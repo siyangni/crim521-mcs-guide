@@ -1,0 +1,76 @@
+---
+import CopyName from "./CopyName.astro";
+import FreqBars from "./FreqBars.astro";
+import { ageLabel } from "../lib/format.mjs";
+import { withBase } from "../lib/paths.mjs";
+
+interface Variable {
+  name: string;
+  domainLabel: string;
+  age: string | null;
+  sourceFile: string;
+  originalVar: string;
+  question: string;
+  originalCodes: string;
+  classCodes: string;
+  notes: string;
+  frequencies: { value: string; n: number; isMissing: boolean }[];
+  href: string;
+}
+
+interface Related {
+  name: string;
+  href: string;
+  age: string | null;
+}
+
+interface Props {
+  variable: Variable;
+  related?: Related[];
+}
+
+const { variable, related = [] } = Astro.props;
+---
+
+<article class="var-block" id={variable.name}>
+  <h3>
+    <CopyName name={variable.name} />
+  </h3>
+  <p>{variable.question}</p>
+  <dl class="meta-grid">
+    <dt>Age</dt>
+    <dd>{ageLabel(variable.age)}</dd>
+    <dt>Domain</dt>
+    <dd>{variable.domainLabel}</dd>
+    <dt>Original</dt>
+    <dd><code>{variable.originalVar}</code></dd>
+    <dt>Original codes</dt>
+    <dd>{variable.originalCodes}</dd>
+    <dt>Class codes</dt>
+    <dd>{variable.classCodes}</dd>
+    {
+      variable.notes && (
+        <>
+          <dt>Notes</dt>
+          <dd>{variable.notes}</dd>
+        </>
+      )
+    }
+  </dl>
+  <FreqBars rows={variable.frequencies} caption="Unweighted counts in the class file" />
+  {
+    related.length > 0 && (
+      <p>
+        Same item at other ages:{" "}
+        {related.map((item, i) => (
+          <>
+            {i > 0 && ", "}
+            <a href={withBase(item.href)}>
+              <code>{item.name}</code>
+            </a>
+          </>
+        ))}
+      </p>
+    )
+  }
+</article>

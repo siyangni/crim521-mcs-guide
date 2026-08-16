@@ -1,0 +1,139 @@
+<dialog class="dialog" id="search-dialog" aria-label="Search the guide">
+  <div class="dialog-head">
+    <input
+      class="search-field"
+      id="search-input"
+      type="search"
+      placeholder="Variable, original name, or question"
+      autocomplete="off"
+      aria-label="Search the guide"
+    />
+  </div>
+  <div class="dialog-list" id="search-results" role="listbox"></div>
+</dialog>
+
+<script>
+  const dialog = document.getElementById("search-dialog") as HTMLDialogElement | null;
+  const input = document.getElementById("search-input") as HTMLInputElement | null;
+  const list = document.getElementById("search-results");
+  let index: {
+    type: string;
+    title: string;
+    subtitle: string;
+    tokens: string;
+    href: string;
+  }[] = [];
+  let selected = 0;
+  let loaded = false;
+
+  fetch(`${document.documentElement.dataset.base || ""}/search-index.json`)
+    .then((res) => {
+      if (!res.ok) throw new Error("search index missing");
+      return res.json();
+    })
+    .then((data) => {
+      index = data;
+      loaded = true;
+      if (dialog?.open) render(input?.value ?? "");
+    })
+    .catch(() => {
+      index = [];
+      loaded = true;
+    });
+
+  function openSearch() {
+    dialog?.showModal();
+    selected = 0;
+    if (input) {
+      input.value = "";
+      input.focus();
+    }
+    render("");
+  }
+
+  function matches(item: (typeof index)[number], q: string) {
+    if (!q) return item.type === "variable";
+    return item.tokens.includes(q) || item.title.toLowerCase().includes(q);
+  }
+
+  function render(raw: string) {
+    if (!list) return;
+    list.replaceChildren();
+    if (!loaded) {
+      const p = document.createElement("p");
+      p.className = "empty";
+      p.style.padding = "1rem";
+      p.textContent = "Loading…";
+      list.append(p);
+      return;
+    }
+    const q = raw.trim().toLowerCase();
+    const hits = index.filter((item) => matches(item, q)).slice(0, 20);
+    if (hits.length === 0) {
+      const p = document.createElement("p");
+      p.className = "empty";
+      p.style.padding = "1rem";
+      p.textContent = "No matches.";
+      list.append(p);
+      return;
+    }
+    selected = Math.min(selected, hits.length - 1);
+    hits.forEach((item, i) => {
+      const a = document.createElement("a");
+      a.role = "option";
+      a.href = item.href;
+      a.setAttribute("aria-selected", String(i === selected));
+      const type = document.createElement("span");
+      type.className = "type";
+      type.textContent = item.type;
+      const title = document.createElement("strong");
+      title.textContent = item.title;
+      const sub = document.createElement("div");
+      sub.textContent = item.subtitle ?? "";
+      a.append(type, title, sub);
+      list.append(a);
+    });
+  }
+
+  document.querySelectorAll("[data-open-search]").forEach((btn) => {
+    btn.addEventListener("click", openSearch);
+  });
+
+  document.addEventListener("keydown", (event) => {
+    const key = event.key;
+    const target = event.target;
+    const typing =
+      (target instanceof HTMLInputElement &&
+        ["text", "search", "email", "url"].includes(target.type)) ||
+      target instanceof HTMLTextAreaElement;
+
+    if ((key === "k" && (event.metaKey || event.ctrlKey)) || (key === "/" && !typing && !dialog?.open)) {
+      event.preventDefault();
+      openSearch();
+      return;
+    }
+    if (key === "Escape" && dialog?.open) {
+      dialog.close();
+      return;
+    }
+    if (!dialog?.open) return;
+    const options = [...(list?.querySelectorAll("a") ?? [])];
+    if (key === "ArrowDown") {
+      event.preventDefault();
+      selected = Math.min(selected + 1, Math.max(options.length - 1, 0));
+      render(input?.value ?? "");
+    } else if (key === "ArrowUp") {
+      event.preventDefault();
+      selected = Math.max(selected - 1, 0);
+      render(input?.value ?? "");
+    } else if (key === "Enter" && options[selected]) {
+      event.preventDefault();
+      window.location.href = options[selected].href;
+    }
+  });
+
+  input?.addEventListener("input", () => {
+    selected = 0;
+    render(input.value);
+  });
+</script>

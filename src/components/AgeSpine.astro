@@ -1,0 +1,75 @@
+---
+import { formatN } from "../lib/format.mjs";
+import { withBase } from "../lib/paths.mjs";
+
+interface Props {
+  respondents: Record<string, number>;
+  currentPath: string;
+}
+
+const { respondents, currentPath } = Astro.props;
+
+const items = [
+  {
+    key: "9m",
+    label: "9 months",
+    detail: "MCS1 · 2001",
+    href: "/introduction",
+  },
+  {
+    key: "3",
+    label: "Age 3",
+    detail: "MCS2 · 2004",
+    href: "/ages/3",
+  },
+  {
+    key: "11",
+    label: "Age 11",
+    detail: respondents.resp11 ? `${formatN(respondents.resp11)} interviewed` : "MCS5 · 2012",
+    href: "/ages/11",
+  },
+  {
+    key: "14",
+    label: "Age 14",
+    detail: respondents.resp14 ? `${formatN(respondents.resp14)} interviewed` : "MCS6 · 2015",
+    href: "/ages/14",
+  },
+  {
+    key: "17",
+    label: "Age 17",
+    detail: respondents.resp17 ? `${formatN(respondents.resp17)} interviewed` : "MCS7 · 2018",
+    href: "/ages/17",
+  },
+  {
+    key: "23",
+    label: "Age 23",
+    detail: respondents.resp23 ? `${formatN(respondents.resp23)} interviewed` : "MCS8 · 2023",
+    href: "/ages/23",
+  },
+];
+
+function active(item: (typeof items)[number]) {
+  if (currentPath === item.href) return true;
+  if (item.key !== "9m" && currentPath.includes(`age-${item.key}`)) return true;
+  if (item.key !== "9m" && currentPath.endsWith(`/ages/${item.key}`)) return true;
+  return false;
+}
+---
+
+<div class="spine-wrap">
+  <div class="spine-copy">
+    <p class="spine-kicker">Browse the file by age</p>
+    <p class="spine-help">Each stop is a sweep. Open it to see the variables collected then.</p>
+  </div>
+  <nav class="spine" aria-label="Browse variables by age">
+    {
+      items.map((item) => (
+        <a class="spine-item" href={withBase(item.href)} aria-current={active(item) ? "true" : undefined}>
+          <span class="spine-dot" aria-hidden="true" />
+          <span class="spine-age">{item.label}</span>
+          <span class="spine-meta">{item.detail}</span>
+        </a>
+      ))
+    }
+  </nav>
+</div>

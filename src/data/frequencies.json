@@ -1,0 +1,2226 @@
+{
+  "sex": [
+    {
+      "value": "1",
+      "n": 9994,
+      "isMissing": false
+    },
+    {
+      "value": "2",
+      "n": 9476,
+      "isMissing": false
+    },
+    {
+      "value": "Missing",
+      "n": 35,
+      "isMissing": true
+    }
+  ],
+  "race11": [
+    {
+      "value": "1",
+      "n": 15936,
+      "isMissing": false
+    },
+    {
+      "value": "2",
+      "n": 602,
+      "isMissing": false
+    },
+    {
+      "value": "3",
+      "n": 502,
+      "isMissing": false
+    },
+    {
+      "value": "4",
+      "n": 957,
+      "isMissing": false
+    },
+    {
+      "value": "5",
+      "n": 397,
+      "isMissing": false
+    },
+    {
+      "value": "6",
+      "n": 141,
+      "isMissing": false
+    },
+    {
+      "value": "7",
+      "n": 263,
+      "isMissing": false
+    },
+    {
+      "value": "8",
+      "n": 427,
+      "isMissing": false
+    },
+    {
+      "value": "9",
+      "n": 52,
+      "isMissing": false
+    },
+    {
+      "value": "10",
+      "n": 36,
+      "isMissing": false
+    },
+    {
+      "value": "11",
+      "n": 126,
+      "isMissing": false
+    },
+    {
+      "value": "Missing",
+      "n": 66,
+      "isMissing": true
+    }
+  ],
+  "race4": [
+    {
+      "value": "1",
+      "n": 15936,
+      "isMissing": false
+    },
+    {
+      "value": "2",
+      "n": 742,
+      "isMissing": false
+    },
+    {
+      "value": "3",
+      "n": 2033,
+      "isMissing": false
+    },
+    {
+      "value": "4",
+      "n": 728,
+      "isMissing": false
+    },
+    {
+      "value": "Missing",
+      "n": 66,
+      "isMissing": true
+    }
+  ],
+  "conduct3": [
+    {
+      "value": "0",
+      "n": 9982,
+      "isMissing": false
+    },
+    {
+      "value": "1",
+      "n": 4956,
+      "isMissing": false
+    },
+    {
+      "value": "Missing",
+      "n": 4567,
+      "isMissing": true
+    }
+  ],
+  "conduct3_score": [
+    {
+      "value": "0",
+      "n": 1855,
+      "isMissing": false
+    },
+    {
+      "value": "1",
+      "n": 2646,
+      "isMissing": false
+    },
+    {
+      "value": "2",
+      "n": 2766,
+      "isMissing": false
+    },
+    {
+      "value": "3",
+      "n": 2715,
+      "isMissing": false
+    },
+    {
+      "value": "4",
+      "n": 2007,
+      "isMissing": false
+    },
+    {
+      "value": "5",
+      "n": 1329,
+      "isMissing": false
+    },
+    {
+      "value": "6",
+      "n": 779,
+      "isMissing": false
+    },
+    {
+      "value": "7",
+      "n": 405,
+      "isMissing": false
+    },
+    {
+      "value": "8",
+      "n": 255,
+      "isMissing": false
+    },
+    {
+      "value": "9",
+      "n": 128,
+      "isMissing": false
+    },
+    {
+      "value": "10",
+      "n": 53,
+      "isMissing": false
+    },
+    {
+      "value": "Missing",
+      "n": 4567,
+      "isMissing": true
+    }
+  ],
+  "conduct3_tantrum": [
+    {
+      "value": "0",
+      "n": 4986,
+      "isMissing": false
+    },
+    {
+      "value": "1",
+      "n": 9868,
+      "isMissing": false
+    },
+    {
+      "value": "Missing",
+      "n": 4651,
+      "isMissing": true
+    }
+  ],
+  "conduct3_disobedient": [
+    {
+      "value": "0",
+      "n": 5322,
+      "isMissing": false
+    },
+    {
+      "value": "1",
+      "n": 9545,
+      "isMissing": false
+    },
+    {
+      "value": "Missing",
+      "n": 4638,
+      "isMissing": true
+    }
+  ],
+  "conduct3_fights": [
+    {
+      "value": "0",
+      "n": 11993,
+      "isMissing": false
+    },
+    {
+      "value": "1",
+      "n": 2689,
+      "isMissing": false
+    },
+    {
+      "value": "Missing",
+      "n": 4823,
+      "isMissing": true
+    }
+  ],
+  "conduct3_argumentative": [
+    {
+      "value": "0",
+      "n": 7026,
+      "isMissing": false
+    },
+    {
+      "value": "1",
+      "n": 7673,
+      "isMissing": false
+    },
+    {
+      "value": "Missing",
+      "n": 4806,
+      "isMissing": true
+    }
+  ],
+  "conduct3_spiteful": [
+    {
+      "value": "0",
+      "n": 10143,
+      "isMissing": false
+    },
+    {
+      "value": "1",
+      "n": 4251,
+      "isMissing": false
+    },
+    {
+      "value": "Missing",
+      "n": 5111,
+      "isMissing": true
+    }
+  ],
+  "delinq11_rude_ever": [
+    {
+      "value": "0",
+      "n": 10676,
+      "isMissing": false
+    },
+    {
+      "value": "1",
+      "n": 2321,
+      "isMissing": false
+    },
+    {
+      "value": "Missing",
+      "n": 6508,
+      "isMissing": true
+    }
+  ],
+  "delinq11_shoplift_ever": [
+    {
+      "value": "0",
+      "n": 12374,
+      "isMissing": false
+    },
+    {
+      "value": "1",
+      "n": 640,
+      "isMissing": false
+    },
+    {
+      "value": "Missing",
+      "n": 6491,
+      "isMissing": true
+    }
+  ],
+  "delinq11_graffiti_ever": [
+    {
+      "value": "0",
+      "n": 12659,
+      "isMissing": false
+    },
+    {
+      "value": "1",
+      "n": 372,
+      "isMissing": false
+    },
+    {
+      "value": "Missing",
+      "n": 6474,
+      "isMissing": true
+    }
+  ],
+  "delinq11_damage_ever": [
+    {
+      "value": "0",
+      "n": 12635,
+      "isMissing": false
+    },
+    {
+      "value": "1",
+      "n": 320,
+      "isMissing": false
+    },
+    {
+      "value": "Missing",
+      "n": 6550,
+      "isMissing": true
+    }
+  ],
+  "att11_fight": [
+    {
+      "value": "1",
+      "n": 8318,
+      "isMissing": false
+    },
+    {
+      "value": "2",
+      "n": 3695,
+      "isMissing": false
+    },
+    {
+      "value": "3",
+      "n": 250,
+      "isMissing": false
+    },
+    {
+      "value": "Missing",
+      "n": 7242,
+      "isMissing": true
+    }
+  ],
+  "att11_graffiti": [
+    {
+      "value": "1",
+      "n": 11859,
+      "isMissing": false
+    },
+    {
+      "value": "2",
+      "n": 796,
+      "isMissing": false
+    },
+    {
+      "value": "3",
+      "n": 79,
+      "isMissing": false
+    },
+    {
+      "value": "Missing",
+      "n": 6771,
+      "isMissing": true
+    }
+  ],
+  "att11_steal": [
+    {
+      "value": "1",
+      "n": 12239,
+      "isMissing": false
+    },
+    {
+      "value": "2",
+      "n": 536,
+      "isMissing": false
+    },
+    {
+      "value": "3",
+      "n": 52,
+      "isMissing": false
+    },
+    {
+      "value": "Missing",
+      "n": 6678,
+      "isMissing": true
+    }
+  ],
+  "att11_download": [
+    {
+      "value": "1",
+      "n": 9552,
+      "isMissing": false
+    },
+    {
+      "value": "2",
+      "n": 2461,
+      "isMissing": false
+    },
+    {
+      "value": "3",
+      "n": 358,
+      "isMissing": false
+    },
+    {
+      "value": "Missing",
+      "n": 7134,
+      "isMissing": true
+    }
+  ],
+  "att14_fight": [
+    {
+      "value": "1",
+      "n": 4132,
+      "isMissing": false
+    },
+    {
+      "value": "2",
+      "n": 6445,
+      "isMissing": false
+    },
+    {
+      "value": "3",
+      "n": 773,
+      "isMissing": false
+    },
+    {
+      "value": "Missing",
+      "n": 8155,
+      "isMissing": true
+    }
+  ],
+  "att14_graffiti": [
+    {
+      "value": "1",
+      "n": 8850,
+      "isMissing": false
+    },
+    {
+      "value": "2",
+      "n": 2237,
+      "isMissing": false
+    },
+    {
+      "value": "3",
+      "n": 268,
+      "isMissing": false
+    },
+    {
+      "value": "Missing",
+      "n": 8150,
+      "isMissing": true
+    }
+  ],
+  "att14_steal": [
+    {
+      "value": "1",
+      "n": 10564,
+      "isMissing": false
+    },
+    {
+      "value": "2",
+      "n": 727,
+      "isMissing": false
+    },
+    {
+      "value": "3",
+      "n": 67,
+      "isMissing": false
+    },
+    {
+      "value": "Missing",
+      "n": 8147,
+      "isMissing": true
+    }
+  ],
+  "att14_download": [
+    {
+      "value": "1",
+      "n": 3922,
+      "isMissing": false
+    },
+    {
+      "value": "2",
+      "n": 5492,
+      "isMissing": false
+    },
+    {
+      "value": "3",
+      "n": 1923,
+      "isMissing": false
+    },
+    {
+      "value": "Missing",
+      "n": 8168,
+      "isMissing": true
+    }
+  ],
+  "online11_messages": [
+    {
+      "value": "1",
+      "n": 2924,
+      "isMissing": false
+    },
+    {
+      "value": "2",
+      "n": 2231,
+      "isMissing": false
+    },
+    {
+      "value": "3",
+      "n": 1358,
+      "isMissing": false
+    },
+    {
+      "value": "4",
+      "n": 1346,
+      "isMissing": false
+    },
+    {
+      "value": "5",
+      "n": 5158,
+      "isMissing": false
+    },
+    {
+      "value": "Missing",
+      "n": 6488,
+      "isMissing": true
+    }
+  ],
+  "online11_sns": [
+    {
+      "value": "1",
+      "n": 2628,
+      "isMissing": false
+    },
+    {
+      "value": "2",
+      "n": 1728,
+      "isMissing": false
+    },
+    {
+      "value": "3",
+      "n": 762,
+      "isMissing": false
+    },
+    {
+      "value": "4",
+      "n": 686,
+      "isMissing": false
+    },
+    {
+      "value": "5",
+      "n": 7221,
+      "isMissing": false
+    },
+    {
+      "value": "Missing",
+      "n": 6480,
+      "isMissing": true
+    }
+  ],
+  "pocket11": [
+    {
+      "value": "0",
+      "n": 5449,
+      "isMissing": false
+    },
+    {
+      "value": "1",
+      "n": 7522,
+      "isMissing": false
+    },
+    {
+      "value": "Missing",
+      "n": 6534,
+      "isMissing": true
+    }
+  ],
+  "chores11": [
+    {
+      "value": "1",
+      "n": 4347,
+      "isMissing": false
+    },
+    {
+      "value": "2",
+      "n": 2718,
+      "isMissing": false
+    },
+    {
+      "value": "3",
+      "n": 3366,
+      "isMissing": false
+    },
+    {
+      "value": "4",
+      "n": 1146,
+      "isMissing": false
+    },
+    {
+      "value": "5",
+      "n": 782,
+      "isMissing": false
+    },
+    {
+      "value": "6",
+      "n": 971,
+      "isMissing": false
+    },
+    {
+      "value": "Missing",
+      "n": 6175,
+      "isMissing": true
+    }
+  ],
+  "job14": [
+    {
+      "value": "0",
+      "n": 10388,
+      "isMissing": false
+    },
+    {
+      "value": "1",
+      "n": 992,
+      "isMissing": false
+    },
+    {
+      "value": "Missing",
+      "n": 8125,
+      "isMissing": true
+    }
+  ],
+  "job14_familybiz": [
+    {
+      "value": "0",
+      "n": 10895,
+      "isMissing": false
+    },
+    {
+      "value": "1",
+      "n": 485,
+      "isMissing": false
+    },
+    {
+      "value": "Missing",
+      "n": 8125,
+      "isMissing": true
+    }
+  ],
+  "job14_chores": [
+    {
+      "value": "0",
+      "n": 8006,
+      "isMissing": false
+    },
+    {
+      "value": "1",
+      "n": 3374,
+      "isMissing": false
+    },
+    {
+      "value": "Missing",
+      "n": 8125,
+      "isMissing": true
+    }
+  ],
+  "online14_internet": [
+    {
+      "value": "1",
+      "n": 88,
+      "isMissing": false
+    },
+    {
+      "value": "2",
+      "n": 347,
+      "isMissing": false
+    },
+    {
+      "value": "3",
+      "n": 842,
+      "isMissing": false
+    },
+    {
+      "value": "4",
+      "n": 1665,
+      "isMissing": false
+    },
+    {
+      "value": "5",
+      "n": 2077,
+      "isMissing": false
+    },
+    {
+      "value": "6",
+      "n": 2457,
+      "isMissing": false
+    },
+    {
+      "value": "7",
+      "n": 1775,
+      "isMissing": false
+    },
+    {
+      "value": "8",
+      "n": 2121,
+      "isMissing": false
+    },
+    {
+      "value": "Missing",
+      "n": 8133,
+      "isMissing": true
+    }
+  ],
+  "online14_sns": [
+    {
+      "value": "1",
+      "n": 906,
+      "isMissing": false
+    },
+    {
+      "value": "2",
+      "n": 1406,
+      "isMissing": false
+    },
+    {
+      "value": "3",
+      "n": 1621,
+      "isMissing": false
+    },
+    {
+      "value": "4",
+      "n": 1923,
+      "isMissing": false
+    },
+    {
+      "value": "5",
+      "n": 1747,
+      "isMissing": false
+    },
+    {
+      "value": "6",
+      "n": 1589,
+      "isMissing": false
+    },
+    {
+      "value": "7",
+      "n": 1089,
+      "isMissing": false
+    },
+    {
+      "value": "8",
+      "n": 1087,
+      "isMissing": false
+    },
+    {
+      "value": "Missing",
+      "n": 8137,
+      "isMissing": true
+    }
+  ],
+  "date14_partner": [
+    {
+      "value": "0",
+      "n": 9288,
+      "isMissing": false
+    },
+    {
+      "value": "1",
+      "n": 1886,
+      "isMissing": false
+    },
+    {
+      "value": "Missing",
+      "n": 8331,
+      "isMissing": true
+    }
+  ],
+  "date14_hands": [
+    {
+      "value": "0",
+      "n": 4740,
+      "isMissing": false
+    },
+    {
+      "value": "1",
+      "n": 6383,
+      "isMissing": false
+    },
+    {
+      "value": "Missing",
+      "n": 8382,
+      "isMissing": true
+    }
+  ],
+  "date14_kiss": [
+    {
+      "value": "0",
+      "n": 7009,
+      "isMissing": false
+    },
+    {
+      "value": "1",
+      "n": 4120,
+      "isMissing": false
+    },
+    {
+      "value": "Missing",
+      "n": 8376,
+      "isMissing": true
+    }
+  ],
+  "date14_cuddle": [
+    {
+      "value": "0",
+      "n": 5290,
+      "isMissing": false
+    },
+    {
+      "value": "1",
+      "n": 5831,
+      "isMissing": false
+    },
+    {
+      "value": "Missing",
+      "n": 8384,
+      "isMissing": true
+    }
+  ],
+  "date14_touched": [
+    {
+      "value": "0",
+      "n": 5284,
+      "isMissing": false
+    },
+    {
+      "value": "1",
+      "n": 972,
+      "isMissing": false
+    },
+    {
+      "value": "Missing",
+      "n": 13249,
+      "isMissing": true
+    }
+  ],
+  "date14_touch": [
+    {
+      "value": "0",
+      "n": 5402,
+      "isMissing": false
+    },
+    {
+      "value": "1",
+      "n": 858,
+      "isMissing": false
+    },
+    {
+      "value": "Missing",
+      "n": 13245,
+      "isMissing": true
+    }
+  ],
+  "date14_touch_gen": [
+    {
+      "value": "0",
+      "n": 556,
+      "isMissing": false
+    },
+    {
+      "value": "1",
+      "n": 506,
+      "isMissing": false
+    },
+    {
+      "value": "Missing",
+      "n": 18443,
+      "isMissing": true
+    }
+  ],
+  "date14_touched_gen": [
+    {
+      "value": "0",
+      "n": 512,
+      "isMissing": false
+    },
+    {
+      "value": "1",
+      "n": 550,
+      "isMissing": false
+    },
+    {
+      "value": "Missing",
+      "n": 18443,
+      "isMissing": true
+    }
+  ],
+  "date14_oral_did": [
+    {
+      "value": "0",
+      "n": 374,
+      "isMissing": false
+    },
+    {
+      "value": "1",
+      "n": 232,
+      "isMissing": false
+    },
+    {
+      "value": "Missing",
+      "n": 18899,
+      "isMissing": true
+    }
+  ],
+  "date14_oral_rec": [
+    {
+      "value": "0",
+      "n": 351,
+      "isMissing": false
+    },
+    {
+      "value": "1",
+      "n": 256,
+      "isMissing": false
+    },
+    {
+      "value": "Missing",
+      "n": 18898,
+      "isMissing": true
+    }
+  ],
+  "date14_sex": [
+    {
+      "value": "0",
+      "n": 418,
+      "isMissing": false
+    },
+    {
+      "value": "1",
+      "n": 188,
+      "isMissing": false
+    },
+    {
+      "value": "Missing",
+      "n": 18899,
+      "isMissing": true
+    }
+  ],
+  "date17_sex_ever": [
+    {
+      "value": "0",
+      "n": 6067,
+      "isMissing": false
+    },
+    {
+      "value": "1",
+      "n": 3949,
+      "isMissing": false
+    },
+    {
+      "value": "Missing",
+      "n": 9489,
+      "isMissing": true
+    }
+  ],
+  "delinq14_rude": [
+    {
+      "value": "0",
+      "n": 9720,
+      "isMissing": false
+    },
+    {
+      "value": "1",
+      "n": 1466,
+      "isMissing": false
+    },
+    {
+      "value": "Missing",
+      "n": 8319,
+      "isMissing": true
+    }
+  ],
+  "delinq14_shoplift": [
+    {
+      "value": "0",
+      "n": 10816,
+      "isMissing": false
+    },
+    {
+      "value": "1",
+      "n": 371,
+      "isMissing": false
+    },
+    {
+      "value": "Missing",
+      "n": 8318,
+      "isMissing": true
+    }
+  ],
+  "delinq14_graffiti": [
+    {
+      "value": "0",
+      "n": 10889,
+      "isMissing": false
+    },
+    {
+      "value": "1",
+      "n": 304,
+      "isMissing": false
+    },
+    {
+      "value": "Missing",
+      "n": 8312,
+      "isMissing": true
+    }
+  ],
+  "delinq14_damage": [
+    {
+      "value": "0",
+      "n": 10842,
+      "isMissing": false
+    },
+    {
+      "value": "1",
+      "n": 346,
+      "isMissing": false
+    },
+    {
+      "value": "Missing",
+      "n": 8317,
+      "isMissing": true
+    }
+  ],
+  "delinq14_hack": [
+    {
+      "value": "0",
+      "n": 10671,
+      "isMissing": false
+    },
+    {
+      "value": "1",
+      "n": 524,
+      "isMissing": false
+    },
+    {
+      "value": "Missing",
+      "n": 8310,
+      "isMissing": true
+    }
+  ],
+  "delinq14_virus": [
+    {
+      "value": "0",
+      "n": 11090,
+      "isMissing": false
+    },
+    {
+      "value": "1",
+      "n": 92,
+      "isMissing": false
+    },
+    {
+      "value": "Missing",
+      "n": 8323,
+      "isMissing": true
+    }
+  ],
+  "delinq14_hit": [
+    {
+      "value": "0",
+      "n": 7783,
+      "isMissing": false
+    },
+    {
+      "value": "1",
+      "n": 3404,
+      "isMissing": false
+    },
+    {
+      "value": "Missing",
+      "n": 8318,
+      "isMissing": true
+    }
+  ],
+  "delinq14_weapon_use": [
+    {
+      "value": "0",
+      "n": 11084,
+      "isMissing": false
+    },
+    {
+      "value": "1",
+      "n": 105,
+      "isMissing": false
+    },
+    {
+      "value": "Missing",
+      "n": 8316,
+      "isMissing": true
+    }
+  ],
+  "delinq14_steal_person": [
+    {
+      "value": "0",
+      "n": 11063,
+      "isMissing": false
+    },
+    {
+      "value": "1",
+      "n": 125,
+      "isMissing": false
+    },
+    {
+      "value": "Missing",
+      "n": 8317,
+      "isMissing": true
+    }
+  ],
+  "delinq14_burglary_ever": [
+    {
+      "value": "0",
+      "n": 11172,
+      "isMissing": false
+    },
+    {
+      "value": "1",
+      "n": 22,
+      "isMissing": false
+    },
+    {
+      "value": "Missing",
+      "n": 8311,
+      "isMissing": true
+    }
+  ],
+  "delinq14_knife_ever": [
+    {
+      "value": "0",
+      "n": 10928,
+      "isMissing": false
+    },
+    {
+      "value": "1",
+      "n": 260,
+      "isMissing": false
+    },
+    {
+      "value": "Missing",
+      "n": 8317,
+      "isMissing": true
+    }
+  ],
+  "vic14_insult": [
+    {
+      "value": "0",
+      "n": 6373,
+      "isMissing": false
+    },
+    {
+      "value": "1",
+      "n": 4810,
+      "isMissing": false
+    },
+    {
+      "value": "Missing",
+      "n": 8322,
+      "isMissing": true
+    }
+  ],
+  "vic14_violence": [
+    {
+      "value": "0",
+      "n": 8736,
+      "isMissing": false
+    },
+    {
+      "value": "1",
+      "n": 2442,
+      "isMissing": false
+    },
+    {
+      "value": "Missing",
+      "n": 8327,
+      "isMissing": true
+    }
+  ],
+  "vic14_weapon": [
+    {
+      "value": "0",
+      "n": 10833,
+      "isMissing": false
+    },
+    {
+      "value": "1",
+      "n": 342,
+      "isMissing": false
+    },
+    {
+      "value": "Missing",
+      "n": 8330,
+      "isMissing": true
+    }
+  ],
+  "vic14_stolen": [
+    {
+      "value": "0",
+      "n": 10374,
+      "isMissing": false
+    },
+    {
+      "value": "1",
+      "n": 803,
+      "isMissing": false
+    },
+    {
+      "value": "Missing",
+      "n": 8328,
+      "isMissing": true
+    }
+  ],
+  "vic14_sexual": [
+    {
+      "value": "0",
+      "n": 10864,
+      "isMissing": false
+    },
+    {
+      "value": "1",
+      "n": 312,
+      "isMissing": false
+    },
+    {
+      "value": "Missing",
+      "n": 8329,
+      "isMissing": true
+    }
+  ],
+  "gang14": [
+    {
+      "value": "0",
+      "n": 10989,
+      "isMissing": false
+    },
+    {
+      "value": "1",
+      "n": 196,
+      "isMissing": false
+    },
+    {
+      "value": "Missing",
+      "n": 8320,
+      "isMissing": true
+    }
+  ],
+  "job17": [
+    {
+      "value": "0",
+      "n": 5754,
+      "isMissing": false
+    },
+    {
+      "value": "1",
+      "n": 3721,
+      "isMissing": false
+    },
+    {
+      "value": "Missing",
+      "n": 10030,
+      "isMissing": true
+    }
+  ],
+  "job17_paid": [
+    {
+      "value": "0",
+      "n": 45,
+      "isMissing": false
+    },
+    {
+      "value": "1",
+      "n": 445,
+      "isMissing": false
+    },
+    {
+      "value": "Missing",
+      "n": 19015,
+      "isMissing": true
+    }
+  ],
+  "job17_any_paid_income": [
+    {
+      "value": "0",
+      "n": 8592,
+      "isMissing": false
+    },
+    {
+      "value": "1",
+      "n": 1381,
+      "isMissing": false
+    },
+    {
+      "value": "Missing",
+      "n": 9532,
+      "isMissing": true
+    }
+  ],
+  "online17_sns": [
+    {
+      "value": "1",
+      "n": 105,
+      "isMissing": false
+    },
+    {
+      "value": "2",
+      "n": 344,
+      "isMissing": false
+    },
+    {
+      "value": "3",
+      "n": 492,
+      "isMissing": false
+    },
+    {
+      "value": "4",
+      "n": 1027,
+      "isMissing": false
+    },
+    {
+      "value": "5",
+      "n": 1152,
+      "isMissing": false
+    },
+    {
+      "value": "6",
+      "n": 1312,
+      "isMissing": false
+    },
+    {
+      "value": "7",
+      "n": 954,
+      "isMissing": false
+    },
+    {
+      "value": "8",
+      "n": 629,
+      "isMissing": false
+    },
+    {
+      "value": "9",
+      "n": 1008,
+      "isMissing": false
+    },
+    {
+      "value": "Missing",
+      "n": 12482,
+      "isMissing": true
+    }
+  ],
+  "online17_games": [
+    {
+      "value": "1",
+      "n": 1682,
+      "isMissing": false
+    },
+    {
+      "value": "2",
+      "n": 1024,
+      "isMissing": false
+    },
+    {
+      "value": "3",
+      "n": 680,
+      "isMissing": false
+    },
+    {
+      "value": "4",
+      "n": 893,
+      "isMissing": false
+    },
+    {
+      "value": "5",
+      "n": 718,
+      "isMissing": false
+    },
+    {
+      "value": "6",
+      "n": 621,
+      "isMissing": false
+    },
+    {
+      "value": "7",
+      "n": 466,
+      "isMissing": false
+    },
+    {
+      "value": "8",
+      "n": 272,
+      "isMissing": false
+    },
+    {
+      "value": "9",
+      "n": 437,
+      "isMissing": false
+    },
+    {
+      "value": "Missing",
+      "n": 12712,
+      "isMissing": true
+    }
+  ],
+  "date17_partner": [
+    {
+      "value": "0",
+      "n": 6906,
+      "isMissing": false
+    },
+    {
+      "value": "1",
+      "n": 3170,
+      "isMissing": false
+    },
+    {
+      "value": "Missing",
+      "n": 9429,
+      "isMissing": true
+    }
+  ],
+  "delinq17_shoplift": [
+    {
+      "value": "0",
+      "n": 9489,
+      "isMissing": false
+    },
+    {
+      "value": "1",
+      "n": 590,
+      "isMissing": false
+    },
+    {
+      "value": "Missing",
+      "n": 9426,
+      "isMissing": true
+    }
+  ],
+  "delinq17_graffiti": [
+    {
+      "value": "0",
+      "n": 9769,
+      "isMissing": false
+    },
+    {
+      "value": "1",
+      "n": 304,
+      "isMissing": false
+    },
+    {
+      "value": "Missing",
+      "n": 9432,
+      "isMissing": true
+    }
+  ],
+  "delinq17_damage": [
+    {
+      "value": "0",
+      "n": 9727,
+      "isMissing": false
+    },
+    {
+      "value": "1",
+      "n": 321,
+      "isMissing": false
+    },
+    {
+      "value": "Missing",
+      "n": 9457,
+      "isMissing": true
+    }
+  ],
+  "delinq17_burglary": [
+    {
+      "value": "0",
+      "n": 10036,
+      "isMissing": false
+    },
+    {
+      "value": "1",
+      "n": 15,
+      "isMissing": false
+    },
+    {
+      "value": "Missing",
+      "n": 9454,
+      "isMissing": true
+    }
+  ],
+  "delinq17_vehicle": [
+    {
+      "value": "0",
+      "n": 10048,
+      "isMissing": false
+    },
+    {
+      "value": "1",
+      "n": 30,
+      "isMissing": false
+    },
+    {
+      "value": "Missing",
+      "n": 9427,
+      "isMissing": true
+    }
+  ],
+  "delinq17_arson": [
+    {
+      "value": "0",
+      "n": 9764,
+      "isMissing": false
+    },
+    {
+      "value": "1",
+      "n": 306,
+      "isMissing": false
+    },
+    {
+      "value": "Missing",
+      "n": 9435,
+      "isMissing": true
+    }
+  ],
+  "delinq17_fraud": [
+    {
+      "value": "0",
+      "n": 9944,
+      "isMissing": false
+    },
+    {
+      "value": "1",
+      "n": 119,
+      "isMissing": false
+    },
+    {
+      "value": "Missing",
+      "n": 9442,
+      "isMissing": true
+    }
+  ],
+  "delinq17_hack": [
+    {
+      "value": "0",
+      "n": 9850,
+      "isMissing": false
+    },
+    {
+      "value": "1",
+      "n": 207,
+      "isMissing": false
+    },
+    {
+      "value": "Missing",
+      "n": 9448,
+      "isMissing": true
+    }
+  ],
+  "delinq17_virus": [
+    {
+      "value": "0",
+      "n": 10043,
+      "isMissing": false
+    },
+    {
+      "value": "1",
+      "n": 33,
+      "isMissing": false
+    },
+    {
+      "value": "Missing",
+      "n": 9429,
+      "isMissing": true
+    }
+  ],
+  "delinq17_hit": [
+    {
+      "value": "0",
+      "n": 7630,
+      "isMissing": false
+    },
+    {
+      "value": "1",
+      "n": 2450,
+      "isMissing": false
+    },
+    {
+      "value": "Missing",
+      "n": 9425,
+      "isMissing": true
+    }
+  ],
+  "delinq17_weapon_use": [
+    {
+      "value": "0",
+      "n": 9974,
+      "isMissing": false
+    },
+    {
+      "value": "1",
+      "n": 105,
+      "isMissing": false
+    },
+    {
+      "value": "Missing",
+      "n": 9426,
+      "isMissing": true
+    }
+  ],
+  "delinq17_steal_person": [
+    {
+      "value": "0",
+      "n": 9910,
+      "isMissing": false
+    },
+    {
+      "value": "1",
+      "n": 163,
+      "isMissing": false
+    },
+    {
+      "value": "Missing",
+      "n": 9432,
+      "isMissing": true
+    }
+  ],
+  "delinq17_harass": [
+    {
+      "value": "0",
+      "n": 9905,
+      "isMissing": false
+    },
+    {
+      "value": "1",
+      "n": 172,
+      "isMissing": false
+    },
+    {
+      "value": "Missing",
+      "n": 9428,
+      "isMissing": true
+    }
+  ],
+  "delinq17_image": [
+    {
+      "value": "0",
+      "n": 9943,
+      "isMissing": false
+    },
+    {
+      "value": "1",
+      "n": 136,
+      "isMissing": false
+    },
+    {
+      "value": "Missing",
+      "n": 9426,
+      "isMissing": true
+    }
+  ],
+  "delinq17_sexual": [
+    {
+      "value": "0",
+      "n": 10065,
+      "isMissing": false
+    },
+    {
+      "value": "1",
+      "n": 14,
+      "isMissing": false
+    },
+    {
+      "value": "Missing",
+      "n": 9426,
+      "isMissing": true
+    }
+  ],
+  "vic17_insult": [
+    {
+      "value": "0",
+      "n": 6161,
+      "isMissing": false
+    },
+    {
+      "value": "1",
+      "n": 3907,
+      "isMissing": false
+    },
+    {
+      "value": "Missing",
+      "n": 9437,
+      "isMissing": true
+    }
+  ],
+  "vic17_gossip": [
+    {
+      "value": "0",
+      "n": 6194,
+      "isMissing": false
+    },
+    {
+      "value": "1",
+      "n": 3871,
+      "isMissing": false
+    },
+    {
+      "value": "Missing",
+      "n": 9440,
+      "isMissing": true
+    }
+  ],
+  "vic17_violence": [
+    {
+      "value": "0",
+      "n": 8320,
+      "isMissing": false
+    },
+    {
+      "value": "1",
+      "n": 1750,
+      "isMissing": false
+    },
+    {
+      "value": "Missing",
+      "n": 9435,
+      "isMissing": true
+    }
+  ],
+  "vic17_weapon": [
+    {
+      "value": "0",
+      "n": 9755,
+      "isMissing": false
+    },
+    {
+      "value": "1",
+      "n": 316,
+      "isMissing": false
+    },
+    {
+      "value": "Missing",
+      "n": 9434,
+      "isMissing": true
+    }
+  ],
+  "vic17_stolen": [
+    {
+      "value": "0",
+      "n": 9250,
+      "isMissing": false
+    },
+    {
+      "value": "1",
+      "n": 816,
+      "isMissing": false
+    },
+    {
+      "value": "Missing",
+      "n": 9439,
+      "isMissing": true
+    }
+  ],
+  "vic17_harass": [
+    {
+      "value": "0",
+      "n": 8582,
+      "isMissing": false
+    },
+    {
+      "value": "1",
+      "n": 1489,
+      "isMissing": false
+    },
+    {
+      "value": "Missing",
+      "n": 9434,
+      "isMissing": true
+    }
+  ],
+  "vic17_image": [
+    {
+      "value": "0",
+      "n": 9354,
+      "isMissing": false
+    },
+    {
+      "value": "1",
+      "n": 707,
+      "isMissing": false
+    },
+    {
+      "value": "Missing",
+      "n": 9444,
+      "isMissing": true
+    }
+  ],
+  "vic17_unwelcome": [
+    {
+      "value": "0",
+      "n": 8811,
+      "isMissing": false
+    },
+    {
+      "value": "1",
+      "n": 1255,
+      "isMissing": false
+    },
+    {
+      "value": "Missing",
+      "n": 9439,
+      "isMissing": true
+    }
+  ],
+  "vic17_assault": [
+    {
+      "value": "0",
+      "n": 9747,
+      "isMissing": false
+    },
+    {
+      "value": "1",
+      "n": 322,
+      "isMissing": false
+    },
+    {
+      "value": "Missing",
+      "n": 9436,
+      "isMissing": true
+    }
+  ],
+  "gang17": [
+    {
+      "value": "0",
+      "n": 6753,
+      "isMissing": false
+    },
+    {
+      "value": "1",
+      "n": 34,
+      "isMissing": false
+    },
+    {
+      "value": "Missing",
+      "n": 12718,
+      "isMissing": true
+    }
+  ],
+  "knife17": [
+    {
+      "value": "0",
+      "n": 6589,
+      "isMissing": false
+    },
+    {
+      "value": "1",
+      "n": 194,
+      "isMissing": false
+    },
+    {
+      "value": "Missing",
+      "n": 12722,
+      "isMissing": true
+    }
+  ],
+  "cj17_stopped": [
+    {
+      "value": "0",
+      "n": 5611,
+      "isMissing": false
+    },
+    {
+      "value": "1",
+      "n": 1173,
+      "isMissing": false
+    },
+    {
+      "value": "Missing",
+      "n": 12721,
+      "isMissing": true
+    }
+  ],
+  "cj17_caution": [
+    {
+      "value": "0",
+      "n": 6298,
+      "isMissing": false
+    },
+    {
+      "value": "1",
+      "n": 479,
+      "isMissing": false
+    },
+    {
+      "value": "Missing",
+      "n": 12728,
+      "isMissing": true
+    }
+  ],
+  "cj17_arrest": [
+    {
+      "value": "0",
+      "n": 6665,
+      "isMissing": false
+    },
+    {
+      "value": "1",
+      "n": 112,
+      "isMissing": false
+    },
+    {
+      "value": "Missing",
+      "n": 12728,
+      "isMissing": true
+    }
+  ],
+  "cj17_court": [
+    {
+      "value": "0",
+      "n": 88,
+      "isMissing": false
+    },
+    {
+      "value": "1",
+      "n": 24,
+      "isMissing": false
+    },
+    {
+      "value": "Missing",
+      "n": 19393,
+      "isMissing": true
+    }
+  ],
+  "cj17": [
+    {
+      "value": "0",
+      "n": 6257,
+      "isMissing": false
+    },
+    {
+      "value": "1",
+      "n": 518,
+      "isMissing": false
+    },
+    {
+      "value": "Missing",
+      "n": 12730,
+      "isMissing": true
+    }
+  ],
+  "live_parents23": [
+    {
+      "value": "0",
+      "n": 2829,
+      "isMissing": false
+    },
+    {
+      "value": "1",
+      "n": 6846,
+      "isMissing": false
+    },
+    {
+      "value": "Missing",
+      "n": 9830,
+      "isMissing": true
+    }
+  ],
+  "married23": [
+    {
+      "value": "0",
+      "n": 9238,
+      "isMissing": false
+    },
+    {
+      "value": "1",
+      "n": 419,
+      "isMissing": false
+    },
+    {
+      "value": "Missing",
+      "n": 9848,
+      "isMissing": true
+    }
+  ],
+  "cohab23": [
+    {
+      "value": "0",
+      "n": 8191,
+      "isMissing": false
+    },
+    {
+      "value": "1",
+      "n": 1484,
+      "isMissing": false
+    },
+    {
+      "value": "Missing",
+      "n": 9830,
+      "isMissing": true
+    }
+  ],
+  "married_cohab23": [
+    {
+      "value": "0",
+      "n": 8041,
+      "isMissing": false
+    },
+    {
+      "value": "1",
+      "n": 1634,
+      "isMissing": false
+    },
+    {
+      "value": "Missing",
+      "n": 9830,
+      "isMissing": true
+    }
+  ],
+  "ftjob23": [
+    {
+      "value": "0",
+      "n": 4107,
+      "isMissing": false
+    },
+    {
+      "value": "1",
+      "n": 5527,
+      "isMissing": false
+    },
+    {
+      "value": "Missing",
+      "n": 9871,
+      "isMissing": true
+    }
+  ],
+  "nvq23": [
+    {
+      "value": "1",
+      "n": 592,
+      "isMissing": false
+    },
+    {
+      "value": "2",
+      "n": 2386,
+      "isMissing": false
+    },
+    {
+      "value": "3",
+      "n": 1929,
+      "isMissing": false
+    },
+    {
+      "value": "4",
+      "n": 3637,
+      "isMissing": false
+    },
+    {
+      "value": "5",
+      "n": 687,
+      "isMissing": false
+    },
+    {
+      "value": "96",
+      "n": 311,
+      "isMissing": false
+    },
+    {
+      "value": "Missing",
+      "n": 9963,
+      "isMissing": true
+    }
+  ],
+  "vic23_violence": [
+    {
+      "value": "0",
+      "n": 7878,
+      "isMissing": false
+    },
+    {
+      "value": "1",
+      "n": 995,
+      "isMissing": false
+    },
+    {
+      "value": "Missing",
+      "n": 10632,
+      "isMissing": true
+    }
+  ],
+  "vic23_weapon": [
+    {
+      "value": "0",
+      "n": 8704,
+      "isMissing": false
+    },
+    {
+      "value": "1",
+      "n": 177,
+      "isMissing": false
+    },
+    {
+      "value": "Missing",
+      "n": 10624,
+      "isMissing": true
+    }
+  ],
+  "vic23_image": [
+    {
+      "value": "0",
+      "n": 8593,
+      "isMissing": false
+    },
+    {
+      "value": "1",
+      "n": 281,
+      "isMissing": false
+    },
+    {
+      "value": "Missing",
+      "n": 10631,
+      "isMissing": true
+    }
+  ],
+  "vic23_sexual": [
+    {
+      "value": "0",
+      "n": 7334,
+      "isMissing": false
+    },
+    {
+      "value": "1",
+      "n": 1547,
+      "isMissing": false
+    },
+    {
+      "value": "Missing",
+      "n": 10624,
+      "isMissing": true
+    }
+  ],
+  "knife23": [
+    {
+      "value": "0",
+      "n": 8812,
+      "isMissing": false
+    },
+    {
+      "value": "1",
+      "n": 83,
+      "isMissing": false
+    },
+    {
+      "value": "Missing",
+      "n": 10610,
+      "isMissing": true
+    }
+  ],
+  "resp11": [
+    {
+      "value": "0",
+      "n": 6069,
+      "isMissing": false
+    },
+    {
+      "value": "1",
+      "n": 13436,
+      "isMissing": false
+    }
+  ],
+  "resp14": [
+    {
+      "value": "0",
+      "n": 7786,
+      "isMissing": false
+    },
+    {
+      "value": "1",
+      "n": 11719,
+      "isMissing": false
+    }
+  ],
+  "resp17": [
+    {
+      "value": "0",
+      "n": 9162,
+      "isMissing": false
+    },
+    {
+      "value": "1",
+      "n": 10343,
+      "isMissing": false
+    }
+  ],
+  "resp23": [
+    {
+      "value": "0",
+      "n": 9830,
+      "isMissing": false
+    },
+    {
+      "value": "1",
+      "n": 9675,
+      "isMissing": false
+    }
+  ]
+}

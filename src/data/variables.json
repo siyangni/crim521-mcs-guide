@@ -1,0 +1,4508 @@
+[
+  {
+    "name": "mcsid",
+    "domain": "id",
+    "domainLabel": "Identifiers",
+    "age": null,
+    "sourceFile": "mcs_longitudinal_cm_file.dta",
+    "originalVar": "mcsid",
+    "recodeType": "keep",
+    "question": "Anonymised family/household identifier",
+    "originalCodes": "character",
+    "classCodes": "character",
+    "notes": "Merge key",
+    "frequencies": [],
+    "yesN": null,
+    "topicSlug": "identifiers",
+    "topicId": "5.1",
+    "href": "/variables/identifiers#mcsid",
+    "stem": "mcsid"
+  },
+  {
+    "name": "cnum",
+    "domain": "id",
+    "domainLabel": "Identifiers",
+    "age": null,
+    "sourceFile": "mcs_longitudinal_cm_file.dta",
+    "originalVar": "cnum",
+    "recodeType": "keep",
+    "question": "Cohort member number within family",
+    "originalCodes": "1/2/3",
+    "classCodes": "1/2/3",
+    "notes": "Merge key; twins and triplets retained",
+    "frequencies": [],
+    "yesN": null,
+    "topicSlug": "identifiers",
+    "topicId": "5.1",
+    "href": "/variables/identifiers#cnum",
+    "stem": "cnum"
+  },
+  {
+    "name": "country",
+    "domain": "design",
+    "domainLabel": "Design & weights",
+    "age": null,
+    "sourceFile": "mcs_longitudinal_cm_file.dta",
+    "originalVar": "country",
+    "recodeType": "keep_pos",
+    "question": "Country at MCS sampling",
+    "originalCodes": "1 England; 2 Wales; 3 Scotland; 4 NI",
+    "classCodes": "-1 to NA",
+    "notes": "Sampling country not interview country",
+    "frequencies": [],
+    "yesN": null,
+    "topicSlug": null,
+    "topicId": null,
+    "href": "/weights#country",
+    "stem": "country"
+  },
+  {
+    "name": "pttype2",
+    "domain": "design",
+    "domainLabel": "Design & weights",
+    "age": null,
+    "sourceFile": "mcs_longitudinal_cm_file.dta",
+    "originalVar": "pttype2",
+    "recodeType": "keep_pos",
+    "question": "Stratum within country",
+    "originalCodes": "1-9 as deposited",
+    "classCodes": "-1 to NA",
+    "notes": "Use as strata()",
+    "frequencies": [],
+    "yesN": null,
+    "topicSlug": null,
+    "topicId": null,
+    "href": "/weights#pttype2",
+    "stem": "pttype2"
+  },
+  {
+    "name": "sptn00",
+    "domain": "design",
+    "domainLabel": "Design & weights",
+    "age": null,
+    "sourceFile": "mcs_longitudinal_cm_file.dta",
+    "originalVar": "sptn00",
+    "recodeType": "keep",
+    "question": "Fieldwork point (PSU)",
+    "originalCodes": "character ward/superward code",
+    "classCodes": "character",
+    "notes": "Use as cluster id",
+    "frequencies": [],
+    "yesN": null,
+    "topicSlug": null,
+    "topicId": null,
+    "href": "/weights#sptn00",
+    "stem": "sptn00"
+  },
+  {
+    "name": "nh2",
+    "domain": "design",
+    "domainLabel": "Design & weights",
+    "age": null,
+    "sourceFile": "mcs_longitudinal_cm_file.dta",
+    "originalVar": "nh2",
+    "recodeType": "keep",
+    "question": "Population correction factor",
+    "originalCodes": "numeric",
+    "classCodes": "numeric",
+    "notes": "Optional FPC",
+    "frequencies": [],
+    "yesN": null,
+    "topicSlug": null,
+    "topicId": null,
+    "href": "/weights#nh2",
+    "stem": "nh2"
+  },
+  {
+    "name": "weight1",
+    "domain": "design",
+    "domainLabel": "Design & weights",
+    "age": null,
+    "sourceFile": "mcs_longitudinal_cm_file.dta",
+    "originalVar": "weight1",
+    "recodeType": "neg_to_na",
+    "question": "Base weight single-country",
+    "originalCodes": "numeric",
+    "classCodes": "negative to NA",
+    "notes": "",
+    "frequencies": [],
+    "yesN": null,
+    "topicSlug": null,
+    "topicId": null,
+    "href": "/weights#weight1",
+    "stem": "weight1"
+  },
+  {
+    "name": "weight2",
+    "domain": "design",
+    "domainLabel": "Design & weights",
+    "age": null,
+    "sourceFile": "mcs_longitudinal_cm_file.dta",
+    "originalVar": "weight2",
+    "recodeType": "neg_to_na",
+    "question": "Base weight whole UK",
+    "originalCodes": "numeric",
+    "classCodes": "negative to NA",
+    "notes": "",
+    "frequencies": [],
+    "yesN": null,
+    "topicSlug": null,
+    "topicId": null,
+    "href": "/weights#weight2",
+    "stem": "weight2"
+  },
+  {
+    "name": "weightgb",
+    "domain": "design",
+    "domainLabel": "Design & weights",
+    "age": null,
+    "sourceFile": "mcs_longitudinal_cm_file.dta",
+    "originalVar": "weightgb",
+    "recodeType": "neg_to_na",
+    "question": "Base weight GB",
+    "originalCodes": "numeric",
+    "classCodes": "negative to NA",
+    "notes": "",
+    "frequencies": [],
+    "yesN": null,
+    "topicSlug": null,
+    "topicId": null,
+    "href": "/weights#weightgb",
+    "stem": "weightgb"
+  },
+  {
+    "name": "eovwt2",
+    "domain": "design",
+    "domainLabel": "Design & weights",
+    "age": "11",
+    "sourceFile": "mcs_longitudinal_cm_file.dta",
+    "originalVar": "eovwt2",
+    "recodeType": "neg_to_na",
+    "question": "MCS5 overall UK weight",
+    "originalCodes": "numeric",
+    "classCodes": "negative to NA",
+    "notes": "Use with age 11 analyses",
+    "frequencies": [],
+    "yesN": null,
+    "topicSlug": null,
+    "topicId": null,
+    "href": "/weights#eovwt2",
+    "stem": "eovwt2"
+  },
+  {
+    "name": "fovwt2",
+    "domain": "design",
+    "domainLabel": "Design & weights",
+    "age": "14",
+    "sourceFile": "mcs_longitudinal_cm_file.dta",
+    "originalVar": "fovwt2",
+    "recodeType": "neg_to_na",
+    "question": "MCS6 overall UK weight",
+    "originalCodes": "numeric",
+    "classCodes": "negative to NA",
+    "notes": "Use with age 14 analyses",
+    "frequencies": [],
+    "yesN": null,
+    "topicSlug": null,
+    "topicId": null,
+    "href": "/weights#fovwt2",
+    "stem": "fovwt2"
+  },
+  {
+    "name": "govwt2",
+    "domain": "design",
+    "domainLabel": "Design & weights",
+    "age": "17",
+    "sourceFile": "mcs_longitudinal_cm_file.dta",
+    "originalVar": "govwt2",
+    "recodeType": "neg_to_na",
+    "question": "MCS7 overall UK weight",
+    "originalCodes": "numeric",
+    "classCodes": "negative to NA",
+    "notes": "Use with age 17 analyses",
+    "frequencies": [],
+    "yesN": null,
+    "topicSlug": null,
+    "topicId": null,
+    "href": "/weights#govwt2",
+    "stem": "govwt2"
+  },
+  {
+    "name": "hovwt2",
+    "domain": "design",
+    "domainLabel": "Design & weights",
+    "age": "23",
+    "sourceFile": "mcs_longitudinal_cm_file.dta",
+    "originalVar": "hovwt2",
+    "recodeType": "neg_to_na",
+    "question": "MCS8 overall UK weight",
+    "originalCodes": "numeric",
+    "classCodes": "negative to NA",
+    "notes": "Use with age 23 analyses",
+    "frequencies": [],
+    "yesN": null,
+    "topicSlug": null,
+    "topicId": null,
+    "href": "/weights#hovwt2",
+    "stem": "hovwt2"
+  },
+  {
+    "name": "resp11",
+    "domain": "design",
+    "domainLabel": "Design & weights",
+    "age": "11",
+    "sourceFile": "constructed",
+    "originalVar": "MCS5 interview match",
+    "recodeType": "flag",
+    "question": "In MCS5 CM interview",
+    "originalCodes": "0/1",
+    "classCodes": "0/1",
+    "notes": "",
+    "frequencies": [
+      {
+        "value": "0",
+        "n": 6069,
+        "isMissing": false
+      },
+      {
+        "value": "1",
+        "n": 13436,
+        "isMissing": false
+      }
+    ],
+    "yesN": 13436,
+    "topicSlug": null,
+    "topicId": null,
+    "href": "/weights#resp11",
+    "stem": "resp11"
+  },
+  {
+    "name": "resp14",
+    "domain": "design",
+    "domainLabel": "Design & weights",
+    "age": "14",
+    "sourceFile": "constructed",
+    "originalVar": "MCS6 interview match",
+    "recodeType": "flag",
+    "question": "In MCS6 CM interview",
+    "originalCodes": "0/1",
+    "classCodes": "0/1",
+    "notes": "",
+    "frequencies": [
+      {
+        "value": "0",
+        "n": 7786,
+        "isMissing": false
+      },
+      {
+        "value": "1",
+        "n": 11719,
+        "isMissing": false
+      }
+    ],
+    "yesN": 11719,
+    "topicSlug": null,
+    "topicId": null,
+    "href": "/weights#resp14",
+    "stem": "resp14"
+  },
+  {
+    "name": "resp17",
+    "domain": "design",
+    "domainLabel": "Design & weights",
+    "age": "17",
+    "sourceFile": "constructed",
+    "originalVar": "MCS7 interview match",
+    "recodeType": "flag",
+    "question": "In MCS7 CM interview",
+    "originalCodes": "0/1",
+    "classCodes": "0/1",
+    "notes": "",
+    "frequencies": [
+      {
+        "value": "0",
+        "n": 9162,
+        "isMissing": false
+      },
+      {
+        "value": "1",
+        "n": 10343,
+        "isMissing": false
+      }
+    ],
+    "yesN": 10343,
+    "topicSlug": null,
+    "topicId": null,
+    "href": "/weights#resp17",
+    "stem": "resp17"
+  },
+  {
+    "name": "resp23",
+    "domain": "design",
+    "domainLabel": "Design & weights",
+    "age": "23",
+    "sourceFile": "constructed",
+    "originalVar": "MCS8 survey match",
+    "recodeType": "flag",
+    "question": "In MCS8 CM survey",
+    "originalCodes": "0/1",
+    "classCodes": "0/1",
+    "notes": "",
+    "frequencies": [
+      {
+        "value": "0",
+        "n": 9830,
+        "isMissing": false
+      },
+      {
+        "value": "1",
+        "n": 9675,
+        "isMissing": false
+      }
+    ],
+    "yesN": 9675,
+    "topicSlug": null,
+    "topicId": null,
+    "href": "/weights#resp23",
+    "stem": "resp23"
+  },
+  {
+    "name": "sex",
+    "domain": "demo",
+    "domainLabel": "Demographics",
+    "age": "birth",
+    "sourceFile": "mcs_core.dta",
+    "originalVar": "sex",
+    "recodeType": "keep_if_1_2",
+    "question": "Sex at birth",
+    "originalCodes": "1 Male; 2 Female; -9/-8/-1 missing",
+    "classCodes": "1 Male; 2 Female",
+    "notes": "Taken from first non-missing sweep",
+    "frequencies": [
+      {
+        "value": "1",
+        "n": 9994,
+        "isMissing": false
+      },
+      {
+        "value": "2",
+        "n": 9476,
+        "isMissing": false
+      },
+      {
+        "value": "Missing",
+        "n": 35,
+        "isMissing": true
+      }
+    ],
+    "yesN": null,
+    "topicSlug": "sex",
+    "topicId": "5.2",
+    "href": "/variables/sex#sex",
+    "stem": "sex"
+  },
+  {
+    "name": "race11",
+    "domain": "demo",
+    "domainLabel": "Demographics",
+    "age": "birth",
+    "sourceFile": "mcs_core.dta",
+    "originalVar": "dc11e",
+    "recodeType": "keep_if_1_11",
+    "question": "Ethnic group 11-category Census (first recorded)",
+    "originalCodes": "1-11 as Census 2001; -9/-8/-1 missing",
+    "classCodes": "1-11",
+    "notes": "Retained so race4 is auditable",
+    "frequencies": [
+      {
+        "value": "1",
+        "n": 15936,
+        "isMissing": false
+      },
+      {
+        "value": "2",
+        "n": 602,
+        "isMissing": false
+      },
+      {
+        "value": "3",
+        "n": 502,
+        "isMissing": false
+      },
+      {
+        "value": "4",
+        "n": 957,
+        "isMissing": false
+      },
+      {
+        "value": "5",
+        "n": 397,
+        "isMissing": false
+      },
+      {
+        "value": "6",
+        "n": 141,
+        "isMissing": false
+      },
+      {
+        "value": "7",
+        "n": 263,
+        "isMissing": false
+      },
+      {
+        "value": "8",
+        "n": 427,
+        "isMissing": false
+      },
+      {
+        "value": "9",
+        "n": 52,
+        "isMissing": false
+      },
+      {
+        "value": "10",
+        "n": 36,
+        "isMissing": false
+      },
+      {
+        "value": "11",
+        "n": 126,
+        "isMissing": false
+      },
+      {
+        "value": "Missing",
+        "n": 66,
+        "isMissing": true
+      }
+    ],
+    "yesN": null,
+    "topicSlug": "ethnic-group",
+    "topicId": "5.3",
+    "href": "/variables/ethnic-group#race11",
+    "stem": "race11"
+  },
+  {
+    "name": "race4",
+    "domain": "demo",
+    "domainLabel": "Demographics",
+    "age": "birth",
+    "sourceFile": "mcs_core.dta",
+    "originalVar": "dc11e",
+    "recodeType": "collapse",
+    "question": "Ethnic group four categories",
+    "originalCodes": "see race11",
+    "classCodes": "1 White; 2 Black; 3 Asian; 4 Other",
+    "notes": "Chinese with Asian; Mixed with Other",
+    "frequencies": [
+      {
+        "value": "1",
+        "n": 15936,
+        "isMissing": false
+      },
+      {
+        "value": "2",
+        "n": 742,
+        "isMissing": false
+      },
+      {
+        "value": "3",
+        "n": 2033,
+        "isMissing": false
+      },
+      {
+        "value": "4",
+        "n": 728,
+        "isMissing": false
+      },
+      {
+        "value": "Missing",
+        "n": 66,
+        "isMissing": true
+      }
+    ],
+    "yesN": null,
+    "topicSlug": "ethnic-group",
+    "topicId": "5.3",
+    "href": "/variables/ethnic-group#race4",
+    "stem": "race4"
+  },
+  {
+    "name": "conduct3_score",
+    "domain": "conduct",
+    "domainLabel": "Conduct (age 3)",
+    "age": "3",
+    "sourceFile": "mcs_core.dta",
+    "originalVar": "conduct",
+    "recodeType": "keep_ge0",
+    "question": "SDQ conduct problems score (parent)",
+    "originalCodes": "0-10; -1/NA missing",
+    "classCodes": "0-10",
+    "notes": "Official SDQ 2-4 year scoring",
+    "frequencies": [
+      {
+        "value": "0",
+        "n": 1855,
+        "isMissing": false
+      },
+      {
+        "value": "1",
+        "n": 2646,
+        "isMissing": false
+      },
+      {
+        "value": "2",
+        "n": 2766,
+        "isMissing": false
+      },
+      {
+        "value": "3",
+        "n": 2715,
+        "isMissing": false
+      },
+      {
+        "value": "4",
+        "n": 2007,
+        "isMissing": false
+      },
+      {
+        "value": "5",
+        "n": 1329,
+        "isMissing": false
+      },
+      {
+        "value": "6",
+        "n": 779,
+        "isMissing": false
+      },
+      {
+        "value": "7",
+        "n": 405,
+        "isMissing": false
+      },
+      {
+        "value": "8",
+        "n": 255,
+        "isMissing": false
+      },
+      {
+        "value": "9",
+        "n": 128,
+        "isMissing": false
+      },
+      {
+        "value": "10",
+        "n": 53,
+        "isMissing": false
+      },
+      {
+        "value": "Missing",
+        "n": 4567,
+        "isMissing": true
+      }
+    ],
+    "yesN": 2646,
+    "topicSlug": "conduct-problems-at-age-3-sdq",
+    "topicId": "5.4",
+    "href": "/variables/conduct-problems-at-age-3-sdq#conduct3_score",
+    "stem": "conduct:score"
+  },
+  {
+    "name": "conduct3",
+    "domain": "conduct",
+    "domainLabel": "Conduct (age 3)",
+    "age": "3",
+    "sourceFile": "mcs_core.dta",
+    "originalVar": "conduct",
+    "recodeType": "cut_ge4",
+    "question": "SDQ conduct high band",
+    "originalCodes": "0-10",
+    "classCodes": "1 if score>=4 else 0 if 0-3",
+    "notes": "2-4 year high band",
+    "frequencies": [
+      {
+        "value": "0",
+        "n": 9982,
+        "isMissing": false
+      },
+      {
+        "value": "1",
+        "n": 4956,
+        "isMissing": false
+      },
+      {
+        "value": "Missing",
+        "n": 4567,
+        "isMissing": true
+      }
+    ],
+    "yesN": 4956,
+    "topicSlug": "conduct-problems-at-age-3-sdq",
+    "topicId": "5.4",
+    "href": "/variables/conduct-problems-at-age-3-sdq#conduct3",
+    "stem": "conduct"
+  },
+  {
+    "name": "delinq11_rude_ever",
+    "domain": "delinquency",
+    "domainLabel": "Delinquency",
+    "age": "11",
+    "sourceFile": "mcs5_cm_interview.dta",
+    "originalVar": "ECQ25X00",
+    "recodeType": "yesno",
+    "question": "Ever noisy or rude in a public place",
+    "originalCodes": "1 Yes; 2 No; -8 No answer",
+    "classCodes": "1 Yes; 0 No",
+    "notes": "Lifetime",
+    "frequencies": [
+      {
+        "value": "0",
+        "n": 10676,
+        "isMissing": false
+      },
+      {
+        "value": "1",
+        "n": 2321,
+        "isMissing": false
+      },
+      {
+        "value": "Missing",
+        "n": 6508,
+        "isMissing": true
+      }
+    ],
+    "yesN": 2321,
+    "topicSlug": "delinquency-age-11-lifetime",
+    "topicId": "5.5",
+    "href": "/variables/delinquency-age-11-lifetime#delinq11_rude_ever",
+    "stem": "delinq:rude"
+  },
+  {
+    "name": "delinq11_shoplift_ever",
+    "domain": "delinquency",
+    "domainLabel": "Delinquency",
+    "age": "11",
+    "sourceFile": "mcs5_cm_interview.dta",
+    "originalVar": "ECQ26X00",
+    "recodeType": "yesno",
+    "question": "Ever taken something from a shop without paying",
+    "originalCodes": "1 Yes; 2 No; -8",
+    "classCodes": "1/0",
+    "notes": "Lifetime",
+    "frequencies": [
+      {
+        "value": "0",
+        "n": 12374,
+        "isMissing": false
+      },
+      {
+        "value": "1",
+        "n": 640,
+        "isMissing": false
+      },
+      {
+        "value": "Missing",
+        "n": 6491,
+        "isMissing": true
+      }
+    ],
+    "yesN": 640,
+    "topicSlug": "delinquency-age-11-lifetime",
+    "topicId": "5.5",
+    "href": "/variables/delinquency-age-11-lifetime#delinq11_shoplift_ever",
+    "stem": "delinq:shoplift"
+  },
+  {
+    "name": "delinq11_graffiti_ever",
+    "domain": "delinquency",
+    "domainLabel": "Delinquency",
+    "age": "11",
+    "sourceFile": "mcs5_cm_interview.dta",
+    "originalVar": "ECQ27X00",
+    "recodeType": "yesno",
+    "question": "Ever written things or sprayed paint on a building",
+    "originalCodes": "1 Yes; 2 No; -8",
+    "classCodes": "1/0",
+    "notes": "Lifetime",
+    "frequencies": [
+      {
+        "value": "0",
+        "n": 12659,
+        "isMissing": false
+      },
+      {
+        "value": "1",
+        "n": 372,
+        "isMissing": false
+      },
+      {
+        "value": "Missing",
+        "n": 6474,
+        "isMissing": true
+      }
+    ],
+    "yesN": 372,
+    "topicSlug": "delinquency-age-11-lifetime",
+    "topicId": "5.5",
+    "href": "/variables/delinquency-age-11-lifetime#delinq11_graffiti_ever",
+    "stem": "delinq:graffiti"
+  },
+  {
+    "name": "delinq11_damage_ever",
+    "domain": "delinquency",
+    "domainLabel": "Delinquency",
+    "age": "11",
+    "sourceFile": "mcs5_cm_interview.dta",
+    "originalVar": "ECQ28X00",
+    "recodeType": "yesno",
+    "question": "Ever on purpose damaged anything in a public place",
+    "originalCodes": "1 Yes; 2 No; -8",
+    "classCodes": "1/0",
+    "notes": "Lifetime",
+    "frequencies": [
+      {
+        "value": "0",
+        "n": 12635,
+        "isMissing": false
+      },
+      {
+        "value": "1",
+        "n": 320,
+        "isMissing": false
+      },
+      {
+        "value": "Missing",
+        "n": 6550,
+        "isMissing": true
+      }
+    ],
+    "yesN": 320,
+    "topicSlug": "delinquency-age-11-lifetime",
+    "topicId": "5.5",
+    "href": "/variables/delinquency-age-11-lifetime#delinq11_damage_ever",
+    "stem": "delinq:damage"
+  },
+  {
+    "name": "att11_fight",
+    "domain": "attitude",
+    "domainLabel": "Attitudes",
+    "age": "11",
+    "sourceFile": "mcs5_cm_interview.dta",
+    "originalVar": "ECQ49X00",
+    "recodeType": "keep_1_3",
+    "question": "How wrong to start a fight",
+    "originalCodes": "1 Very wrong; 2 A bit wrong; 3 Not wrong; 4 DK; -8",
+    "classCodes": "1-3",
+    "notes": "DK to missing",
+    "frequencies": [
+      {
+        "value": "1",
+        "n": 8318,
+        "isMissing": false
+      },
+      {
+        "value": "2",
+        "n": 3695,
+        "isMissing": false
+      },
+      {
+        "value": "3",
+        "n": 250,
+        "isMissing": false
+      },
+      {
+        "value": "Missing",
+        "n": 7242,
+        "isMissing": true
+      }
+    ],
+    "yesN": null,
+    "topicSlug": "delinquent-attitudes-age-11-and-age-14",
+    "topicId": "5.6",
+    "href": "/variables/delinquent-attitudes-age-11-and-age-14#att11_fight",
+    "stem": "att:fight"
+  },
+  {
+    "name": "att11_graffiti",
+    "domain": "attitude",
+    "domainLabel": "Attitudes",
+    "age": "11",
+    "sourceFile": "mcs5_cm_interview.dta",
+    "originalVar": "ECQ50X00",
+    "recodeType": "keep_1_3",
+    "question": "How wrong to graffiti",
+    "originalCodes": "1-4; -8",
+    "classCodes": "1-3",
+    "notes": "",
+    "frequencies": [
+      {
+        "value": "1",
+        "n": 11859,
+        "isMissing": false
+      },
+      {
+        "value": "2",
+        "n": 796,
+        "isMissing": false
+      },
+      {
+        "value": "3",
+        "n": 79,
+        "isMissing": false
+      },
+      {
+        "value": "Missing",
+        "n": 6771,
+        "isMissing": true
+      }
+    ],
+    "yesN": null,
+    "topicSlug": "delinquent-attitudes-age-11-and-age-14",
+    "topicId": "5.6",
+    "href": "/variables/delinquent-attitudes-age-11-and-age-14#att11_graffiti",
+    "stem": "att:graffiti"
+  },
+  {
+    "name": "att11_steal",
+    "domain": "attitude",
+    "domainLabel": "Attitudes",
+    "age": "11",
+    "sourceFile": "mcs5_cm_interview.dta",
+    "originalVar": "ECQ51X00",
+    "recodeType": "keep_1_3",
+    "question": "How wrong to take something",
+    "originalCodes": "1-4; -8",
+    "classCodes": "1-3",
+    "notes": "",
+    "frequencies": [
+      {
+        "value": "1",
+        "n": 12239,
+        "isMissing": false
+      },
+      {
+        "value": "2",
+        "n": 536,
+        "isMissing": false
+      },
+      {
+        "value": "3",
+        "n": 52,
+        "isMissing": false
+      },
+      {
+        "value": "Missing",
+        "n": 6678,
+        "isMissing": true
+      }
+    ],
+    "yesN": null,
+    "topicSlug": "delinquent-attitudes-age-11-and-age-14",
+    "topicId": "5.6",
+    "href": "/variables/delinquent-attitudes-age-11-and-age-14#att11_steal",
+    "stem": "att:steal"
+  },
+  {
+    "name": "att11_download",
+    "domain": "attitude",
+    "domainLabel": "Attitudes",
+    "age": "11",
+    "sourceFile": "mcs5_cm_interview.dta",
+    "originalVar": "ECQ52X00",
+    "recodeType": "keep_1_3",
+    "question": "How wrong to copy or download music",
+    "originalCodes": "1-4; -8",
+    "classCodes": "1-3",
+    "notes": "",
+    "frequencies": [
+      {
+        "value": "1",
+        "n": 9552,
+        "isMissing": false
+      },
+      {
+        "value": "2",
+        "n": 2461,
+        "isMissing": false
+      },
+      {
+        "value": "3",
+        "n": 358,
+        "isMissing": false
+      },
+      {
+        "value": "Missing",
+        "n": 7134,
+        "isMissing": true
+      }
+    ],
+    "yesN": null,
+    "topicSlug": "delinquent-attitudes-age-11-and-age-14",
+    "topicId": "5.6",
+    "href": "/variables/delinquent-attitudes-age-11-and-age-14#att11_download",
+    "stem": "att:download"
+  },
+  {
+    "name": "online11_messages",
+    "domain": "online",
+    "domainLabel": "Time online",
+    "age": "11",
+    "sourceFile": "mcs5_cm_interview.dta",
+    "originalVar": "ECQ08X00",
+    "recodeType": "keep_1_5",
+    "question": "How often exchange messages with friends on the internet",
+    "originalCodes": "1 Most days ... 5 Never; -8",
+    "classCodes": "1-5",
+    "notes": "",
+    "frequencies": [
+      {
+        "value": "1",
+        "n": 2924,
+        "isMissing": false
+      },
+      {
+        "value": "2",
+        "n": 2231,
+        "isMissing": false
+      },
+      {
+        "value": "3",
+        "n": 1358,
+        "isMissing": false
+      },
+      {
+        "value": "4",
+        "n": 1346,
+        "isMissing": false
+      },
+      {
+        "value": "5",
+        "n": 5158,
+        "isMissing": false
+      },
+      {
+        "value": "Missing",
+        "n": 6488,
+        "isMissing": true
+      }
+    ],
+    "yesN": null,
+    "topicSlug": "time-online-age-11",
+    "topicId": "5.7",
+    "href": "/variables/time-online-age-11#online11_messages",
+    "stem": "online:messages"
+  },
+  {
+    "name": "online11_sns",
+    "domain": "online",
+    "domainLabel": "Time online",
+    "age": "11",
+    "sourceFile": "mcs5_cm_interview.dta",
+    "originalVar": "ECQ09X00",
+    "recodeType": "keep_1_5",
+    "question": "How often visit a social networking website",
+    "originalCodes": "1-5; -8",
+    "classCodes": "1-5",
+    "notes": "",
+    "frequencies": [
+      {
+        "value": "1",
+        "n": 2628,
+        "isMissing": false
+      },
+      {
+        "value": "2",
+        "n": 1728,
+        "isMissing": false
+      },
+      {
+        "value": "3",
+        "n": 762,
+        "isMissing": false
+      },
+      {
+        "value": "4",
+        "n": 686,
+        "isMissing": false
+      },
+      {
+        "value": "5",
+        "n": 7221,
+        "isMissing": false
+      },
+      {
+        "value": "Missing",
+        "n": 6480,
+        "isMissing": true
+      }
+    ],
+    "yesN": null,
+    "topicSlug": "time-online-age-11",
+    "topicId": "5.7",
+    "href": "/variables/time-online-age-11#online11_sns",
+    "stem": "online:sns"
+  },
+  {
+    "name": "pocket11",
+    "domain": "job",
+    "domainLabel": "Work & money",
+    "age": "11",
+    "sourceFile": "mcs5_cm_interview.dta",
+    "originalVar": "ECQ20X00",
+    "recodeType": "yesno",
+    "question": "Gets pocket money regularly",
+    "originalCodes": "1 Yes; 2 No; -8",
+    "classCodes": "1/0",
+    "notes": "Closest available to a child job",
+    "frequencies": [
+      {
+        "value": "0",
+        "n": 5449,
+        "isMissing": false
+      },
+      {
+        "value": "1",
+        "n": 7522,
+        "isMissing": false
+      },
+      {
+        "value": "Missing",
+        "n": 6534,
+        "isMissing": true
+      }
+    ],
+    "yesN": 7522,
+    "topicSlug": "pocket-money-and-chores-age-11",
+    "topicId": "5.8",
+    "href": "/variables/pocket-money-and-chores-age-11#pocket11",
+    "stem": "pocket11"
+  },
+  {
+    "name": "chores11",
+    "domain": "job",
+    "domainLabel": "Work & money",
+    "age": "11",
+    "sourceFile": "mcs5_parent_cm_interview.dta",
+    "originalVar": "EPACHM00",
+    "recodeType": "keep_1_6",
+    "question": "How often involved in household chores",
+    "originalCodes": "1 every day ... 6 not at all",
+    "classCodes": "1-6",
+    "notes": "Main parent preferred",
+    "frequencies": [
+      {
+        "value": "1",
+        "n": 4347,
+        "isMissing": false
+      },
+      {
+        "value": "2",
+        "n": 2718,
+        "isMissing": false
+      },
+      {
+        "value": "3",
+        "n": 3366,
+        "isMissing": false
+      },
+      {
+        "value": "4",
+        "n": 1146,
+        "isMissing": false
+      },
+      {
+        "value": "5",
+        "n": 782,
+        "isMissing": false
+      },
+      {
+        "value": "6",
+        "n": 971,
+        "isMissing": false
+      },
+      {
+        "value": "Missing",
+        "n": 6175,
+        "isMissing": true
+      }
+    ],
+    "yesN": null,
+    "topicSlug": "pocket-money-and-chores-age-11",
+    "topicId": "5.8",
+    "href": "/variables/pocket-money-and-chores-age-11#chores11",
+    "stem": "chores11"
+  },
+  {
+    "name": "job14",
+    "domain": "job",
+    "domainLabel": "Work & money",
+    "age": "14",
+    "sourceFile": "mcs6_cm_interview.dta",
+    "originalVar": "fcwmon0d",
+    "recodeType": "yesno_01",
+    "question": "Money from a paid job",
+    "originalCodes": "0 No; 1 Yes; -1 NA",
+    "classCodes": "1/0",
+    "notes": "No hours asked at 14",
+    "frequencies": [
+      {
+        "value": "0",
+        "n": 10388,
+        "isMissing": false
+      },
+      {
+        "value": "1",
+        "n": 992,
+        "isMissing": false
+      },
+      {
+        "value": "Missing",
+        "n": 8125,
+        "isMissing": true
+      }
+    ],
+    "yesN": 992,
+    "topicSlug": "job-age-14",
+    "topicId": "5.9",
+    "href": "/variables/job-age-14#job14",
+    "stem": "job"
+  },
+  {
+    "name": "job14_familybiz",
+    "domain": "job",
+    "domainLabel": "Work & money",
+    "age": "14",
+    "sourceFile": "mcs6_cm_interview.dta",
+    "originalVar": "fcwmon0c",
+    "recodeType": "yesno_01",
+    "question": "Money from the family business",
+    "originalCodes": "0/1; -1",
+    "classCodes": "1/0",
+    "notes": "",
+    "frequencies": [
+      {
+        "value": "0",
+        "n": 10895,
+        "isMissing": false
+      },
+      {
+        "value": "1",
+        "n": 485,
+        "isMissing": false
+      },
+      {
+        "value": "Missing",
+        "n": 8125,
+        "isMissing": true
+      }
+    ],
+    "yesN": 485,
+    "topicSlug": "job-age-14",
+    "topicId": "5.9",
+    "href": "/variables/job-age-14#job14_familybiz",
+    "stem": "job:familybiz"
+  },
+  {
+    "name": "job14_chores",
+    "domain": "job",
+    "domainLabel": "Work & money",
+    "age": "14",
+    "sourceFile": "mcs6_cm_interview.dta",
+    "originalVar": "fcwmon0b",
+    "recodeType": "yesno_01",
+    "question": "Money from chores or babysitting",
+    "originalCodes": "0/1; -1",
+    "classCodes": "1/0",
+    "notes": "",
+    "frequencies": [
+      {
+        "value": "0",
+        "n": 8006,
+        "isMissing": false
+      },
+      {
+        "value": "1",
+        "n": 3374,
+        "isMissing": false
+      },
+      {
+        "value": "Missing",
+        "n": 8125,
+        "isMissing": true
+      }
+    ],
+    "yesN": 3374,
+    "topicSlug": "job-age-14",
+    "topicId": "5.9",
+    "href": "/variables/job-age-14#job14_chores",
+    "stem": "job:chores"
+  },
+  {
+    "name": "online14_internet",
+    "domain": "online",
+    "domainLabel": "Time online",
+    "age": "14",
+    "sourceFile": "mcs6_cm_interview.dta",
+    "originalVar": "fcinth00",
+    "recodeType": "keep_1_8",
+    "question": "Weekday hours using the internet (not at school)",
+    "originalCodes": "1 None ... 8 7+ hours; -9/-8/-1",
+    "classCodes": "1-8",
+    "notes": "Stata label is incorrect; questionnaire is INTH",
+    "frequencies": [
+      {
+        "value": "1",
+        "n": 88,
+        "isMissing": false
+      },
+      {
+        "value": "2",
+        "n": 347,
+        "isMissing": false
+      },
+      {
+        "value": "3",
+        "n": 842,
+        "isMissing": false
+      },
+      {
+        "value": "4",
+        "n": 1665,
+        "isMissing": false
+      },
+      {
+        "value": "5",
+        "n": 2077,
+        "isMissing": false
+      },
+      {
+        "value": "6",
+        "n": 2457,
+        "isMissing": false
+      },
+      {
+        "value": "7",
+        "n": 1775,
+        "isMissing": false
+      },
+      {
+        "value": "8",
+        "n": 2121,
+        "isMissing": false
+      },
+      {
+        "value": "Missing",
+        "n": 8133,
+        "isMissing": true
+      }
+    ],
+    "yesN": null,
+    "topicSlug": "time-online-age-14",
+    "topicId": "5.10",
+    "href": "/variables/time-online-age-14#online14_internet",
+    "stem": "online:internet"
+  },
+  {
+    "name": "online14_sns",
+    "domain": "online",
+    "domainLabel": "Time online",
+    "age": "14",
+    "sourceFile": "mcs6_cm_interview.dta",
+    "originalVar": "fcsome00",
+    "recodeType": "keep_1_8",
+    "question": "Weekday hours on social networking or messaging",
+    "originalCodes": "1-8; negatives",
+    "classCodes": "1-8",
+    "notes": "SOME",
+    "frequencies": [
+      {
+        "value": "1",
+        "n": 906,
+        "isMissing": false
+      },
+      {
+        "value": "2",
+        "n": 1406,
+        "isMissing": false
+      },
+      {
+        "value": "3",
+        "n": 1621,
+        "isMissing": false
+      },
+      {
+        "value": "4",
+        "n": 1923,
+        "isMissing": false
+      },
+      {
+        "value": "5",
+        "n": 1747,
+        "isMissing": false
+      },
+      {
+        "value": "6",
+        "n": 1589,
+        "isMissing": false
+      },
+      {
+        "value": "7",
+        "n": 1089,
+        "isMissing": false
+      },
+      {
+        "value": "8",
+        "n": 1087,
+        "isMissing": false
+      },
+      {
+        "value": "Missing",
+        "n": 8137,
+        "isMissing": true
+      }
+    ],
+    "yesN": null,
+    "topicSlug": "time-online-age-14",
+    "topicId": "5.10",
+    "href": "/variables/time-online-age-14#online14_sns",
+    "stem": "online:sns"
+  },
+  {
+    "name": "date14_partner",
+    "domain": "dating",
+    "domainLabel": "Dating & partnership",
+    "age": "14",
+    "sourceFile": "mcs6_cm_interview.dta",
+    "originalVar": "fcbgfr00",
+    "recodeType": "yesno",
+    "question": "Has a boyfriend or girlfriend",
+    "originalCodes": "1 Yes; 2 No; -9/-8/-1",
+    "classCodes": "1/0",
+    "notes": "",
+    "frequencies": [
+      {
+        "value": "0",
+        "n": 9288,
+        "isMissing": false
+      },
+      {
+        "value": "1",
+        "n": 1886,
+        "isMissing": false
+      },
+      {
+        "value": "Missing",
+        "n": 8331,
+        "isMissing": true
+      }
+    ],
+    "yesN": 1886,
+    "topicSlug": "dating-age-14",
+    "topicId": "5.11",
+    "href": "/variables/dating-age-14#date14_partner",
+    "stem": "date:partner"
+  },
+  {
+    "name": "date14_hands",
+    "domain": "dating",
+    "domainLabel": "Dating & partnership",
+    "age": "14",
+    "sourceFile": "mcs6_cm_interview.dta",
+    "originalVar": "fchhnd00",
+    "recodeType": "yesno",
+    "question": "Held hands (last 12 months)",
+    "originalCodes": "1/2; negatives",
+    "classCodes": "1/0",
+    "notes": "",
+    "frequencies": [
+      {
+        "value": "0",
+        "n": 4740,
+        "isMissing": false
+      },
+      {
+        "value": "1",
+        "n": 6383,
+        "isMissing": false
+      },
+      {
+        "value": "Missing",
+        "n": 8382,
+        "isMissing": true
+      }
+    ],
+    "yesN": 6383,
+    "topicSlug": "dating-age-14",
+    "topicId": "5.11",
+    "href": "/variables/dating-age-14#date14_hands",
+    "stem": "date:hands"
+  },
+  {
+    "name": "date14_kiss",
+    "domain": "dating",
+    "domainLabel": "Dating & partnership",
+    "age": "14",
+    "sourceFile": "mcs6_cm_interview.dta",
+    "originalVar": "fckiss00",
+    "recodeType": "yesno",
+    "question": "Kissed another young person (last 12 months)",
+    "originalCodes": "1/2; negatives",
+    "classCodes": "1/0",
+    "notes": "",
+    "frequencies": [
+      {
+        "value": "0",
+        "n": 7009,
+        "isMissing": false
+      },
+      {
+        "value": "1",
+        "n": 4120,
+        "isMissing": false
+      },
+      {
+        "value": "Missing",
+        "n": 8376,
+        "isMissing": true
+      }
+    ],
+    "yesN": 4120,
+    "topicSlug": "dating-age-14",
+    "topicId": "5.11",
+    "href": "/variables/dating-age-14#date14_kiss",
+    "stem": "date:kiss"
+  },
+  {
+    "name": "date14_cuddle",
+    "domain": "dating",
+    "domainLabel": "Dating & partnership",
+    "age": "14",
+    "sourceFile": "mcs6_cm_interview.dta",
+    "originalVar": "fccddl00",
+    "recodeType": "yesno",
+    "question": "Cuddled (last 12 months)",
+    "originalCodes": "1/2; negatives",
+    "classCodes": "1/0",
+    "notes": "",
+    "frequencies": [
+      {
+        "value": "0",
+        "n": 5290,
+        "isMissing": false
+      },
+      {
+        "value": "1",
+        "n": 5831,
+        "isMissing": false
+      },
+      {
+        "value": "Missing",
+        "n": 8384,
+        "isMissing": true
+      }
+    ],
+    "yesN": 5831,
+    "topicSlug": "dating-age-14",
+    "topicId": "5.11",
+    "href": "/variables/dating-age-14#date14_cuddle",
+    "stem": "date:cuddle"
+  },
+  {
+    "name": "delinq14_rude",
+    "domain": "delinquency",
+    "domainLabel": "Delinquency",
+    "age": "14",
+    "sourceFile": "mcs6_cm_interview.dta",
+    "originalVar": "fcrude00",
+    "recodeType": "yesno",
+    "question": "Rude or noisy in public (last 12 months)",
+    "originalCodes": "1/2; negatives",
+    "classCodes": "1/0",
+    "notes": "",
+    "frequencies": [
+      {
+        "value": "0",
+        "n": 9720,
+        "isMissing": false
+      },
+      {
+        "value": "1",
+        "n": 1466,
+        "isMissing": false
+      },
+      {
+        "value": "Missing",
+        "n": 8319,
+        "isMissing": true
+      }
+    ],
+    "yesN": 1466,
+    "topicSlug": "delinquency-age-14",
+    "topicId": "5.12",
+    "href": "/variables/delinquency-age-14#delinq14_rude",
+    "stem": "delinq:rude"
+  },
+  {
+    "name": "delinq14_shoplift",
+    "domain": "delinquency",
+    "domainLabel": "Delinquency",
+    "age": "14",
+    "sourceFile": "mcs6_cm_interview.dta",
+    "originalVar": "fcstol00",
+    "recodeType": "yesno",
+    "question": "Shoplifted (last 12 months)",
+    "originalCodes": "1/2; negatives",
+    "classCodes": "1/0",
+    "notes": "",
+    "frequencies": [
+      {
+        "value": "0",
+        "n": 10816,
+        "isMissing": false
+      },
+      {
+        "value": "1",
+        "n": 371,
+        "isMissing": false
+      },
+      {
+        "value": "Missing",
+        "n": 8318,
+        "isMissing": true
+      }
+    ],
+    "yesN": 371,
+    "topicSlug": "delinquency-age-14",
+    "topicId": "5.12",
+    "href": "/variables/delinquency-age-14#delinq14_shoplift",
+    "stem": "delinq:shoplift"
+  },
+  {
+    "name": "delinq14_graffiti",
+    "domain": "delinquency",
+    "domainLabel": "Delinquency",
+    "age": "14",
+    "sourceFile": "mcs6_cm_interview.dta",
+    "originalVar": "fcspry00",
+    "recodeType": "yesno",
+    "question": "Graffiti (last 12 months)",
+    "originalCodes": "1/2; negatives",
+    "classCodes": "1/0",
+    "notes": "",
+    "frequencies": [
+      {
+        "value": "0",
+        "n": 10889,
+        "isMissing": false
+      },
+      {
+        "value": "1",
+        "n": 304,
+        "isMissing": false
+      },
+      {
+        "value": "Missing",
+        "n": 8312,
+        "isMissing": true
+      }
+    ],
+    "yesN": 304,
+    "topicSlug": "delinquency-age-14",
+    "topicId": "5.12",
+    "href": "/variables/delinquency-age-14#delinq14_graffiti",
+    "stem": "delinq:graffiti"
+  },
+  {
+    "name": "delinq14_damage",
+    "domain": "delinquency",
+    "domainLabel": "Delinquency",
+    "age": "14",
+    "sourceFile": "mcs6_cm_interview.dta",
+    "originalVar": "fcdamg00",
+    "recodeType": "yesno",
+    "question": "Damaged property (last 12 months)",
+    "originalCodes": "1/2; negatives",
+    "classCodes": "1/0",
+    "notes": "",
+    "frequencies": [
+      {
+        "value": "0",
+        "n": 10842,
+        "isMissing": false
+      },
+      {
+        "value": "1",
+        "n": 346,
+        "isMissing": false
+      },
+      {
+        "value": "Missing",
+        "n": 8317,
+        "isMissing": true
+      }
+    ],
+    "yesN": 346,
+    "topicSlug": "delinquency-age-14",
+    "topicId": "5.12",
+    "href": "/variables/delinquency-age-14#delinq14_damage",
+    "stem": "delinq:damage"
+  },
+  {
+    "name": "delinq14_hack",
+    "domain": "delinquency",
+    "domainLabel": "Delinquency",
+    "age": "14",
+    "sourceFile": "mcs6_cm_interview.dta",
+    "originalVar": "fchack00",
+    "recodeType": "yesno",
+    "question": "Hacked a computer or account (last 12 months)",
+    "originalCodes": "1/2; negatives",
+    "classCodes": "1/0",
+    "notes": "",
+    "frequencies": [
+      {
+        "value": "0",
+        "n": 10671,
+        "isMissing": false
+      },
+      {
+        "value": "1",
+        "n": 524,
+        "isMissing": false
+      },
+      {
+        "value": "Missing",
+        "n": 8310,
+        "isMissing": true
+      }
+    ],
+    "yesN": 524,
+    "topicSlug": "delinquency-age-14",
+    "topicId": "5.12",
+    "href": "/variables/delinquency-age-14#delinq14_hack",
+    "stem": "delinq:hack"
+  },
+  {
+    "name": "delinq14_virus",
+    "domain": "delinquency",
+    "domainLabel": "Delinquency",
+    "age": "14",
+    "sourceFile": "mcs6_cm_interview.dta",
+    "originalVar": "fcvirs00",
+    "recodeType": "yesno",
+    "question": "Sent viruses (last 12 months)",
+    "originalCodes": "1/2; negatives",
+    "classCodes": "1/0",
+    "notes": "",
+    "frequencies": [
+      {
+        "value": "0",
+        "n": 11090,
+        "isMissing": false
+      },
+      {
+        "value": "1",
+        "n": 92,
+        "isMissing": false
+      },
+      {
+        "value": "Missing",
+        "n": 8323,
+        "isMissing": true
+      }
+    ],
+    "yesN": 92,
+    "topicSlug": "delinquency-age-14",
+    "topicId": "5.12",
+    "href": "/variables/delinquency-age-14#delinq14_virus",
+    "stem": "delinq:virus"
+  },
+  {
+    "name": "delinq14_hit",
+    "domain": "delinquency",
+    "domainLabel": "Delinquency",
+    "age": "14",
+    "sourceFile": "mcs6_cm_interview.dta",
+    "originalVar": "fchitt00",
+    "recodeType": "yesno",
+    "question": "Pushed/hit someone",
+    "originalCodes": "1/2; negatives",
+    "classCodes": "1/0",
+    "notes": "",
+    "frequencies": [
+      {
+        "value": "0",
+        "n": 7783,
+        "isMissing": false
+      },
+      {
+        "value": "1",
+        "n": 3404,
+        "isMissing": false
+      },
+      {
+        "value": "Missing",
+        "n": 8318,
+        "isMissing": true
+      }
+    ],
+    "yesN": 3404,
+    "topicSlug": "delinquency-age-14",
+    "topicId": "5.12",
+    "href": "/variables/delinquency-age-14#delinq14_hit",
+    "stem": "delinq:hit"
+  },
+  {
+    "name": "delinq14_weapon_use",
+    "domain": "delinquency",
+    "domainLabel": "Delinquency",
+    "age": "14",
+    "sourceFile": "mcs6_cm_interview.dta",
+    "originalVar": "fcwepn00",
+    "recodeType": "yesno",
+    "question": "Used or hit someone with a weapon",
+    "originalCodes": "1/2; negatives",
+    "classCodes": "1/0",
+    "notes": "",
+    "frequencies": [
+      {
+        "value": "0",
+        "n": 11084,
+        "isMissing": false
+      },
+      {
+        "value": "1",
+        "n": 105,
+        "isMissing": false
+      },
+      {
+        "value": "Missing",
+        "n": 8316,
+        "isMissing": true
+      }
+    ],
+    "yesN": 105,
+    "topicSlug": "delinquency-age-14",
+    "topicId": "5.12",
+    "href": "/variables/delinquency-age-14#delinq14_weapon_use",
+    "stem": "delinq:weapon_use"
+  },
+  {
+    "name": "delinq14_steal_person",
+    "domain": "delinquency",
+    "domainLabel": "Delinquency",
+    "age": "14",
+    "sourceFile": "mcs6_cm_interview.dta",
+    "originalVar": "fcstln00",
+    "recodeType": "yesno",
+    "question": "Stolen from a person",
+    "originalCodes": "1/2; negatives",
+    "classCodes": "1/0",
+    "notes": "",
+    "frequencies": [
+      {
+        "value": "0",
+        "n": 11063,
+        "isMissing": false
+      },
+      {
+        "value": "1",
+        "n": 125,
+        "isMissing": false
+      },
+      {
+        "value": "Missing",
+        "n": 8317,
+        "isMissing": true
+      }
+    ],
+    "yesN": 125,
+    "topicSlug": "delinquency-age-14",
+    "topicId": "5.12",
+    "href": "/variables/delinquency-age-14#delinq14_steal_person",
+    "stem": "delinq:steal_person"
+  },
+  {
+    "name": "delinq14_burglary_ever",
+    "domain": "delinquency",
+    "domainLabel": "Delinquency",
+    "age": "14",
+    "sourceFile": "mcs6_cm_interview.dta",
+    "originalVar": "fcrobh00",
+    "recodeType": "yesno",
+    "question": "Ever entered a home to steal or damage",
+    "originalCodes": "1/2; negatives",
+    "classCodes": "1/0",
+    "notes": "Lifetime",
+    "frequencies": [
+      {
+        "value": "0",
+        "n": 11172,
+        "isMissing": false
+      },
+      {
+        "value": "1",
+        "n": 22,
+        "isMissing": false
+      },
+      {
+        "value": "Missing",
+        "n": 8311,
+        "isMissing": true
+      }
+    ],
+    "yesN": 22,
+    "topicSlug": "delinquency-age-14",
+    "topicId": "5.12",
+    "href": "/variables/delinquency-age-14#delinq14_burglary_ever",
+    "stem": "delinq:burglary"
+  },
+  {
+    "name": "delinq14_knife_ever",
+    "domain": "delinquency",
+    "domainLabel": "Delinquency",
+    "age": "14",
+    "sourceFile": "mcs6_cm_interview.dta",
+    "originalVar": "fcknif00",
+    "recodeType": "yesno",
+    "question": "Ever carried a knife or other weapon",
+    "originalCodes": "1/2; negatives",
+    "classCodes": "1/0",
+    "notes": "Lifetime",
+    "frequencies": [
+      {
+        "value": "0",
+        "n": 10928,
+        "isMissing": false
+      },
+      {
+        "value": "1",
+        "n": 260,
+        "isMissing": false
+      },
+      {
+        "value": "Missing",
+        "n": 8317,
+        "isMissing": true
+      }
+    ],
+    "yesN": 260,
+    "topicSlug": "delinquency-age-14",
+    "topicId": "5.12",
+    "href": "/variables/delinquency-age-14#delinq14_knife_ever",
+    "stem": "delinq:knife"
+  },
+  {
+    "name": "vic14_insult",
+    "domain": "victim",
+    "domainLabel": "Victimization",
+    "age": "14",
+    "sourceFile": "mcs6_cm_interview.dta",
+    "originalVar": "fcvicg00",
+    "recodeType": "yesno",
+    "question": "Insulted threatened or shouted at (last 12 months)",
+    "originalCodes": "1/2; negatives",
+    "classCodes": "1/0",
+    "notes": "",
+    "frequencies": [
+      {
+        "value": "0",
+        "n": 6373,
+        "isMissing": false
+      },
+      {
+        "value": "1",
+        "n": 4810,
+        "isMissing": false
+      },
+      {
+        "value": "Missing",
+        "n": 8322,
+        "isMissing": true
+      }
+    ],
+    "yesN": 4810,
+    "topicSlug": "victimization-age-14",
+    "topicId": "5.13",
+    "href": "/variables/victimization-age-14#vic14_insult",
+    "stem": "vic:insult"
+  },
+  {
+    "name": "vic14_violence",
+    "domain": "victim",
+    "domainLabel": "Victimization",
+    "age": "14",
+    "sourceFile": "mcs6_cm_interview.dta",
+    "originalVar": "fcvica00",
+    "recodeType": "yesno",
+    "question": "Physically violent towards CM (last 12 months)",
+    "originalCodes": "1/2; negatives",
+    "classCodes": "1/0",
+    "notes": "",
+    "frequencies": [
+      {
+        "value": "0",
+        "n": 8736,
+        "isMissing": false
+      },
+      {
+        "value": "1",
+        "n": 2442,
+        "isMissing": false
+      },
+      {
+        "value": "Missing",
+        "n": 8327,
+        "isMissing": true
+      }
+    ],
+    "yesN": 2442,
+    "topicSlug": "victimization-age-14",
+    "topicId": "5.13",
+    "href": "/variables/victimization-age-14#vic14_violence",
+    "stem": "vic:violence"
+  },
+  {
+    "name": "vic14_weapon",
+    "domain": "victim",
+    "domainLabel": "Victimization",
+    "age": "14",
+    "sourceFile": "mcs6_cm_interview.dta",
+    "originalVar": "fcvicc00",
+    "recodeType": "yesno",
+    "question": "Hit or used a weapon against CM (last 12 months)",
+    "originalCodes": "1/2; negatives",
+    "classCodes": "1/0",
+    "notes": "",
+    "frequencies": [
+      {
+        "value": "0",
+        "n": 10833,
+        "isMissing": false
+      },
+      {
+        "value": "1",
+        "n": 342,
+        "isMissing": false
+      },
+      {
+        "value": "Missing",
+        "n": 8330,
+        "isMissing": true
+      }
+    ],
+    "yesN": 342,
+    "topicSlug": "victimization-age-14",
+    "topicId": "5.13",
+    "href": "/variables/victimization-age-14#vic14_weapon",
+    "stem": "vic:weapon"
+  },
+  {
+    "name": "vic14_stolen",
+    "domain": "victim",
+    "domainLabel": "Victimization",
+    "age": "14",
+    "sourceFile": "mcs6_cm_interview.dta",
+    "originalVar": "fcvice00",
+    "recodeType": "yesno",
+    "question": "Something stolen from CM (last 12 months)",
+    "originalCodes": "1/2; negatives",
+    "classCodes": "1/0",
+    "notes": "",
+    "frequencies": [
+      {
+        "value": "0",
+        "n": 10374,
+        "isMissing": false
+      },
+      {
+        "value": "1",
+        "n": 803,
+        "isMissing": false
+      },
+      {
+        "value": "Missing",
+        "n": 8328,
+        "isMissing": true
+      }
+    ],
+    "yesN": 803,
+    "topicSlug": "victimization-age-14",
+    "topicId": "5.13",
+    "href": "/variables/victimization-age-14#vic14_stolen",
+    "stem": "vic:stolen"
+  },
+  {
+    "name": "vic14_sexual",
+    "domain": "victim",
+    "domainLabel": "Victimization",
+    "age": "14",
+    "sourceFile": "mcs6_cm_interview.dta",
+    "originalVar": "fcvicf0a",
+    "recodeType": "yesno",
+    "question": "Sexually assaulted (last 12 months)",
+    "originalCodes": "1/2; negatives",
+    "classCodes": "1/0",
+    "notes": "",
+    "frequencies": [
+      {
+        "value": "0",
+        "n": 10864,
+        "isMissing": false
+      },
+      {
+        "value": "1",
+        "n": 312,
+        "isMissing": false
+      },
+      {
+        "value": "Missing",
+        "n": 8329,
+        "isMissing": true
+      }
+    ],
+    "yesN": 312,
+    "topicSlug": "victimization-age-14",
+    "topicId": "5.13",
+    "href": "/variables/victimization-age-14#vic14_sexual",
+    "stem": "vic:sexual"
+  },
+  {
+    "name": "gang14",
+    "domain": "gang",
+    "domainLabel": "Gang membership",
+    "age": "14",
+    "sourceFile": "mcs6_cm_interview.dta",
+    "originalVar": "fcgang00",
+    "recodeType": "current_member",
+    "question": "Current street gang member",
+    "originalCodes": "1 Yes; 2 No; 3 used to be; negatives",
+    "classCodes": "1/0",
+    "notes": "Code 3 recoded to No",
+    "frequencies": [
+      {
+        "value": "0",
+        "n": 10989,
+        "isMissing": false
+      },
+      {
+        "value": "1",
+        "n": 196,
+        "isMissing": false
+      },
+      {
+        "value": "Missing",
+        "n": 8320,
+        "isMissing": true
+      }
+    ],
+    "yesN": 196,
+    "topicSlug": "gang-member-age-14",
+    "topicId": "5.14",
+    "href": "/variables/gang-member-age-14#gang14",
+    "stem": "gang"
+  },
+  {
+    "name": "job17",
+    "domain": "job",
+    "domainLabel": "Work & money",
+    "age": "17",
+    "sourceFile": "mcs7_cm_interview.dta",
+    "originalVar": "gcjobs00",
+    "recodeType": "yesno",
+    "question": "Currently doing any kind of paid job",
+    "originalCodes": "1 Yes; 2 No; 3-5 DK/refuse/NA",
+    "classCodes": "1/0",
+    "notes": "",
+    "frequencies": [
+      {
+        "value": "0",
+        "n": 5754,
+        "isMissing": false
+      },
+      {
+        "value": "1",
+        "n": 3721,
+        "isMissing": false
+      },
+      {
+        "value": "Missing",
+        "n": 10030,
+        "isMissing": true
+      }
+    ],
+    "yesN": 3721,
+    "topicSlug": "job-age-17",
+    "topicId": "5.15",
+    "href": "/variables/job-age-17#job17",
+    "stem": "job"
+  },
+  {
+    "name": "job17_hours",
+    "domain": "job",
+    "domainLabel": "Work & money",
+    "age": "17",
+    "sourceFile": "mcs7_cm_interview.dta",
+    "originalVar": "gchurs00",
+    "recodeType": "keep_ge0",
+    "question": "Usual weekly hours including overtime",
+    "originalCodes": "continuous; -1 N/A; -8/-9",
+    "classCodes": "hours",
+    "notes": "Missing if not in a job",
+    "frequencies": [],
+    "yesN": null,
+    "topicSlug": "job-age-17",
+    "topicId": "5.15",
+    "href": "/variables/job-age-17#job17_hours",
+    "stem": "job:hours"
+  },
+  {
+    "name": "job17_paid",
+    "domain": "job",
+    "domainLabel": "Work & money",
+    "age": "17",
+    "sourceFile": "mcs7_cm_interview.dta",
+    "originalVar": "gcifpd00",
+    "recodeType": "yesno",
+    "question": "Regular payment for current job",
+    "originalCodes": "1/2; 3-5",
+    "classCodes": "1/0",
+    "notes": "Asked of workers",
+    "frequencies": [
+      {
+        "value": "0",
+        "n": 45,
+        "isMissing": false
+      },
+      {
+        "value": "1",
+        "n": 445,
+        "isMissing": false
+      },
+      {
+        "value": "Missing",
+        "n": 19015,
+        "isMissing": true
+      }
+    ],
+    "yesN": 445,
+    "topicSlug": "job-age-17",
+    "topicId": "5.15",
+    "href": "/variables/job-age-17#job17_paid",
+    "stem": "job:paid"
+  },
+  {
+    "name": "job17_any_paid_income",
+    "domain": "job",
+    "domainLabel": "Work & money",
+    "age": "17",
+    "sourceFile": "mcs7_cm_interview.dta",
+    "originalVar": "gcocin00",
+    "recodeType": "yesno",
+    "question": "Any income from paid work including casual",
+    "originalCodes": "1/2; 3-5",
+    "classCodes": "1/0",
+    "notes": "",
+    "frequencies": [
+      {
+        "value": "0",
+        "n": 8592,
+        "isMissing": false
+      },
+      {
+        "value": "1",
+        "n": 1381,
+        "isMissing": false
+      },
+      {
+        "value": "Missing",
+        "n": 9532,
+        "isMissing": true
+      }
+    ],
+    "yesN": 1381,
+    "topicSlug": "job-age-17",
+    "topicId": "5.15",
+    "href": "/variables/job-age-17#job17_any_paid_income",
+    "stem": "job:any_paid_income"
+  },
+  {
+    "name": "online17_sns",
+    "domain": "online",
+    "domainLabel": "Time online",
+    "age": "17",
+    "sourceFile": "mcs7_cm_interview.dta",
+    "originalVar": "gcsome00",
+    "recodeType": "keep_1_9",
+    "question": "Weekday hours on social networking or messaging",
+    "originalCodes": "1 None ... 9 10+ hours; 10-12 DK/refuse/NA",
+    "classCodes": "1-9",
+    "notes": "",
+    "frequencies": [
+      {
+        "value": "1",
+        "n": 105,
+        "isMissing": false
+      },
+      {
+        "value": "2",
+        "n": 344,
+        "isMissing": false
+      },
+      {
+        "value": "3",
+        "n": 492,
+        "isMissing": false
+      },
+      {
+        "value": "4",
+        "n": 1027,
+        "isMissing": false
+      },
+      {
+        "value": "5",
+        "n": 1152,
+        "isMissing": false
+      },
+      {
+        "value": "6",
+        "n": 1312,
+        "isMissing": false
+      },
+      {
+        "value": "7",
+        "n": 954,
+        "isMissing": false
+      },
+      {
+        "value": "8",
+        "n": 629,
+        "isMissing": false
+      },
+      {
+        "value": "9",
+        "n": 1008,
+        "isMissing": false
+      },
+      {
+        "value": "Missing",
+        "n": 12482,
+        "isMissing": true
+      }
+    ],
+    "yesN": null,
+    "topicSlug": "time-online-age-17",
+    "topicId": "5.16",
+    "href": "/variables/time-online-age-17#online17_sns",
+    "stem": "online:sns"
+  },
+  {
+    "name": "online17_games",
+    "domain": "online",
+    "domainLabel": "Time online",
+    "age": "17",
+    "sourceFile": "mcs7_cm_interview.dta",
+    "originalVar": "gccomh00",
+    "recodeType": "keep_1_9",
+    "question": "Weekday hours playing games including online",
+    "originalCodes": "1-9; 10-12",
+    "classCodes": "1-9",
+    "notes": "No INTH item at 17",
+    "frequencies": [
+      {
+        "value": "1",
+        "n": 1682,
+        "isMissing": false
+      },
+      {
+        "value": "2",
+        "n": 1024,
+        "isMissing": false
+      },
+      {
+        "value": "3",
+        "n": 680,
+        "isMissing": false
+      },
+      {
+        "value": "4",
+        "n": 893,
+        "isMissing": false
+      },
+      {
+        "value": "5",
+        "n": 718,
+        "isMissing": false
+      },
+      {
+        "value": "6",
+        "n": 621,
+        "isMissing": false
+      },
+      {
+        "value": "7",
+        "n": 466,
+        "isMissing": false
+      },
+      {
+        "value": "8",
+        "n": 272,
+        "isMissing": false
+      },
+      {
+        "value": "9",
+        "n": 437,
+        "isMissing": false
+      },
+      {
+        "value": "Missing",
+        "n": 12712,
+        "isMissing": true
+      }
+    ],
+    "yesN": null,
+    "topicSlug": "time-online-age-17",
+    "topicId": "5.16",
+    "href": "/variables/time-online-age-17#online17_games",
+    "stem": "online:games"
+  },
+  {
+    "name": "date17_partner",
+    "domain": "dating",
+    "domainLabel": "Dating & partnership",
+    "age": "17",
+    "sourceFile": "mcs7_cm_interview.dta",
+    "originalVar": "gcbgfr00",
+    "recodeType": "yesno",
+    "question": "Has a boyfriend or girlfriend",
+    "originalCodes": "1/2; 3-5",
+    "classCodes": "1/0",
+    "notes": "",
+    "frequencies": [
+      {
+        "value": "0",
+        "n": 6906,
+        "isMissing": false
+      },
+      {
+        "value": "1",
+        "n": 3170,
+        "isMissing": false
+      },
+      {
+        "value": "Missing",
+        "n": 9429,
+        "isMissing": true
+      }
+    ],
+    "yesN": 3170,
+    "topicSlug": "dating-age-17",
+    "topicId": "5.17",
+    "href": "/variables/dating-age-17#date17_partner",
+    "stem": "date:partner"
+  },
+  {
+    "name": "delinq17_shoplift",
+    "domain": "delinquency",
+    "domainLabel": "Delinquency",
+    "age": "17",
+    "sourceFile": "mcs7_cm_interview.dta",
+    "originalVar": "gcstol00",
+    "recodeType": "yesno",
+    "question": "Shoplifted (last 12 months)",
+    "originalCodes": "1/2; 3-5",
+    "classCodes": "1/0",
+    "notes": "",
+    "frequencies": [
+      {
+        "value": "0",
+        "n": 9489,
+        "isMissing": false
+      },
+      {
+        "value": "1",
+        "n": 590,
+        "isMissing": false
+      },
+      {
+        "value": "Missing",
+        "n": 9426,
+        "isMissing": true
+      }
+    ],
+    "yesN": 590,
+    "topicSlug": "delinquency-age-17",
+    "topicId": "5.18",
+    "href": "/variables/delinquency-age-17#delinq17_shoplift",
+    "stem": "delinq:shoplift"
+  },
+  {
+    "name": "delinq17_graffiti",
+    "domain": "delinquency",
+    "domainLabel": "Delinquency",
+    "age": "17",
+    "sourceFile": "mcs7_cm_interview.dta",
+    "originalVar": "gcspry00",
+    "recodeType": "yesno",
+    "question": "Graffiti (last 12 months)",
+    "originalCodes": "1/2; 3-5",
+    "classCodes": "1/0",
+    "notes": "",
+    "frequencies": [
+      {
+        "value": "0",
+        "n": 9769,
+        "isMissing": false
+      },
+      {
+        "value": "1",
+        "n": 304,
+        "isMissing": false
+      },
+      {
+        "value": "Missing",
+        "n": 9432,
+        "isMissing": true
+      }
+    ],
+    "yesN": 304,
+    "topicSlug": "delinquency-age-17",
+    "topicId": "5.18",
+    "href": "/variables/delinquency-age-17#delinq17_graffiti",
+    "stem": "delinq:graffiti"
+  },
+  {
+    "name": "delinq17_damage",
+    "domain": "delinquency",
+    "domainLabel": "Delinquency",
+    "age": "17",
+    "sourceFile": "mcs7_cm_interview.dta",
+    "originalVar": "gcdamg00",
+    "recodeType": "yesno",
+    "question": "Damaged property in a public place (last 12 months)",
+    "originalCodes": "1/2; 3-5",
+    "classCodes": "1/0",
+    "notes": "",
+    "frequencies": [
+      {
+        "value": "0",
+        "n": 9727,
+        "isMissing": false
+      },
+      {
+        "value": "1",
+        "n": 321,
+        "isMissing": false
+      },
+      {
+        "value": "Missing",
+        "n": 9457,
+        "isMissing": true
+      }
+    ],
+    "yesN": 321,
+    "topicSlug": "delinquency-age-17",
+    "topicId": "5.18",
+    "href": "/variables/delinquency-age-17#delinq17_damage",
+    "stem": "delinq:damage"
+  },
+  {
+    "name": "delinq17_burglary",
+    "domain": "delinquency",
+    "domainLabel": "Delinquency",
+    "age": "17",
+    "sourceFile": "mcs7_cm_interview.dta",
+    "originalVar": "gcrobh00",
+    "recodeType": "yesno",
+    "question": "Entered a home without permission (last 12 months)",
+    "originalCodes": "1/2; 3-5",
+    "classCodes": "1/0",
+    "notes": "",
+    "frequencies": [
+      {
+        "value": "0",
+        "n": 10036,
+        "isMissing": false
+      },
+      {
+        "value": "1",
+        "n": 15,
+        "isMissing": false
+      },
+      {
+        "value": "Missing",
+        "n": 9454,
+        "isMissing": true
+      }
+    ],
+    "yesN": 15,
+    "topicSlug": "delinquency-age-17",
+    "topicId": "5.18",
+    "href": "/variables/delinquency-age-17#delinq17_burglary",
+    "stem": "delinq:burglary"
+  },
+  {
+    "name": "delinq17_vehicle",
+    "domain": "delinquency",
+    "domainLabel": "Delinquency",
+    "age": "17",
+    "sourceFile": "mcs7_cm_interview.dta",
+    "originalVar": "gcjyrd00",
+    "recodeType": "yesno",
+    "question": "Stolen a vehicle (last 12 months)",
+    "originalCodes": "1/2; 3-5",
+    "classCodes": "1/0",
+    "notes": "",
+    "frequencies": [
+      {
+        "value": "0",
+        "n": 10048,
+        "isMissing": false
+      },
+      {
+        "value": "1",
+        "n": 30,
+        "isMissing": false
+      },
+      {
+        "value": "Missing",
+        "n": 9427,
+        "isMissing": true
+      }
+    ],
+    "yesN": 30,
+    "topicSlug": "delinquency-age-17",
+    "topicId": "5.18",
+    "href": "/variables/delinquency-age-17#delinq17_vehicle",
+    "stem": "delinq:vehicle"
+  },
+  {
+    "name": "delinq17_arson",
+    "domain": "delinquency",
+    "domainLabel": "Delinquency",
+    "age": "17",
+    "sourceFile": "mcs7_cm_interview.dta",
+    "originalVar": "gcfire00",
+    "recodeType": "yesno",
+    "question": "Deliberately set fire to something (last 12 months)",
+    "originalCodes": "1/2; 3-5",
+    "classCodes": "1/0",
+    "notes": "",
+    "frequencies": [
+      {
+        "value": "0",
+        "n": 9764,
+        "isMissing": false
+      },
+      {
+        "value": "1",
+        "n": 306,
+        "isMissing": false
+      },
+      {
+        "value": "Missing",
+        "n": 9435,
+        "isMissing": true
+      }
+    ],
+    "yesN": 306,
+    "topicSlug": "delinquency-age-17",
+    "topicId": "5.18",
+    "href": "/variables/delinquency-age-17#delinq17_arson",
+    "stem": "delinq:arson"
+  },
+  {
+    "name": "delinq17_fraud",
+    "domain": "delinquency",
+    "domainLabel": "Delinquency",
+    "age": "17",
+    "sourceFile": "mcs7_cm_interview.dta",
+    "originalVar": "gccred00",
+    "recodeType": "yesno",
+    "question": "Used someone else's card or bank details (last 12 months)",
+    "originalCodes": "1/2; 3-5",
+    "classCodes": "1/0",
+    "notes": "",
+    "frequencies": [
+      {
+        "value": "0",
+        "n": 9944,
+        "isMissing": false
+      },
+      {
+        "value": "1",
+        "n": 119,
+        "isMissing": false
+      },
+      {
+        "value": "Missing",
+        "n": 9442,
+        "isMissing": true
+      }
+    ],
+    "yesN": 119,
+    "topicSlug": "delinquency-age-17",
+    "topicId": "5.18",
+    "href": "/variables/delinquency-age-17#delinq17_fraud",
+    "stem": "delinq:fraud"
+  },
+  {
+    "name": "delinq17_hack",
+    "domain": "delinquency",
+    "domainLabel": "Delinquency",
+    "age": "17",
+    "sourceFile": "mcs7_cm_interview.dta",
+    "originalVar": "gchack00",
+    "recodeType": "yesno",
+    "question": "Hacked a device or account (last 12 months)",
+    "originalCodes": "1/2; 3-5",
+    "classCodes": "1/0",
+    "notes": "",
+    "frequencies": [
+      {
+        "value": "0",
+        "n": 9850,
+        "isMissing": false
+      },
+      {
+        "value": "1",
+        "n": 207,
+        "isMissing": false
+      },
+      {
+        "value": "Missing",
+        "n": 9448,
+        "isMissing": true
+      }
+    ],
+    "yesN": 207,
+    "topicSlug": "delinquency-age-17",
+    "topicId": "5.18",
+    "href": "/variables/delinquency-age-17#delinq17_hack",
+    "stem": "delinq:hack"
+  },
+  {
+    "name": "delinq17_virus",
+    "domain": "delinquency",
+    "domainLabel": "Delinquency",
+    "age": "17",
+    "sourceFile": "mcs7_cm_interview.dta",
+    "originalVar": "gcvirs00",
+    "recodeType": "yesno",
+    "question": "Sent viruses or spyware (last 12 months)",
+    "originalCodes": "1/2; 3-5",
+    "classCodes": "1/0",
+    "notes": "",
+    "frequencies": [
+      {
+        "value": "0",
+        "n": 10043,
+        "isMissing": false
+      },
+      {
+        "value": "1",
+        "n": 33,
+        "isMissing": false
+      },
+      {
+        "value": "Missing",
+        "n": 9429,
+        "isMissing": true
+      }
+    ],
+    "yesN": 33,
+    "topicSlug": "delinquency-age-17",
+    "topicId": "5.18",
+    "href": "/variables/delinquency-age-17#delinq17_virus",
+    "stem": "delinq:virus"
+  },
+  {
+    "name": "delinq17_hit",
+    "domain": "delinquency",
+    "domainLabel": "Delinquency",
+    "age": "17",
+    "sourceFile": "mcs7_cm_interview.dta",
+    "originalVar": "gchitt00",
+    "recodeType": "yesno",
+    "question": "Pushed or hit someone (last 12 months)",
+    "originalCodes": "1/2; 3-5",
+    "classCodes": "1/0",
+    "notes": "",
+    "frequencies": [
+      {
+        "value": "0",
+        "n": 7630,
+        "isMissing": false
+      },
+      {
+        "value": "1",
+        "n": 2450,
+        "isMissing": false
+      },
+      {
+        "value": "Missing",
+        "n": 9425,
+        "isMissing": true
+      }
+    ],
+    "yesN": 2450,
+    "topicSlug": "delinquency-age-17",
+    "topicId": "5.18",
+    "href": "/variables/delinquency-age-17#delinq17_hit",
+    "stem": "delinq:hit"
+  },
+  {
+    "name": "delinq17_weapon_use",
+    "domain": "delinquency",
+    "domainLabel": "Delinquency",
+    "age": "17",
+    "sourceFile": "mcs7_cm_interview.dta",
+    "originalVar": "gcwepn00",
+    "recodeType": "yesno",
+    "question": "Hit someone with a weapon (last 12 months)",
+    "originalCodes": "1/2; 3-5",
+    "classCodes": "1/0",
+    "notes": "",
+    "frequencies": [
+      {
+        "value": "0",
+        "n": 9974,
+        "isMissing": false
+      },
+      {
+        "value": "1",
+        "n": 105,
+        "isMissing": false
+      },
+      {
+        "value": "Missing",
+        "n": 9426,
+        "isMissing": true
+      }
+    ],
+    "yesN": 105,
+    "topicSlug": "delinquency-age-17",
+    "topicId": "5.18",
+    "href": "/variables/delinquency-age-17#delinq17_weapon_use",
+    "stem": "delinq:weapon_use"
+  },
+  {
+    "name": "delinq17_steal_person",
+    "domain": "delinquency",
+    "domainLabel": "Delinquency",
+    "age": "17",
+    "sourceFile": "mcs7_cm_interview.dta",
+    "originalVar": "gcstln00",
+    "recodeType": "yesno",
+    "question": "Stolen from a person (last 12 months)",
+    "originalCodes": "1/2; 3-5",
+    "classCodes": "1/0",
+    "notes": "",
+    "frequencies": [
+      {
+        "value": "0",
+        "n": 9910,
+        "isMissing": false
+      },
+      {
+        "value": "1",
+        "n": 163,
+        "isMissing": false
+      },
+      {
+        "value": "Missing",
+        "n": 9432,
+        "isMissing": true
+      }
+    ],
+    "yesN": 163,
+    "topicSlug": "delinquency-age-17",
+    "topicId": "5.18",
+    "href": "/variables/delinquency-age-17#delinq17_steal_person",
+    "stem": "delinq:steal_person"
+  },
+  {
+    "name": "delinq17_harass",
+    "domain": "delinquency",
+    "domainLabel": "Delinquency",
+    "age": "17",
+    "sourceFile": "mcs7_cm_interview.dta",
+    "originalVar": "gchrsd00",
+    "recodeType": "yesno",
+    "question": "Harassed or bothered someone (last 12 months)",
+    "originalCodes": "1/2; 3-5",
+    "classCodes": "1/0",
+    "notes": "",
+    "frequencies": [
+      {
+        "value": "0",
+        "n": 9905,
+        "isMissing": false
+      },
+      {
+        "value": "1",
+        "n": 172,
+        "isMissing": false
+      },
+      {
+        "value": "Missing",
+        "n": 9428,
+        "isMissing": true
+      }
+    ],
+    "yesN": 172,
+    "topicSlug": "delinquency-age-17",
+    "topicId": "5.18",
+    "href": "/variables/delinquency-age-17#delinq17_harass",
+    "stem": "delinq:harass"
+  },
+  {
+    "name": "delinq17_image",
+    "domain": "delinquency",
+    "domainLabel": "Delinquency",
+    "age": "17",
+    "sourceFile": "mcs7_cm_interview.dta",
+    "originalVar": "gcrmrs00",
+    "recodeType": "yesno",
+    "question": "Sent pictures or rumours (last 12 months)",
+    "originalCodes": "1/2; 3-5",
+    "classCodes": "1/0",
+    "notes": "",
+    "frequencies": [
+      {
+        "value": "0",
+        "n": 9943,
+        "isMissing": false
+      },
+      {
+        "value": "1",
+        "n": 136,
+        "isMissing": false
+      },
+      {
+        "value": "Missing",
+        "n": 9426,
+        "isMissing": true
+      }
+    ],
+    "yesN": 136,
+    "topicSlug": "delinquency-age-17",
+    "topicId": "5.18",
+    "href": "/variables/delinquency-age-17#delinq17_image",
+    "stem": "delinq:image"
+  },
+  {
+    "name": "delinq17_sexual",
+    "domain": "delinquency",
+    "domainLabel": "Delinquency",
+    "age": "17",
+    "sourceFile": "mcs7_cm_interview.dta",
+    "originalVar": "gcsexa00",
+    "recodeType": "yesno",
+    "question": "Made an unwelcome sexual approach (last 12 months)",
+    "originalCodes": "1/2; 3-5",
+    "classCodes": "1/0",
+    "notes": "",
+    "frequencies": [
+      {
+        "value": "0",
+        "n": 10065,
+        "isMissing": false
+      },
+      {
+        "value": "1",
+        "n": 14,
+        "isMissing": false
+      },
+      {
+        "value": "Missing",
+        "n": 9426,
+        "isMissing": true
+      }
+    ],
+    "yesN": 14,
+    "topicSlug": "delinquency-age-17",
+    "topicId": "5.18",
+    "href": "/variables/delinquency-age-17#delinq17_sexual",
+    "stem": "delinq:sexual"
+  },
+  {
+    "name": "vic17_insult",
+    "domain": "victim",
+    "domainLabel": "Victimization",
+    "age": "17",
+    "sourceFile": "mcs7_cm_interview.dta",
+    "originalVar": "gcvicg00",
+    "recodeType": "yesno",
+    "question": "Insulted threatened or shouted at (last 12 months)",
+    "originalCodes": "1/2; 3-5",
+    "classCodes": "1/0",
+    "notes": "",
+    "frequencies": [
+      {
+        "value": "0",
+        "n": 6161,
+        "isMissing": false
+      },
+      {
+        "value": "1",
+        "n": 3907,
+        "isMissing": false
+      },
+      {
+        "value": "Missing",
+        "n": 9437,
+        "isMissing": true
+      }
+    ],
+    "yesN": 3907,
+    "topicSlug": "victimization-age-17",
+    "topicId": "5.19",
+    "href": "/variables/victimization-age-17#vic17_insult",
+    "stem": "vic:insult"
+  },
+  {
+    "name": "vic17_gossip",
+    "domain": "victim",
+    "domainLabel": "Victimization",
+    "age": "17",
+    "sourceFile": "mcs7_cm_interview.dta",
+    "originalVar": "gcvicb00",
+    "recodeType": "yesno",
+    "question": "Gossip spread (last 12 months)",
+    "originalCodes": "1/2; 3-5",
+    "classCodes": "1/0",
+    "notes": "",
+    "frequencies": [
+      {
+        "value": "0",
+        "n": 6194,
+        "isMissing": false
+      },
+      {
+        "value": "1",
+        "n": 3871,
+        "isMissing": false
+      },
+      {
+        "value": "Missing",
+        "n": 9440,
+        "isMissing": true
+      }
+    ],
+    "yesN": 3871,
+    "topicSlug": "victimization-age-17",
+    "topicId": "5.19",
+    "href": "/variables/victimization-age-17#vic17_gossip",
+    "stem": "vic:gossip"
+  },
+  {
+    "name": "vic17_violence",
+    "domain": "victim",
+    "domainLabel": "Victimization",
+    "age": "17",
+    "sourceFile": "mcs7_cm_interview.dta",
+    "originalVar": "gcvica00",
+    "recodeType": "yesno",
+    "question": "Physically violent (last 12 months)",
+    "originalCodes": "1/2; 3-5",
+    "classCodes": "1/0",
+    "notes": "",
+    "frequencies": [
+      {
+        "value": "0",
+        "n": 8320,
+        "isMissing": false
+      },
+      {
+        "value": "1",
+        "n": 1750,
+        "isMissing": false
+      },
+      {
+        "value": "Missing",
+        "n": 9435,
+        "isMissing": true
+      }
+    ],
+    "yesN": 1750,
+    "topicSlug": "victimization-age-17",
+    "topicId": "5.19",
+    "href": "/variables/victimization-age-17#vic17_violence",
+    "stem": "vic:violence"
+  },
+  {
+    "name": "vic17_weapon",
+    "domain": "victim",
+    "domainLabel": "Victimization",
+    "age": "17",
+    "sourceFile": "mcs7_cm_interview.dta",
+    "originalVar": "gcvicc00",
+    "recodeType": "yesno",
+    "question": "Hit with or used a weapon (last 12 months)",
+    "originalCodes": "1/2; 3-5",
+    "classCodes": "1/0",
+    "notes": "",
+    "frequencies": [
+      {
+        "value": "0",
+        "n": 9755,
+        "isMissing": false
+      },
+      {
+        "value": "1",
+        "n": 316,
+        "isMissing": false
+      },
+      {
+        "value": "Missing",
+        "n": 9434,
+        "isMissing": true
+      }
+    ],
+    "yesN": 316,
+    "topicSlug": "victimization-age-17",
+    "topicId": "5.19",
+    "href": "/variables/victimization-age-17#vic17_weapon",
+    "stem": "vic:weapon"
+  },
+  {
+    "name": "vic17_stolen",
+    "domain": "victim",
+    "domainLabel": "Victimization",
+    "age": "17",
+    "sourceFile": "mcs7_cm_interview.dta",
+    "originalVar": "gcvice00",
+    "recodeType": "yesno",
+    "question": "Something stolen (last 12 months)",
+    "originalCodes": "1/2; 3-5",
+    "classCodes": "1/0",
+    "notes": "",
+    "frequencies": [
+      {
+        "value": "0",
+        "n": 9250,
+        "isMissing": false
+      },
+      {
+        "value": "1",
+        "n": 816,
+        "isMissing": false
+      },
+      {
+        "value": "Missing",
+        "n": 9439,
+        "isMissing": true
+      }
+    ],
+    "yesN": 816,
+    "topicSlug": "victimization-age-17",
+    "topicId": "5.19",
+    "href": "/variables/victimization-age-17#vic17_stolen",
+    "stem": "vic:stolen"
+  },
+  {
+    "name": "vic17_harass",
+    "domain": "victim",
+    "domainLabel": "Victimization",
+    "age": "17",
+    "sourceFile": "mcs7_cm_interview.dta",
+    "originalVar": "gcvich00",
+    "recodeType": "yesno",
+    "question": "Harassed or bothered (last 12 months)",
+    "originalCodes": "1/2; 3-5",
+    "classCodes": "1/0",
+    "notes": "",
+    "frequencies": [
+      {
+        "value": "0",
+        "n": 8582,
+        "isMissing": false
+      },
+      {
+        "value": "1",
+        "n": 1489,
+        "isMissing": false
+      },
+      {
+        "value": "Missing",
+        "n": 9434,
+        "isMissing": true
+      }
+    ],
+    "yesN": 1489,
+    "topicSlug": "victimization-age-17",
+    "topicId": "5.19",
+    "href": "/variables/victimization-age-17#vic17_harass",
+    "stem": "vic:harass"
+  },
+  {
+    "name": "vic17_image",
+    "domain": "victim",
+    "domainLabel": "Victimization",
+    "age": "17",
+    "sourceFile": "mcs7_cm_interview.dta",
+    "originalVar": "gcvicp00",
+    "recodeType": "yesno",
+    "question": "Pictures or rumours sent (last 12 months)",
+    "originalCodes": "1/2; 3-5",
+    "classCodes": "1/0",
+    "notes": "",
+    "frequencies": [
+      {
+        "value": "0",
+        "n": 9354,
+        "isMissing": false
+      },
+      {
+        "value": "1",
+        "n": 707,
+        "isMissing": false
+      },
+      {
+        "value": "Missing",
+        "n": 9444,
+        "isMissing": true
+      }
+    ],
+    "yesN": 707,
+    "topicSlug": "victimization-age-17",
+    "topicId": "5.19",
+    "href": "/variables/victimization-age-17#vic17_image",
+    "stem": "vic:image"
+  },
+  {
+    "name": "vic17_unwelcome",
+    "domain": "victim",
+    "domainLabel": "Victimization",
+    "age": "17",
+    "sourceFile": "mcs7_cm_interview.dta",
+    "originalVar": "gcvicf00",
+    "recodeType": "yesno",
+    "question": "Unwelcome sexual approach (last 12 months)",
+    "originalCodes": "1/2; 3-5",
+    "classCodes": "1/0",
+    "notes": "",
+    "frequencies": [
+      {
+        "value": "0",
+        "n": 8811,
+        "isMissing": false
+      },
+      {
+        "value": "1",
+        "n": 1255,
+        "isMissing": false
+      },
+      {
+        "value": "Missing",
+        "n": 9439,
+        "isMissing": true
+      }
+    ],
+    "yesN": 1255,
+    "topicSlug": "victimization-age-17",
+    "topicId": "5.19",
+    "href": "/variables/victimization-age-17#vic17_unwelcome",
+    "stem": "vic:unwelcome"
+  },
+  {
+    "name": "vic17_assault",
+    "domain": "victim",
+    "domainLabel": "Victimization",
+    "age": "17",
+    "sourceFile": "mcs7_cm_interview.dta",
+    "originalVar": "gcvics00",
+    "recodeType": "yesno",
+    "question": "Assaulted (last 12 months)",
+    "originalCodes": "1/2; 3-5",
+    "classCodes": "1/0",
+    "notes": "",
+    "frequencies": [
+      {
+        "value": "0",
+        "n": 9747,
+        "isMissing": false
+      },
+      {
+        "value": "1",
+        "n": 322,
+        "isMissing": false
+      },
+      {
+        "value": "Missing",
+        "n": 9436,
+        "isMissing": true
+      }
+    ],
+    "yesN": 322,
+    "topicSlug": "victimization-age-17",
+    "topicId": "5.19",
+    "href": "/variables/victimization-age-17#vic17_assault",
+    "stem": "vic:assault"
+  },
+  {
+    "name": "gang17",
+    "domain": "gang",
+    "domainLabel": "Gang membership",
+    "age": "17",
+    "sourceFile": "mcs7_cm_interview.dta",
+    "originalVar": "gcgang00",
+    "recodeType": "current_member",
+    "question": "Current street gang member",
+    "originalCodes": "1 Yes; 2 No; 3 used to be; 4-6",
+    "classCodes": "1/0",
+    "notes": "Code 3 recoded to No",
+    "frequencies": [
+      {
+        "value": "0",
+        "n": 6753,
+        "isMissing": false
+      },
+      {
+        "value": "1",
+        "n": 34,
+        "isMissing": false
+      },
+      {
+        "value": "Missing",
+        "n": 12718,
+        "isMissing": true
+      }
+    ],
+    "yesN": 34,
+    "topicSlug": "gang-member-age-17",
+    "topicId": "5.20",
+    "href": "/variables/gang-member-age-17#gang17",
+    "stem": "gang"
+  },
+  {
+    "name": "knife17",
+    "domain": "knife",
+    "domainLabel": "Weapon carrying",
+    "age": "17",
+    "sourceFile": "mcs7_cm_interview.dta",
+    "originalVar": "gcknif00",
+    "recodeType": "yesno",
+    "question": "Carried a knife or other weapon (last 12 months)",
+    "originalCodes": "1/2; 3-5",
+    "classCodes": "1/0",
+    "notes": "",
+    "frequencies": [
+      {
+        "value": "0",
+        "n": 6589,
+        "isMissing": false
+      },
+      {
+        "value": "1",
+        "n": 194,
+        "isMissing": false
+      },
+      {
+        "value": "Missing",
+        "n": 12722,
+        "isMissing": true
+      }
+    ],
+    "yesN": 194,
+    "topicSlug": "carry-a-knife-age-17",
+    "topicId": "5.21",
+    "href": "/variables/carry-a-knife-age-17#knife17",
+    "stem": "knife"
+  },
+  {
+    "name": "cj17",
+    "domain": "cj",
+    "domainLabel": "Criminal justice",
+    "age": "17",
+    "sourceFile": "mcs7_cm_interview.dta",
+    "originalVar": "gccaut00+gcares00+gccort00",
+    "recodeType": "composite",
+    "question": "Ever caution arrest or court",
+    "originalCodes": "each 1/2; 3-5",
+    "classCodes": "1/0",
+    "notes": "Yes if any Yes; No if caution=No and arrest=No",
+    "frequencies": [
+      {
+        "value": "0",
+        "n": 6257,
+        "isMissing": false
+      },
+      {
+        "value": "1",
+        "n": 518,
+        "isMissing": false
+      },
+      {
+        "value": "Missing",
+        "n": 12730,
+        "isMissing": true
+      }
+    ],
+    "yesN": 518,
+    "topicSlug": "ever-criminal-justice-contact-age-17",
+    "topicId": "5.22",
+    "href": "/variables/ever-criminal-justice-contact-age-17#cj17",
+    "stem": "cj"
+  },
+  {
+    "name": "live_parents23",
+    "domain": "family",
+    "domainLabel": "Living & partnership",
+    "age": "23",
+    "sourceFile": "mcs8_23y_cm_survey.dta",
+    "originalVar": "hsdvhhglp00",
+    "recodeType": "yesno",
+    "question": "Currently living with a parent",
+    "originalCodes": "1 Yes; 2 No",
+    "classCodes": "1/0",
+    "notes": "",
+    "frequencies": [
+      {
+        "value": "0",
+        "n": 2829,
+        "isMissing": false
+      },
+      {
+        "value": "1",
+        "n": 6846,
+        "isMissing": false
+      },
+      {
+        "value": "Missing",
+        "n": 9830,
+        "isMissing": true
+      }
+    ],
+    "yesN": 6846,
+    "topicSlug": "live-with-parents-age-23",
+    "topicId": "5.23",
+    "href": "/variables/live-with-parents-age-23#live_parents23",
+    "stem": "live_parents23"
+  },
+  {
+    "name": "married23",
+    "domain": "family",
+    "domainLabel": "Living & partnership",
+    "age": "23",
+    "sourceFile": "mcs8_23y_cm_derived.dta",
+    "originalVar": "hdms_r",
+    "recodeType": "married_legal",
+    "question": "Legally married or in a civil partnership",
+    "originalCodes": "1 no longer; 2 married; 3 CP; 4 single; -8",
+    "classCodes": "1 if 2 or 3 else 0 if 1 or 4",
+    "notes": "",
+    "frequencies": [
+      {
+        "value": "0",
+        "n": 9238,
+        "isMissing": false
+      },
+      {
+        "value": "1",
+        "n": 419,
+        "isMissing": false
+      },
+      {
+        "value": "Missing",
+        "n": 9848,
+        "isMissing": true
+      }
+    ],
+    "yesN": 419,
+    "topicSlug": "married-or-cohabiting-age-23",
+    "topicId": "5.24",
+    "href": "/variables/married-or-cohabiting-age-23#married23",
+    "stem": "married23"
+  },
+  {
+    "name": "cohab23",
+    "domain": "family",
+    "domainLabel": "Living & partnership",
+    "age": "23",
+    "sourceFile": "mcs8_23y_cm_derived.dta",
+    "originalVar": "hdcohab",
+    "recodeType": "yesno_01",
+    "question": "Cohabiting as a couple",
+    "originalCodes": "0 No; 1 Yes; -8",
+    "classCodes": "1/0",
+    "notes": "",
+    "frequencies": [
+      {
+        "value": "0",
+        "n": 8191,
+        "isMissing": false
+      },
+      {
+        "value": "1",
+        "n": 1484,
+        "isMissing": false
+      },
+      {
+        "value": "Missing",
+        "n": 9830,
+        "isMissing": true
+      }
+    ],
+    "yesN": 1484,
+    "topicSlug": "married-or-cohabiting-age-23",
+    "topicId": "5.24",
+    "href": "/variables/married-or-cohabiting-age-23#cohab23",
+    "stem": "cohab23"
+  },
+  {
+    "name": "married_cohab23",
+    "domain": "family",
+    "domainLabel": "Living & partnership",
+    "age": "23",
+    "sourceFile": "mcs8 survey+derived",
+    "originalVar": "hdms_r+hdcohab+hsdvhhglpt00",
+    "recodeType": "composite",
+    "question": "Married civil partner or cohabiting",
+    "originalCodes": "see components",
+    "classCodes": "1/0",
+    "notes": "Yes if any component Yes",
+    "frequencies": [
+      {
+        "value": "0",
+        "n": 8041,
+        "isMissing": false
+      },
+      {
+        "value": "1",
+        "n": 1634,
+        "isMissing": false
+      },
+      {
+        "value": "Missing",
+        "n": 9830,
+        "isMissing": true
+      }
+    ],
+    "yesN": 1634,
+    "topicSlug": "married-or-cohabiting-age-23",
+    "topicId": "5.24",
+    "href": "/variables/married-or-cohabiting-age-23#married_cohab23",
+    "stem": "married_cohab23"
+  },
+  {
+    "name": "ftjob23",
+    "domain": "job",
+    "domainLabel": "Work & money",
+    "age": "23",
+    "sourceFile": "mcs8 survey+derived",
+    "originalVar": "hswrkhrs00+hdeconact",
+    "recodeType": "ft_job",
+    "question": "Full-time paid work 30+ hours",
+    "originalCodes": "1 FT; 2 PT; -1 N/A; econact 1-10",
+    "classCodes": "1 if FT; 0 if PT or not in paid work",
+    "notes": "",
+    "frequencies": [
+      {
+        "value": "0",
+        "n": 4107,
+        "isMissing": false
+      },
+      {
+        "value": "1",
+        "n": 5527,
+        "isMissing": false
+      },
+      {
+        "value": "Missing",
+        "n": 9871,
+        "isMissing": true
+      }
+    ],
+    "yesN": 5527,
+    "topicSlug": "full-time-job-age-23",
+    "topicId": "5.26",
+    "href": "/variables/full-time-job-age-23#ftjob23",
+    "stem": "ftjob23"
+  },
+  {
+    "name": "nvq23",
+    "domain": "education",
+    "domainLabel": "Education",
+    "age": "23",
+    "sourceFile": "mcs8_23y_cm_derived.dta",
+    "originalVar": "hdhanvq",
+    "recodeType": "keep_nvq",
+    "question": "Highest academic NVQ as of interview",
+    "originalCodes": "1-5; 96 none; -8/-3 missing",
+    "classCodes": "1-5 and 96 retained",
+    "notes": "Special missing codes dropped only",
+    "frequencies": [
+      {
+        "value": "1",
+        "n": 592,
+        "isMissing": false
+      },
+      {
+        "value": "2",
+        "n": 2386,
+        "isMissing": false
+      },
+      {
+        "value": "3",
+        "n": 1929,
+        "isMissing": false
+      },
+      {
+        "value": "4",
+        "n": 3637,
+        "isMissing": false
+      },
+      {
+        "value": "5",
+        "n": 687,
+        "isMissing": false
+      },
+      {
+        "value": "96",
+        "n": 311,
+        "isMissing": false
+      },
+      {
+        "value": "Missing",
+        "n": 9963,
+        "isMissing": true
+      }
+    ],
+    "yesN": null,
+    "topicSlug": "educational-attainment-nvq-age-23",
+    "topicId": "5.25",
+    "href": "/variables/educational-attainment-nvq-age-23#nvq23",
+    "stem": "nvq23"
+  },
+  {
+    "name": "vic23_violence",
+    "domain": "victim",
+    "domainLabel": "Victimization",
+    "age": "23",
+    "sourceFile": "mcs8_23y_cm_survey.dta",
+    "originalVar": "hsvica00",
+    "recodeType": "yesno",
+    "question": "Physically violent (last 12 months)",
+    "originalCodes": "1/2; -9/-8/-3/-1",
+    "classCodes": "1/0",
+    "notes": "",
+    "frequencies": [
+      {
+        "value": "0",
+        "n": 7878,
+        "isMissing": false
+      },
+      {
+        "value": "1",
+        "n": 995,
+        "isMissing": false
+      },
+      {
+        "value": "Missing",
+        "n": 10632,
+        "isMissing": true
+      }
+    ],
+    "yesN": 995,
+    "topicSlug": "victimization-age-23",
+    "topicId": "5.27",
+    "href": "/variables/victimization-age-23#vic23_violence",
+    "stem": "vic:violence"
+  },
+  {
+    "name": "vic23_weapon",
+    "domain": "victim",
+    "domainLabel": "Victimization",
+    "age": "23",
+    "sourceFile": "mcs8_23y_cm_survey.dta",
+    "originalVar": "hsvicc00",
+    "recodeType": "yesno",
+    "question": "Hit or used a weapon (last 12 months)",
+    "originalCodes": "1/2; negatives",
+    "classCodes": "1/0",
+    "notes": "",
+    "frequencies": [
+      {
+        "value": "0",
+        "n": 8704,
+        "isMissing": false
+      },
+      {
+        "value": "1",
+        "n": 177,
+        "isMissing": false
+      },
+      {
+        "value": "Missing",
+        "n": 10624,
+        "isMissing": true
+      }
+    ],
+    "yesN": 177,
+    "topicSlug": "victimization-age-23",
+    "topicId": "5.27",
+    "href": "/variables/victimization-age-23#vic23_weapon",
+    "stem": "vic:weapon"
+  },
+  {
+    "name": "vic23_image",
+    "domain": "victim",
+    "domainLabel": "Victimization",
+    "age": "23",
+    "sourceFile": "mcs8_23y_cm_survey.dta",
+    "originalVar": "hsvicp00",
+    "recodeType": "yesno",
+    "question": "Pictures or rumours online (last 12 months)",
+    "originalCodes": "1/2; negatives",
+    "classCodes": "1/0",
+    "notes": "",
+    "frequencies": [
+      {
+        "value": "0",
+        "n": 8593,
+        "isMissing": false
+      },
+      {
+        "value": "1",
+        "n": 281,
+        "isMissing": false
+      },
+      {
+        "value": "Missing",
+        "n": 10631,
+        "isMissing": true
+      }
+    ],
+    "yesN": 281,
+    "topicSlug": "victimization-age-23",
+    "topicId": "5.27",
+    "href": "/variables/victimization-age-23#vic23_image",
+    "stem": "vic:image"
+  },
+  {
+    "name": "vic23_sexual",
+    "domain": "victim",
+    "domainLabel": "Victimization",
+    "age": "23",
+    "sourceFile": "mcs8_23y_cm_survey.dta",
+    "originalVar": "hsvicf00",
+    "recodeType": "yesno",
+    "question": "Unwelcome sexual approach (last 12 months)",
+    "originalCodes": "1/2; negatives",
+    "classCodes": "1/0",
+    "notes": "",
+    "frequencies": [
+      {
+        "value": "0",
+        "n": 7334,
+        "isMissing": false
+      },
+      {
+        "value": "1",
+        "n": 1547,
+        "isMissing": false
+      },
+      {
+        "value": "Missing",
+        "n": 10624,
+        "isMissing": true
+      }
+    ],
+    "yesN": 1547,
+    "topicSlug": "victimization-age-23",
+    "topicId": "5.27",
+    "href": "/variables/victimization-age-23#vic23_sexual",
+    "stem": "vic:sexual"
+  },
+  {
+    "name": "knife23",
+    "domain": "knife",
+    "domainLabel": "Weapon carrying",
+    "age": "23",
+    "sourceFile": "mcs8_23y_cm_survey.dta",
+    "originalVar": "hsknif00",
+    "recodeType": "yesno",
+    "question": "Carried a knife or other weapon (last 12 months)",
+    "originalCodes": "1/2; negatives",
+    "classCodes": "1/0",
+    "notes": "",
+    "frequencies": [
+      {
+        "value": "0",
+        "n": 8812,
+        "isMissing": false
+      },
+      {
+        "value": "1",
+        "n": 83,
+        "isMissing": false
+      },
+      {
+        "value": "Missing",
+        "n": 10610,
+        "isMissing": true
+      }
+    ],
+    "yesN": 83,
+    "topicSlug": "carry-a-knife-age-23",
+    "topicId": "5.28",
+    "href": "/variables/carry-a-knife-age-23#knife23",
+    "stem": "knife"
+  },
+  {
+    "name": "conduct3_tantrum",
+    "domain": "conduct",
+    "domainLabel": "Conduct (age 3)",
+    "age": "3",
+    "sourceFile": "mcs2_parent_interview.dta",
+    "originalVar": "bmsdtta0",
+    "recodeType": "sdq_item",
+    "question": "Often has temper tantrums",
+    "originalCodes": "1 Not true; 2 Somewhat; 3 Certainly; 4 Can't say",
+    "classCodes": "1 if 2 or 3",
+    "notes": "C2/C3 suffixes b0/c0",
+    "frequencies": [
+      {
+        "value": "0",
+        "n": 4986,
+        "isMissing": false
+      },
+      {
+        "value": "1",
+        "n": 9868,
+        "isMissing": false
+      },
+      {
+        "value": "Missing",
+        "n": 4651,
+        "isMissing": true
+      }
+    ],
+    "yesN": 9868,
+    "topicSlug": "conduct-problems-at-age-3-sdq",
+    "topicId": "5.4",
+    "href": "/variables/conduct-problems-at-age-3-sdq#conduct3_tantrum",
+    "stem": "conduct:tantrum"
+  },
+  {
+    "name": "conduct3_disobedient",
+    "domain": "conduct",
+    "domainLabel": "Conduct (age 3)",
+    "age": "3",
+    "sourceFile": "mcs2_parent_interview.dta",
+    "originalVar": "bmsdora0",
+    "recodeType": "sdq_reverse",
+    "question": "Generally obedient (reversed)",
+    "originalCodes": "1-4 as above",
+    "classCodes": "1 if 1 or 2",
+    "notes": "",
+    "frequencies": [
+      {
+        "value": "0",
+        "n": 5322,
+        "isMissing": false
+      },
+      {
+        "value": "1",
+        "n": 9545,
+        "isMissing": false
+      },
+      {
+        "value": "Missing",
+        "n": 4638,
+        "isMissing": true
+      }
+    ],
+    "yesN": 9545,
+    "topicSlug": "conduct-problems-at-age-3-sdq",
+    "topicId": "5.4",
+    "href": "/variables/conduct-problems-at-age-3-sdq#conduct3_disobedient",
+    "stem": "conduct:disobedient"
+  },
+  {
+    "name": "conduct3_fights",
+    "domain": "conduct",
+    "domainLabel": "Conduct (age 3)",
+    "age": "3",
+    "sourceFile": "mcs2_parent_interview.dta",
+    "originalVar": "bmsdfba0",
+    "recodeType": "sdq_item",
+    "question": "Fights or bullies",
+    "originalCodes": "1-4",
+    "classCodes": "1 if 2 or 3",
+    "notes": "",
+    "frequencies": [
+      {
+        "value": "0",
+        "n": 11993,
+        "isMissing": false
+      },
+      {
+        "value": "1",
+        "n": 2689,
+        "isMissing": false
+      },
+      {
+        "value": "Missing",
+        "n": 4823,
+        "isMissing": true
+      }
+    ],
+    "yesN": 2689,
+    "topicSlug": "conduct-problems-at-age-3-sdq",
+    "topicId": "5.4",
+    "href": "/variables/conduct-problems-at-age-3-sdq#conduct3_fights",
+    "stem": "conduct:fights"
+  },
+  {
+    "name": "conduct3_argumentative",
+    "domain": "conduct",
+    "domainLabel": "Conduct (age 3)",
+    "age": "3",
+    "sourceFile": "mcs2_parent_interview.dta",
+    "originalVar": "bmsdoaa0",
+    "recodeType": "sdq_item",
+    "question": "Argumentative with adults",
+    "originalCodes": "1-4",
+    "classCodes": "1 if 2 or 3",
+    "notes": "",
+    "frequencies": [
+      {
+        "value": "0",
+        "n": 7026,
+        "isMissing": false
+      },
+      {
+        "value": "1",
+        "n": 7673,
+        "isMissing": false
+      },
+      {
+        "value": "Missing",
+        "n": 4806,
+        "isMissing": true
+      }
+    ],
+    "yesN": 7673,
+    "topicSlug": "conduct-problems-at-age-3-sdq",
+    "topicId": "5.4",
+    "href": "/variables/conduct-problems-at-age-3-sdq#conduct3_argumentative",
+    "stem": "conduct:argumentative"
+  },
+  {
+    "name": "conduct3_spiteful",
+    "domain": "conduct",
+    "domainLabel": "Conduct (age 3)",
+    "age": "3",
+    "sourceFile": "mcs2_parent_interview.dta",
+    "originalVar": "bmsdcsa0",
+    "recodeType": "sdq_item",
+    "question": "Spiteful to others",
+    "originalCodes": "1-4",
+    "classCodes": "1 if 2 or 3",
+    "notes": "",
+    "frequencies": [
+      {
+        "value": "0",
+        "n": 10143,
+        "isMissing": false
+      },
+      {
+        "value": "1",
+        "n": 4251,
+        "isMissing": false
+      },
+      {
+        "value": "Missing",
+        "n": 5111,
+        "isMissing": true
+      }
+    ],
+    "yesN": 4251,
+    "topicSlug": "conduct-problems-at-age-3-sdq",
+    "topicId": "5.4",
+    "href": "/variables/conduct-problems-at-age-3-sdq#conduct3_spiteful",
+    "stem": "conduct:spiteful"
+  },
+  {
+    "name": "att14_fight",
+    "domain": "attitude",
+    "domainLabel": "Attitudes",
+    "age": "14",
+    "sourceFile": "mcs6_cm_interview.dta",
+    "originalVar": "fcfght00",
+    "recodeType": "keep_1_3",
+    "question": "How wrong to start a fight",
+    "originalCodes": "1-3; negatives",
+    "classCodes": "1-3",
+    "notes": "",
+    "frequencies": [
+      {
+        "value": "1",
+        "n": 4132,
+        "isMissing": false
+      },
+      {
+        "value": "2",
+        "n": 6445,
+        "isMissing": false
+      },
+      {
+        "value": "3",
+        "n": 773,
+        "isMissing": false
+      },
+      {
+        "value": "Missing",
+        "n": 8155,
+        "isMissing": true
+      }
+    ],
+    "yesN": null,
+    "topicSlug": "delinquent-attitudes-age-11-and-age-14",
+    "topicId": "5.6",
+    "href": "/variables/delinquent-attitudes-age-11-and-age-14#att14_fight",
+    "stem": "att:fight"
+  },
+  {
+    "name": "att14_graffiti",
+    "domain": "attitude",
+    "domainLabel": "Attitudes",
+    "age": "14",
+    "sourceFile": "mcs6_cm_interview.dta",
+    "originalVar": "fcspnt00",
+    "recodeType": "keep_1_3",
+    "question": "How wrong to graffiti",
+    "originalCodes": "1-3; negatives",
+    "classCodes": "1-3",
+    "notes": "",
+    "frequencies": [
+      {
+        "value": "1",
+        "n": 8850,
+        "isMissing": false
+      },
+      {
+        "value": "2",
+        "n": 2237,
+        "isMissing": false
+      },
+      {
+        "value": "3",
+        "n": 268,
+        "isMissing": false
+      },
+      {
+        "value": "Missing",
+        "n": 8150,
+        "isMissing": true
+      }
+    ],
+    "yesN": null,
+    "topicSlug": "delinquent-attitudes-age-11-and-age-14",
+    "topicId": "5.6",
+    "href": "/variables/delinquent-attitudes-age-11-and-age-14#att14_graffiti",
+    "stem": "att:graffiti"
+  },
+  {
+    "name": "att14_steal",
+    "domain": "attitude",
+    "domainLabel": "Attitudes",
+    "age": "14",
+    "sourceFile": "mcs6_cm_interview.dta",
+    "originalVar": "fcstel00",
+    "recodeType": "keep_1_3",
+    "question": "How wrong to take things",
+    "originalCodes": "1-3; negatives",
+    "classCodes": "1-3",
+    "notes": "",
+    "frequencies": [
+      {
+        "value": "1",
+        "n": 10564,
+        "isMissing": false
+      },
+      {
+        "value": "2",
+        "n": 727,
+        "isMissing": false
+      },
+      {
+        "value": "3",
+        "n": 67,
+        "isMissing": false
+      },
+      {
+        "value": "Missing",
+        "n": 8147,
+        "isMissing": true
+      }
+    ],
+    "yesN": null,
+    "topicSlug": "delinquent-attitudes-age-11-and-age-14",
+    "topicId": "5.6",
+    "href": "/variables/delinquent-attitudes-age-11-and-age-14#att14_steal",
+    "stem": "att:steal"
+  },
+  {
+    "name": "att14_download",
+    "domain": "attitude",
+    "domainLabel": "Attitudes",
+    "age": "14",
+    "sourceFile": "mcs6_cm_interview.dta",
+    "originalVar": "fccopy00",
+    "recodeType": "keep_1_3",
+    "question": "How wrong to download without paying",
+    "originalCodes": "1-3; negatives",
+    "classCodes": "1-3",
+    "notes": "",
+    "frequencies": [
+      {
+        "value": "1",
+        "n": 3922,
+        "isMissing": false
+      },
+      {
+        "value": "2",
+        "n": 5492,
+        "isMissing": false
+      },
+      {
+        "value": "3",
+        "n": 1923,
+        "isMissing": false
+      },
+      {
+        "value": "Missing",
+        "n": 8168,
+        "isMissing": true
+      }
+    ],
+    "yesN": null,
+    "topicSlug": "delinquent-attitudes-age-11-and-age-14",
+    "topicId": "5.6",
+    "href": "/variables/delinquent-attitudes-age-11-and-age-14#att14_download",
+    "stem": "att:download"
+  },
+  {
+    "name": "date14_touched",
+    "domain": "dating",
+    "domainLabel": "Dating & partnership",
+    "age": "14",
+    "sourceFile": "mcs6_cm_interview.dta",
+    "originalVar": "fctuch00",
+    "recodeType": "yesno",
+    "question": "Hands under CM clothing (last 12 months)",
+    "originalCodes": "1/2; negatives",
+    "classCodes": "1/0",
+    "notes": "Routed",
+    "frequencies": [
+      {
+        "value": "0",
+        "n": 5284,
+        "isMissing": false
+      },
+      {
+        "value": "1",
+        "n": 972,
+        "isMissing": false
+      },
+      {
+        "value": "Missing",
+        "n": 13249,
+        "isMissing": true
+      }
+    ],
+    "yesN": 972,
+    "topicSlug": "dating-age-14",
+    "topicId": "5.11",
+    "href": "/variables/dating-age-14#date14_touched",
+    "stem": "date:touched"
+  },
+  {
+    "name": "date14_touch",
+    "domain": "dating",
+    "domainLabel": "Dating & partnership",
+    "age": "14",
+    "sourceFile": "mcs6_cm_interview.dta",
+    "originalVar": "fctcho00",
+    "recodeType": "yesno",
+    "question": "CM hands under other clothing (last 12 months)",
+    "originalCodes": "1/2; negatives",
+    "classCodes": "1/0",
+    "notes": "Routed",
+    "frequencies": [
+      {
+        "value": "0",
+        "n": 5402,
+        "isMissing": false
+      },
+      {
+        "value": "1",
+        "n": 858,
+        "isMissing": false
+      },
+      {
+        "value": "Missing",
+        "n": 13245,
+        "isMissing": true
+      }
+    ],
+    "yesN": 858,
+    "topicSlug": "dating-age-14",
+    "topicId": "5.11",
+    "href": "/variables/dating-age-14#date14_touch",
+    "stem": "date:touch"
+  },
+  {
+    "name": "date14_touch_gen",
+    "domain": "dating",
+    "domainLabel": "Dating & partnership",
+    "age": "14",
+    "sourceFile": "mcs6_cm_interview.dta",
+    "originalVar": "fctchp00",
+    "recodeType": "yesno",
+    "question": "CM touched private parts (last 12 months)",
+    "originalCodes": "1/2; negatives",
+    "classCodes": "1/0",
+    "notes": "Routed",
+    "frequencies": [
+      {
+        "value": "0",
+        "n": 556,
+        "isMissing": false
+      },
+      {
+        "value": "1",
+        "n": 506,
+        "isMissing": false
+      },
+      {
+        "value": "Missing",
+        "n": 18443,
+        "isMissing": true
+      }
+    ],
+    "yesN": 506,
+    "topicSlug": "dating-age-14",
+    "topicId": "5.11",
+    "href": "/variables/dating-age-14#date14_touch_gen",
+    "stem": "date:touch_gen"
+  },
+  {
+    "name": "date14_touched_gen",
+    "domain": "dating",
+    "domainLabel": "Dating & partnership",
+    "age": "14",
+    "sourceFile": "mcs6_cm_interview.dta",
+    "originalVar": "fctcop00",
+    "recodeType": "yesno",
+    "question": "Other touched CM private parts (last 12 months)",
+    "originalCodes": "1/2; negatives",
+    "classCodes": "1/0",
+    "notes": "Routed",
+    "frequencies": [
+      {
+        "value": "0",
+        "n": 512,
+        "isMissing": false
+      },
+      {
+        "value": "1",
+        "n": 550,
+        "isMissing": false
+      },
+      {
+        "value": "Missing",
+        "n": 18443,
+        "isMissing": true
+      }
+    ],
+    "yesN": 550,
+    "topicSlug": "dating-age-14",
+    "topicId": "5.11",
+    "href": "/variables/dating-age-14#date14_touched_gen",
+    "stem": "date:touched_gen"
+  },
+  {
+    "name": "date14_oral_did",
+    "domain": "dating",
+    "domainLabel": "Dating & partnership",
+    "age": "14",
+    "sourceFile": "mcs6_cm_interview.dta",
+    "originalVar": "fcoral00",
+    "recodeType": "yesno",
+    "question": "CM performed oral sex (last 12 months)",
+    "originalCodes": "1/2; negatives",
+    "classCodes": "1/0",
+    "notes": "Routed",
+    "frequencies": [
+      {
+        "value": "0",
+        "n": 374,
+        "isMissing": false
+      },
+      {
+        "value": "1",
+        "n": 232,
+        "isMissing": false
+      },
+      {
+        "value": "Missing",
+        "n": 18899,
+        "isMissing": true
+      }
+    ],
+    "yesN": 232,
+    "topicSlug": "dating-age-14",
+    "topicId": "5.11",
+    "href": "/variables/dating-age-14#date14_oral_did",
+    "stem": "date:oral_did"
+  },
+  {
+    "name": "date14_oral_rec",
+    "domain": "dating",
+    "domainLabel": "Dating & partnership",
+    "age": "14",
+    "sourceFile": "mcs6_cm_interview.dta",
+    "originalVar": "fcorlo00",
+    "recodeType": "yesno",
+    "question": "Oral sex performed on CM (last 12 months)",
+    "originalCodes": "1/2; negatives",
+    "classCodes": "1/0",
+    "notes": "Routed",
+    "frequencies": [
+      {
+        "value": "0",
+        "n": 351,
+        "isMissing": false
+      },
+      {
+        "value": "1",
+        "n": 256,
+        "isMissing": false
+      },
+      {
+        "value": "Missing",
+        "n": 18898,
+        "isMissing": true
+      }
+    ],
+    "yesN": 256,
+    "topicSlug": "dating-age-14",
+    "topicId": "5.11",
+    "href": "/variables/dating-age-14#date14_oral_rec",
+    "stem": "date:oral_rec"
+  },
+  {
+    "name": "date14_sex",
+    "domain": "dating",
+    "domainLabel": "Dating & partnership",
+    "age": "14",
+    "sourceFile": "mcs6_cm_interview.dta",
+    "originalVar": "fcsexx00",
+    "recodeType": "yesno",
+    "question": "Sexual intercourse (last 12 months)",
+    "originalCodes": "1/2; negatives",
+    "classCodes": "1/0",
+    "notes": "Routed",
+    "frequencies": [
+      {
+        "value": "0",
+        "n": 418,
+        "isMissing": false
+      },
+      {
+        "value": "1",
+        "n": 188,
+        "isMissing": false
+      },
+      {
+        "value": "Missing",
+        "n": 18899,
+        "isMissing": true
+      }
+    ],
+    "yesN": 188,
+    "topicSlug": "dating-age-14",
+    "topicId": "5.11",
+    "href": "/variables/dating-age-14#date14_sex",
+    "stem": "date:sex"
+  },
+  {
+    "name": "date17_sex_ever",
+    "domain": "dating",
+    "domainLabel": "Dating & partnership",
+    "age": "17",
+    "sourceFile": "mcs7_cm_interview.dta",
+    "originalVar": "gcsxev00",
+    "recodeType": "yesno",
+    "question": "Ever had sexual intercourse",
+    "originalCodes": "1/2; 3-5",
+    "classCodes": "1/0",
+    "notes": "",
+    "frequencies": [
+      {
+        "value": "0",
+        "n": 6067,
+        "isMissing": false
+      },
+      {
+        "value": "1",
+        "n": 3949,
+        "isMissing": false
+      },
+      {
+        "value": "Missing",
+        "n": 9489,
+        "isMissing": true
+      }
+    ],
+    "yesN": 3949,
+    "topicSlug": "dating-age-17",
+    "topicId": "5.17",
+    "href": "/variables/dating-age-17#date17_sex_ever",
+    "stem": "date:sex"
+  },
+  {
+    "name": "cj17_stopped",
+    "domain": "cj",
+    "domainLabel": "Criminal justice",
+    "age": "17",
+    "sourceFile": "mcs7_cm_interview.dta",
+    "originalVar": "gcpols00",
+    "recodeType": "yesno",
+    "question": "Ever stopped and questioned by police",
+    "originalCodes": "1/2; 3-5",
+    "classCodes": "1/0",
+    "notes": "",
+    "frequencies": [
+      {
+        "value": "0",
+        "n": 5611,
+        "isMissing": false
+      },
+      {
+        "value": "1",
+        "n": 1173,
+        "isMissing": false
+      },
+      {
+        "value": "Missing",
+        "n": 12721,
+        "isMissing": true
+      }
+    ],
+    "yesN": 1173,
+    "topicSlug": "ever-criminal-justice-contact-age-17",
+    "topicId": "5.22",
+    "href": "/variables/ever-criminal-justice-contact-age-17#cj17_stopped",
+    "stem": "cj:stopped"
+  },
+  {
+    "name": "cj17_caution",
+    "domain": "cj",
+    "domainLabel": "Criminal justice",
+    "age": "17",
+    "sourceFile": "mcs7_cm_interview.dta",
+    "originalVar": "gccaut00",
+    "recodeType": "yesno",
+    "question": "Ever caution",
+    "originalCodes": "1/2; 3-5",
+    "classCodes": "1/0",
+    "notes": "",
+    "frequencies": [
+      {
+        "value": "0",
+        "n": 6298,
+        "isMissing": false
+      },
+      {
+        "value": "1",
+        "n": 479,
+        "isMissing": false
+      },
+      {
+        "value": "Missing",
+        "n": 12728,
+        "isMissing": true
+      }
+    ],
+    "yesN": 479,
+    "topicSlug": "ever-criminal-justice-contact-age-17",
+    "topicId": "5.22",
+    "href": "/variables/ever-criminal-justice-contact-age-17#cj17_caution",
+    "stem": "cj:caution"
+  },
+  {
+    "name": "cj17_arrest",
+    "domain": "cj",
+    "domainLabel": "Criminal justice",
+    "age": "17",
+    "sourceFile": "mcs7_cm_interview.dta",
+    "originalVar": "gcares00",
+    "recodeType": "yesno",
+    "question": "Ever arrested",
+    "originalCodes": "1/2; 3-5",
+    "classCodes": "1/0",
+    "notes": "",
+    "frequencies": [
+      {
+        "value": "0",
+        "n": 6665,
+        "isMissing": false
+      },
+      {
+        "value": "1",
+        "n": 112,
+        "isMissing": false
+      },
+      {
+        "value": "Missing",
+        "n": 12728,
+        "isMissing": true
+      }
+    ],
+    "yesN": 112,
+    "topicSlug": "ever-criminal-justice-contact-age-17",
+    "topicId": "5.22",
+    "href": "/variables/ever-criminal-justice-contact-age-17#cj17_arrest",
+    "stem": "cj:arrest"
+  },
+  {
+    "name": "cj17_court",
+    "domain": "cj",
+    "domainLabel": "Criminal justice",
+    "age": "17",
+    "sourceFile": "mcs7_cm_interview.dta",
+    "originalVar": "gccort00",
+    "recodeType": "yesno",
+    "question": "Appeared in court",
+    "originalCodes": "1/2; 3-5",
+    "classCodes": "1/0",
+    "notes": "Asked only if arrested",
+    "frequencies": [
+      {
+        "value": "0",
+        "n": 88,
+        "isMissing": false
+      },
+      {
+        "value": "1",
+        "n": 24,
+        "isMissing": false
+      },
+      {
+        "value": "Missing",
+        "n": 19393,
+        "isMissing": true
+      }
+    ],
+    "yesN": 24,
+    "topicSlug": "ever-criminal-justice-contact-age-17",
+    "topicId": "5.22",
+    "href": "/variables/ever-criminal-justice-contact-age-17#cj17_court",
+    "stem": "cj:court"
+  }
+]

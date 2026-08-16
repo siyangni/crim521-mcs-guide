@@ -1,0 +1,14 @@
+---
+import { withBase } from "../lib/paths.mjs";
+
+interface Props {
+  text: string;
+}
+const { text } = Astro.props;
+---
+
+<footer class="licence-bar">
+  <span class="full">{text}</span>
+  <span class="short">EUL teaching file. Do not share the dataset.</span>
+  <a class="hide-narrow" href={withBase("/cite")}>Cite</a>
+</footer>

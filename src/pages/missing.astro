@@ -1,0 +1,28 @@
+---
+import GuideLayout from "../layouts/GuideLayout.astro";
+import Callout from "../components/Callout.astro";
+import guide from "../data/guide.json";
+
+const chapter = guide.chapters.find((item) => item.href === "/missing");
+if (!chapter) throw new Error("Missing-data chapter missing from ingest");
+---
+
+<GuideLayout title="Missing data" eyebrow="Section 4">
+  <h1>Missing data</h1>
+  <Callout variant="note">
+    <p>
+      <code>nvq23</code> code 96 is a valid qualification code, not missing. Gang code 3
+      (“used to be a member”) is recoded to No. Negative weights mark non-productive cases and
+      must not enter a weighted analysis.
+    </p>
+  </Callout>
+  <div class="prose" set:html={chapter.html} />
+  {
+    chapter.subsections.map((section) => (
+      <section>
+        <h2 id={section.slug}>{section.heading}</h2>
+        <div class="prose" set:html={section.html} />
+      </section>
+    ))
+  }
+</GuideLayout>

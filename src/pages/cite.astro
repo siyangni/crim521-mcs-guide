@@ -1,0 +1,24 @@
+---
+import GuideLayout from "../layouts/GuideLayout.astro";
+import Callout from "../components/Callout.astro";
+import guide from "../data/guide.json";
+
+const chapter = guide.chapters.find((item) => item.href === "/cite");
+if (!chapter) throw new Error("Cite chapter missing from ingest");
+---
+
+<GuideLayout title="Cite & licence" eyebrow="User guide">
+  <h1>Cite the source data</h1>
+  <Callout>
+    <p>{guide.meta.licence}</p>
+  </Callout>
+  <div class="prose" set:html={chapter.html} />
+  {
+    chapter.subsections.map((section) => (
+      <section>
+        <h2 id={section.slug}>{section.heading}</h2>
+        <div class="prose" set:html={section.html} />
+      </section>
+    ))
+  }
+</GuideLayout>

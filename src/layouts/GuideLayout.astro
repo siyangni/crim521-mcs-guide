@@ -1,0 +1,283 @@
+---
+import "../styles/global.css";
+import AgeSpine from "../components/AgeSpine.astro";
+import Colophon from "../components/Colophon.astro";
+import Icon from "../components/Icon.astro";
+import LicenceBar from "../components/LicenceBar.astro";
+import SearchPalette from "../components/SearchPalette.astro";
+import guide from "../data/guide.json";
+import { stripBase, withBase } from "../lib/paths.mjs";
+
+interface Props {
+  title: string;
+  description?: string;
+  eyebrow?: string;
+}
+
+const { title, description, eyebrow } = Astro.props;
+const path = stripBase(Astro.url.pathname);
+const pageTitle =
+  title === guide.meta.title
+    ? `CRIM 521 · ${title}`
+    : `${title} · CRIM 521`;
+
+const chapters = guide.chapters.filter((chapter) => chapter.href !== "/variables");
+const topics = guide.topics as {
+  heading: string;
+  slug: string;
+  href: string;
+  ages: string[];
+}[];
+
+function current(href: string) {
+  const clean = href.replace(/\/$/, "") || "/";
+  if (clean === "/") return path === "/";
+  return path === clean || path.startsWith(`${clean}/`);
+}
+
+const groups: { label: string; items: { href: string; label: string }[] }[] = [
+  { label: "Baseline", items: [] },
+  { label: "Age 3", items: [] },
+  { label: "Age 11", items: [] },
+  { label: "Age 14", items: [] },
+  { label: "Age 17", items: [] },
+  { label: "Age 23", items: [] },
+];
+
+for (const topic of topics) {
+  const first = topic.ages[0];
+  const bucket =
+    first === "3"
+      ? "Age 3"
+      : first === "11"
+        ? "Age 11"
+        : first === "14"
+          ? "Age 14"
+          : first === "17"
+            ? "Age 17"
+            : first === "23"
+              ? "Age 23"
+              : "Baseline";
+  const group = groups.find((item) => item.label === bucket);
+  group?.items.push({
+    href: topic.href,
+    label: shortNavLabel(topic.heading),
+  });
+}
+
+function shortNavLabel(heading: string) {
+  return heading
+    .replace(/^\d+\.\d+\s+/, "")
+    .replace(/,?\s*age \d+( and age \d+)?/gi, "")
+    .replace(/^Educational attainment \(NVQ\).*/i, "NVQ")
+    .replace(/^Delinquent attitudes.*/i, "Attitudes")
+    .replace(/^Conduct problems.*/i, "Conduct (SDQ)")
+    .replace(/^Pocket money and chores.*/i, "Pocket money & chores")
+    .replace(/^Ever criminal justice contact.*/i, "Criminal justice")
+    .replace(/^Live with parents.*/i, "Living with parents")
+    .trim();
+}
+---
+
+<!doctype html>
+<html lang="en" data-base={import.meta.env.BASE_URL.replace(/\/$/, "")}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{pageTitle}</title>
+    <meta
+      name="description"
+      content={description ??
+        "User guide for the Millennium Cohort Study class teaching file: construction, weights, missing data, and the variable dictionary."}
+    />
+    <link rel="icon" href={withBase("/favicon.svg")} type="image/svg+xml" />
+  </head>
+  <body>
+    <a class="skip-link" href="#content">Skip to content</a>
+    <header class="site-header">
+      <div class="header-row">
+        <a class="wordmark" href={withBase("/")}>
+          <span class="wordmark-kicker">CRIM 521 · Life Course Criminology</span>
+          <span class="wordmark-title">MCS class file <em>user guide</em></span>
+        </a>
+        <div class="header-actions">
+          <button class="search-open" type="button" data-open-search>
+            <Icon name="search" />
+            Search <span class="kbd">/</span>
+          </button>
+          <button
+            class="icon-btn menu-btn"
+            type="button"
+            data-toggle-nav
+            aria-expanded="false"
+            aria-controls="site-nav"
+          >
+            Menu
+          </button>
+        </div>
+      </div>
+      <AgeSpine respondents={guide.meta.respondents} currentPath={path} />
+    </header>
+
+    <div class="nav-backdrop" data-toggle-nav hidden></div>
+    <div class="shell">
+      <nav class="sidebar" id="site-nav" aria-label="Guide">
+        <div class="nav-group">
+          <p class="nav-label">Overview</p>
+          <a href={withBase("/")} aria-current={current("/") ? "page" : undefined}>Home</a>
+          {
+            chapters.map((chapter) => (
+              <a href={withBase(chapter.href)} aria-current={current(chapter.href) ? "page" : undefined}>
+                {chapter.nav}
+              </a>
+            ))
+          }
+        </div>
+        <div class="nav-group">
+          <p class="nav-label">Dictionary</p>
+          <a href={withBase("/variables")} aria-current={path === "/variables" ? "page" : undefined}>
+            All variables
+          </a>
+          <div class="age-links">
+            {
+              ["3", "11", "14", "17", "23"].map((age) => (
+                <a
+                  href={withBase(`/ages/${age}`)}
+                  aria-current={path === `/ages/${age}` ? "page" : undefined}
+                >
+                  {age}
+                </a>
+              ))
+            }
+          </div>
+        </div>
+        {
+          groups.map((group) =>
+            group.items.length ? (
+              <div class="nav-group">
+                <p class="nav-label">{group.label}</p>
+                {group.items.map((item) => (
+                  <a href={withBase(item.href)} aria-current={current(item.href) ? "page" : undefined}>
+                    {item.label}
+                  </a>
+                ))}
+              </div>
+            ) : null,
+          )
+        }
+      </nav>
+
+      <div class="main-col">
+        <main class="page" id="content">
+          {eyebrow && <p class="eyebrow">{eyebrow}</p>}
+          <slot />
+        </main>
+        <aside class="toc" aria-label="On this page">
+          <p>On this page</p>
+          <div id="toc-list"></div>
+        </aside>
+      </div>
+    </div>
+
+    <Colophon />
+    <LicenceBar text={guide.meta.licence} />
+    <SearchPalette />
+
+    <script>
+      const toc = document.getElementById("toc-list");
+      const headings = document.querySelectorAll("main h2, main h3");
+      if (toc) {
+        headings.forEach((heading) => {
+          if (!(heading instanceof HTMLElement)) return;
+          if (!heading.id) {
+            heading.id = heading.textContent?.toLowerCase().replace(/[^a-z0-9]+/g, "-") ?? "";
+          }
+          const a = document.createElement("a");
+          a.href = `#${heading.id}`;
+          a.textContent = heading.textContent ?? "";
+          a.className = heading.tagName === "H3" ? "h3" : "h2";
+          toc.append(a);
+        });
+      }
+
+      document.querySelectorAll("pre").forEach((pre) => {
+        if (pre.querySelector(".copy-pre")) return;
+        const btn = document.createElement("button");
+        btn.type = "button";
+        btn.className = "icon-btn copy-pre";
+        btn.textContent = "Copy";
+        btn.dataset.copy = pre.textContent ?? "";
+        pre.prepend(btn);
+      });
+
+      document.body.addEventListener("click", async (event) => {
+        const target = event.target;
+        if (!(target instanceof Element)) return;
+        const btn = target.closest("[data-copy]");
+        if (!(btn instanceof HTMLElement) || !btn.dataset.copy) return;
+        event.preventDefault();
+        event.stopPropagation();
+        const pre = btn.closest("pre");
+        const live = pre?.querySelector("code")?.textContent ?? btn.dataset.copy;
+        try {
+          await navigator.clipboard.writeText(live);
+          if (btn.classList.contains("copy-pre")) {
+            const prev = btn.textContent;
+            btn.textContent = "Copied";
+            window.setTimeout(() => {
+              btn.textContent = prev;
+            }, 1200);
+          } else {
+            btn.setAttribute("data-copied", "true");
+            window.setTimeout(() => btn.removeAttribute("data-copied"), 1200);
+          }
+        } catch {
+          /* ignore */
+        }
+      });
+
+      const menu = document.querySelector(".menu-btn");
+      const backdrop = document.querySelector(".nav-backdrop");
+      const sidebar = document.getElementById("site-nav");
+      const sidebarScrollKey = "mcs-sidebar-scroll";
+      const restoreSidebarScroll = () => {
+        if (!(sidebar instanceof HTMLElement)) return;
+        const saved = sessionStorage.getItem(sidebarScrollKey);
+        if (saved == null) return;
+        sidebar.scrollTop = Number(saved) || 0;
+      };
+      if (sidebar instanceof HTMLElement) {
+        restoreSidebarScroll();
+        sidebar.addEventListener(
+          "scroll",
+          () => {
+            sessionStorage.setItem(sidebarScrollKey, String(sidebar.scrollTop));
+          },
+          { passive: true },
+        );
+        sidebar.addEventListener("click", (event) => {
+          const target = event.target;
+          if (!(target instanceof Element) || !target.closest("a[href]")) return;
+          sessionStorage.setItem(sidebarScrollKey, String(sidebar.scrollTop));
+        });
+      }
+      const mobileNav = () => window.matchMedia("(max-width: 860px)").matches;
+      const setNav = (open) => {
+        document.body.classList.toggle("nav-open", open);
+        menu?.setAttribute("aria-expanded", String(open));
+        if (backdrop instanceof HTMLElement) backdrop.hidden = !open;
+        if (sidebar) {
+          const hide = mobileNav() && !open;
+          sidebar.inert = hide;
+          sidebar.setAttribute("aria-hidden", String(hide));
+        }
+      };
+      setNav(false);
+      restoreSidebarScroll();
+      menu?.addEventListener("click", () => {
+        setNav(!document.body.classList.contains("nav-open"));
+      });
+      backdrop?.addEventListener("click", () => setNav(false));
+    </script>
+  </body>
+</html>

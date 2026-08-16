@@ -1,0 +1,12 @@
+---
+import GuideLayout from "../layouts/GuideLayout.astro";
+import { withBase } from "../lib/paths.mjs";
+---
+
+<GuideLayout title="Page not found">
+  <h1>That page is not in the guide</h1>
+  <p class="lede">
+    Try the <a href={withBase("/variables")}>variable dictionary</a>, the <a href={withBase("/search")}>search page</a>,
+    or press <kbd class="kbd">/</kbd>.
+  </p>
+</GuideLayout>

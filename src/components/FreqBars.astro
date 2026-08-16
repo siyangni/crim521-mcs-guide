@@ -1,0 +1,65 @@
+---
+import { formatN } from "../lib/format.mjs";
+
+interface Row {
+  value: string;
+  n: number;
+  isMissing: boolean;
+}
+
+interface Props {
+  rows: Row[];
+  caption?: string;
+}
+
+const { rows, caption } = Astro.props;
+const total = rows.reduce((sum, row) => sum + row.n, 0) || 1;
+---
+
+{
+  rows.length > 0 && (
+    <figure class="freq">
+      {caption && (
+        <figcaption class="eyebrow" style="margin-bottom:0.4rem">
+          {caption}
+        </figcaption>
+      )}
+      {rows.map((row) => (
+        <div class:list={["freq-row", row.isMissing && "is-missing"]}>
+          <span class="lab">{row.isMissing ? "Missing" : row.value}</span>
+          <div class="bar" aria-hidden="true">
+            <span style={`width:${Math.max(1.5, (row.n / total) * 100)}%`} />
+          </div>
+          <span class="n">{formatN(row.n)}</span>
+        </div>
+      ))}
+      <table class="visually-hidden">
+        <caption>Unweighted counts</caption>
+        <thead>
+          <tr>
+            <th>Value</th>
+            <th>N</th>
+          </tr>
+        </thead>
+        <tbody>
+          {rows.map((row) => (
+            <tr>
+              <td>{row.isMissing ? "Missing" : row.value}</td>
+              <td>{row.n}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </figure>
+  )
+}
+
+<style>
+  .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+  }
+</style>

@@ -1,0 +1,70 @@
+---
+import GuideLayout from "../layouts/GuideLayout.astro";
+---
+
+<GuideLayout title="Search" eyebrow="Find a variable">
+  <h1>Search</h1>
+  <p class="lede">
+    Press <kbd class="kbd">/</kbd> or <kbd class="kbd">Ctrl</kbd>+<kbd class="kbd">K</kbd> from any
+    page, or type here. Matches class names, original names, and question text.
+  </p>
+  <input
+    class="search-field"
+    id="page-search"
+    type="search"
+    placeholder="shoplift, race4, fcstol00…"
+    aria-label="Search the guide"
+  />
+  <div id="page-results"></div>
+</GuideLayout>
+
+<script>
+  const input = document.getElementById("page-search") as HTMLInputElement | null;
+  const host = document.getElementById("page-results");
+  let index: { type: string; title: string; subtitle: string; tokens: string; href: string }[] = [];
+
+  fetch(`${document.documentElement.dataset.base || ""}/search-index.json`)
+    .then((res) => {
+      if (!res.ok) throw new Error("search index missing");
+      return res.json();
+    })
+    .then((data) => {
+      index = data;
+      paint();
+    })
+    .catch(() => {
+      index = [];
+      paint();
+    });
+
+  function paint() {
+    if (!host) return;
+    host.replaceChildren();
+    const q = (input?.value ?? "").trim().toLowerCase();
+    const hits = index
+      .filter((item) => !q || item.tokens.includes(q) || item.title.toLowerCase().includes(q))
+      .slice(0, 40);
+    for (const item of hits) {
+      const a = document.createElement("a");
+      a.className = "var-row";
+      a.href = item.href;
+      const name = document.createElement("span");
+      name.className = "name";
+      const code = document.createElement("code");
+      code.textContent = item.title;
+      name.append(code);
+      const age = document.createElement("span");
+      age.className = "age";
+      age.textContent = item.type;
+      const question = document.createElement("span");
+      question.className = "q";
+      question.textContent = item.subtitle ?? "";
+      const yes = document.createElement("span");
+      yes.className = "yes";
+      a.append(name, age, question, yes);
+      host.append(a);
+    }
+  }
+
+  input?.addEventListener("input", paint);
+</script>

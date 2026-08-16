@@ -1,0 +1,32 @@
+---
+interface Props {
+  r: string;
+  stata: string;
+}
+const { r, stata } = Astro.props;
+const id = Math.random().toString(36).slice(2, 8);
+---
+
+<div class="code-tabs" data-tabs>
+  <div class="tabs" role="tablist">
+    <button type="button" role="tab" aria-selected="true" data-tab={`r-${id}`}>R</button>
+    <button type="button" role="tab" aria-selected="false" data-tab={`stata-${id}`}>Stata</button>
+  </div>
+  <pre id={`r-${id}`} data-panel><code>{r}</code></pre>
+  <pre id={`stata-${id}`} data-panel hidden><code>{stata}</code></pre>
+</div>
+
+<script>
+  document.querySelectorAll("[data-tabs]").forEach((root) => {
+    const tabs = root.querySelectorAll("[role='tab']");
+    tabs.forEach((tab) => {
+      tab.addEventListener("click", () => {
+        const target = (tab as HTMLElement).dataset.tab;
+        tabs.forEach((other) => other.setAttribute("aria-selected", String(other === tab)));
+        root.querySelectorAll("[data-panel]").forEach((panel) => {
+          (panel as HTMLElement).hidden = panel.id !== target;
+        });
+      });
+    });
+  });
+</script>

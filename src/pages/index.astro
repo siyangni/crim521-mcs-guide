@@ -1,0 +1,136 @@
+---
+import GuideLayout from "../layouts/GuideLayout.astro";
+import Callout from "../components/Callout.astro";
+import Icon from "../components/Icon.astro";
+import guide from "../data/guide.json";
+import { formatN } from "../lib/format.mjs";
+import { withBase } from "../lib/paths.mjs";
+
+const { meta } = guide;
+---
+
+<GuideLayout
+  title={meta.title}
+  eyebrow="CRIM 521 · Version 1.0"
+  description="Teaching-site user guide for the CRIM 521 Millennium Cohort Study class file."
+>
+  <div class="hero">
+    <div class="hero-top">
+      <h1>Millennium <span class="nobr">Cohort Study</span></h1>
+      <div class="hero-stat">
+        <span class="num">{formatN(meta.n)}</span>
+        <span class="cap">cohort members</span>
+      </div>
+    </div>
+    <p class="lede">
+      A single wide teaching file. Each row is a cohort member. This site is the
+      user guide: how the file was built, which weight to use, and what every
+      released variable means.
+    </p>
+    <ul class="course-banner">
+      <li>
+        <Icon name="book" />
+        <span>
+          <span class="course-label">Course</span>
+          <strong>CRIM 521</strong>
+          Life Course Criminology
+        </span>
+      </li>
+      <li>
+        <Icon name="person" />
+        <span>
+          <span class="course-label">Instructor</span>
+          <strong>Dr. Jeremy Staff</strong>
+        </span>
+      </li>
+      <li>
+        <Icon name="pen" />
+        <span>
+          <span class="course-label">Website</span>
+          Made by <strong>Siyang Ni</strong>
+        </span>
+      </li>
+    </ul>
+  </div>
+
+  <Callout>
+    <p>{meta.licence} The guide may be shared. The dataset may not.</p>
+  </Callout>
+
+  <ol class="ledger">
+    <li>
+      <a href={withBase("/weights")}>
+        <span class="n">01</span>
+        <span><Icon name="scale" /> Set the survey design</span>
+        <span class="go">Weights →</span>
+      </a>
+    </li>
+    <li>
+      <a href={withBase("/variables")}>
+        <span class="n">02</span>
+        <span><Icon name="book" /> Find a variable</span>
+        <span class="go">Dictionary →</span>
+      </a>
+    </li>
+    <li>
+      <a href={withBase("/construction")}>
+        <span class="n">03</span>
+        <span><Icon name="timeline" /> How the file was built</span>
+        <span class="go">Construction →</span>
+      </a>
+    </li>
+  </ol>
+
+  <h2>Sweeps in this file</h2>
+  <p>
+    MCS follows people born in the United Kingdom in 2000–02. Sweeps 3 and 4 are not used.
+    Counts on the age spine are respondents to the interview used in this file, not the issued
+    sample.
+  </p>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Sweep</th>
+          <th>Typical age</th>
+          <th>Fieldwork began</th>
+        </tr>
+      </thead>
+      <tbody>
+        {
+          meta.sweeps.map((row) => (
+            <tr>
+              <td>{row.sweep}</td>
+              <td>{row.age}</td>
+              <td>{row.fieldwork}</td>
+            </tr>
+          ))
+        }
+      </tbody>
+    </table>
+  </div>
+
+  <h2>Files on disk</h2>
+  <p>This website does not contain the class dataset.</p>
+  <ul class="file-list">
+    {
+      meta.files
+        .filter((file) => /mcs_class\.(dta|csv)$/.test(file.file))
+        .map((file) => (
+          <li>
+            <code>{file.file.replace(/^output\//, "")}</code>
+            <span>{file.contents}</span>
+          </li>
+        ))
+    }
+  </ul>
+
+  <h2>Source deposits</h2>
+  <p>
+    Cite the MCS deposits used to build the file, and acknowledge the Centre for Longitudinal
+    Studies, UCL. Full wording is on the <a href={withBase("/cite")}>citation page</a>.
+  </p>
+  <ul>
+    {meta.deposits.map((item) => <li>{item}</li>)}
+  </ul>
+</GuideLayout>

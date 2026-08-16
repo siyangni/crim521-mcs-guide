@@ -1,0 +1,27 @@
+---
+import GuideLayout from "../layouts/GuideLayout.astro";
+import Callout from "../components/Callout.astro";
+import guide from "../data/guide.json";
+
+const chapter = guide.chapters.find((item) => item.href === "/construction");
+if (!chapter) throw new Error("Construction chapter missing from ingest");
+---
+
+<GuideLayout title="How the file was constructed" eyebrow="Section 2">
+  <h1>How the file was constructed</h1>
+  <Callout variant="note">
+    <p>
+      Unless a specific rule is given in the dictionary, MCS missing codes become system missing,
+      Yes/No items become 1/0, and no case is dropped because an item is missing.
+    </p>
+  </Callout>
+  <div class="prose" set:html={chapter.html} />
+  {
+    chapter.subsections.map((section) => (
+      <section>
+        <h2 id={section.slug}>{section.heading}</h2>
+        <div class="prose" set:html={section.html} />
+      </section>
+    ))
+  }
+</GuideLayout>

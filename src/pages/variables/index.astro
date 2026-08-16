@@ -1,0 +1,119 @@
+---
+import GuideLayout from "../../layouts/GuideLayout.astro";
+import guide from "../../data/guide.json";
+import { ageLabel, formatN } from "../../lib/format.mjs";
+import { withBase } from "../../lib/paths.mjs";
+
+const variables = guide.variables as {
+  name: string;
+  domain: string;
+  domainLabel: string;
+  age: string | null;
+  question: string;
+  originalVar: string;
+  yesN: number | null;
+  href: string;
+}[];
+
+const ages = [...new Set(variables.map((item) => item.age).filter(Boolean))] as string[];
+const domains = [...new Set(variables.map((item) => item.domain))];
+const chapter = guide.chapters.find((item) => item.href === "/variables");
+---
+
+<GuideLayout
+  title="Variable dictionary"
+  eyebrow="Section 5"
+  description="Searchable dictionary of class-file variables."
+>
+  <h1>Variable dictionary</h1>
+  {chapter && <div class="prose" set:html={chapter.html} />}
+  <p>
+    Search original names such as <code>fcstol00</code> as well as class names.
+  </p>
+
+  <label class="eyebrow" for="var-q">Filter</label>
+  <input class="search-field" id="var-q" type="search" placeholder="delinq14, shoplift, fcstol00…" />
+
+  <div class="filters" data-group="age">
+    <button type="button" data-age="" aria-pressed="true">All ages</button>
+    {ages.map((age) => (
+      <button type="button" data-age={age} aria-pressed="false">
+        {ageLabel(age)}
+      </button>
+    ))}
+  </div>
+  <div class="filters" data-group="domain">
+    <button type="button" data-domain="" aria-pressed="true">All domains</button>
+    {domains.map((domain) => (
+      <button type="button" data-domain={domain} aria-pressed="false">
+        {variables.find((item) => item.domain === domain)?.domainLabel ?? domain}
+      </button>
+    ))}
+  </div>
+
+  <p class="eyebrow"><span id="var-count">{variables.length}</span> variables</p>
+
+  <div id="var-list">
+    {
+      variables.map((variable) => (
+        <a
+          class="var-row"
+          href={withBase(variable.href)}
+          data-row
+          data-age={variable.age ?? ""}
+          data-domain={variable.domain}
+          data-tokens={`${variable.name} ${variable.originalVar} ${variable.question} ${variable.domain}`.toLowerCase()}
+        >
+          <span class="name">
+            <code>{variable.name}</code>
+          </span>
+          <span class="age">{ageLabel(variable.age)}</span>
+          <span class="q">{variable.question}</span>
+          <span class="yes">{variable.yesN != null ? `Yes ${formatN(variable.yesN)}` : ""}</span>
+        </a>
+      ))
+    }
+  </div>
+</GuideLayout>
+
+<script>
+  const q = document.getElementById("var-q") as HTMLInputElement | null;
+  const count = document.getElementById("var-count");
+  const rows = [...document.querySelectorAll("[data-row]")] as HTMLElement[];
+  let age = "";
+  let domain = "";
+
+  function apply() {
+    const query = (q?.value ?? "").trim().toLowerCase();
+    let visible = 0;
+    for (const row of rows) {
+      const okAge = !age || row.dataset.age === age;
+      const okDomain = !domain || row.dataset.domain === domain;
+      const okQ = !query || (row.dataset.tokens ?? "").includes(query);
+      const show = okAge && okDomain && okQ;
+      row.hidden = !show;
+      if (show) visible += 1;
+    }
+    if (count) count.textContent = String(visible);
+  }
+
+  function wire(group: string, attr: "age" | "domain", assign: (value: string) => void) {
+    const root = document.querySelector(`[data-group="${group}"]`);
+    root?.querySelectorAll("button").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        root.querySelectorAll("button").forEach((other) => other.setAttribute("aria-pressed", "false"));
+        btn.setAttribute("aria-pressed", "true");
+        assign(btn.dataset[attr] ?? "");
+        apply();
+      });
+    });
+  }
+
+  wire("age", "age", (value) => {
+    age = value;
+  });
+  wire("domain", "domain", (value) => {
+    domain = value;
+  });
+  q?.addEventListener("input", apply);
+</script>

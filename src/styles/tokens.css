@@ -1,0 +1,38 @@
+:root {
+  --paper: #f7f6f2;
+  --paper-deep: #efeee8;
+  --paper-inked: #e4e2da;
+  --ink: #141413;
+  --ink-soft: #3d3c38;
+  --ink-faint: #8a8780;
+  --oxblood: #c45c3e;
+  --oxblood-deep: #9a3f26;
+  --teal: #3f5e57;
+  --teal-soft: #547870;
+  --rule: #e4e1d8;
+  --rule-strong: #141413;
+  --missing: #b0ada4;
+
+  --font-display: "Source Serif 4", "Iowan Old Style", "Palatino Linotype", Palatino, serif;
+  --font-body: "Source Sans 3", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-ui: "Source Sans 3", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+
+  --s-1: 0.25rem;
+  --s-2: 0.5rem;
+  --s-3: 0.75rem;
+  --s-4: 1rem;
+  --s-5: 1.5rem;
+  --s-6: 2rem;
+  --s-7: 3rem;
+  --s-8: 4.5rem;
+
+  --sidebar: 17.5rem;
+  --toc: 13.5rem;
+  --header: 10.25rem;
+  --licence: 2.35rem;
+  --measure: 42rem;
+  --radius: 999px;
+
+  --ease: cubic-bezier(0.2, 0.7, 0.2, 1);
+}

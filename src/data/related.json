@@ -1,0 +1,566 @@
+{
+  "mcsid": [],
+  "cnum": [],
+  "country": [],
+  "pttype2": [],
+  "sptn00": [],
+  "nh2": [],
+  "weight1": [],
+  "weight2": [],
+  "weightgb": [],
+  "eovwt2": [],
+  "fovwt2": [],
+  "govwt2": [],
+  "hovwt2": [],
+  "resp11": [],
+  "resp14": [],
+  "resp17": [],
+  "resp23": [],
+  "sex": [],
+  "race11": [],
+  "race4": [],
+  "conduct3_score": [],
+  "conduct3": [],
+  "delinq11_rude_ever": [
+    {
+      "name": "delinq14_rude",
+      "href": "/variables/delinquency-age-14#delinq14_rude",
+      "age": "14"
+    }
+  ],
+  "delinq11_shoplift_ever": [
+    {
+      "name": "delinq14_shoplift",
+      "href": "/variables/delinquency-age-14#delinq14_shoplift",
+      "age": "14"
+    },
+    {
+      "name": "delinq17_shoplift",
+      "href": "/variables/delinquency-age-17#delinq17_shoplift",
+      "age": "17"
+    }
+  ],
+  "delinq11_graffiti_ever": [
+    {
+      "name": "delinq14_graffiti",
+      "href": "/variables/delinquency-age-14#delinq14_graffiti",
+      "age": "14"
+    },
+    {
+      "name": "delinq17_graffiti",
+      "href": "/variables/delinquency-age-17#delinq17_graffiti",
+      "age": "17"
+    }
+  ],
+  "delinq11_damage_ever": [
+    {
+      "name": "delinq14_damage",
+      "href": "/variables/delinquency-age-14#delinq14_damage",
+      "age": "14"
+    },
+    {
+      "name": "delinq17_damage",
+      "href": "/variables/delinquency-age-17#delinq17_damage",
+      "age": "17"
+    }
+  ],
+  "att11_fight": [
+    {
+      "name": "att14_fight",
+      "href": "/variables/delinquent-attitudes-age-11-and-age-14#att14_fight",
+      "age": "14"
+    }
+  ],
+  "att11_graffiti": [
+    {
+      "name": "att14_graffiti",
+      "href": "/variables/delinquent-attitudes-age-11-and-age-14#att14_graffiti",
+      "age": "14"
+    }
+  ],
+  "att11_steal": [
+    {
+      "name": "att14_steal",
+      "href": "/variables/delinquent-attitudes-age-11-and-age-14#att14_steal",
+      "age": "14"
+    }
+  ],
+  "att11_download": [
+    {
+      "name": "att14_download",
+      "href": "/variables/delinquent-attitudes-age-11-and-age-14#att14_download",
+      "age": "14"
+    }
+  ],
+  "online11_messages": [],
+  "online11_sns": [
+    {
+      "name": "online14_sns",
+      "href": "/variables/time-online-age-14#online14_sns",
+      "age": "14"
+    },
+    {
+      "name": "online17_sns",
+      "href": "/variables/time-online-age-17#online17_sns",
+      "age": "17"
+    }
+  ],
+  "pocket11": [],
+  "chores11": [],
+  "job14": [
+    {
+      "name": "job17",
+      "href": "/variables/job-age-17#job17",
+      "age": "17"
+    }
+  ],
+  "job14_familybiz": [],
+  "job14_chores": [],
+  "online14_internet": [],
+  "online14_sns": [
+    {
+      "name": "online11_sns",
+      "href": "/variables/time-online-age-11#online11_sns",
+      "age": "11"
+    },
+    {
+      "name": "online17_sns",
+      "href": "/variables/time-online-age-17#online17_sns",
+      "age": "17"
+    }
+  ],
+  "date14_partner": [
+    {
+      "name": "date17_partner",
+      "href": "/variables/dating-age-17#date17_partner",
+      "age": "17"
+    }
+  ],
+  "date14_hands": [],
+  "date14_kiss": [],
+  "date14_cuddle": [],
+  "delinq14_rude": [
+    {
+      "name": "delinq11_rude_ever",
+      "href": "/variables/delinquency-age-11-lifetime#delinq11_rude_ever",
+      "age": "11"
+    }
+  ],
+  "delinq14_shoplift": [
+    {
+      "name": "delinq11_shoplift_ever",
+      "href": "/variables/delinquency-age-11-lifetime#delinq11_shoplift_ever",
+      "age": "11"
+    },
+    {
+      "name": "delinq17_shoplift",
+      "href": "/variables/delinquency-age-17#delinq17_shoplift",
+      "age": "17"
+    }
+  ],
+  "delinq14_graffiti": [
+    {
+      "name": "delinq11_graffiti_ever",
+      "href": "/variables/delinquency-age-11-lifetime#delinq11_graffiti_ever",
+      "age": "11"
+    },
+    {
+      "name": "delinq17_graffiti",
+      "href": "/variables/delinquency-age-17#delinq17_graffiti",
+      "age": "17"
+    }
+  ],
+  "delinq14_damage": [
+    {
+      "name": "delinq11_damage_ever",
+      "href": "/variables/delinquency-age-11-lifetime#delinq11_damage_ever",
+      "age": "11"
+    },
+    {
+      "name": "delinq17_damage",
+      "href": "/variables/delinquency-age-17#delinq17_damage",
+      "age": "17"
+    }
+  ],
+  "delinq14_hack": [
+    {
+      "name": "delinq17_hack",
+      "href": "/variables/delinquency-age-17#delinq17_hack",
+      "age": "17"
+    }
+  ],
+  "delinq14_virus": [
+    {
+      "name": "delinq17_virus",
+      "href": "/variables/delinquency-age-17#delinq17_virus",
+      "age": "17"
+    }
+  ],
+  "delinq14_hit": [
+    {
+      "name": "delinq17_hit",
+      "href": "/variables/delinquency-age-17#delinq17_hit",
+      "age": "17"
+    }
+  ],
+  "delinq14_weapon_use": [
+    {
+      "name": "delinq17_weapon_use",
+      "href": "/variables/delinquency-age-17#delinq17_weapon_use",
+      "age": "17"
+    }
+  ],
+  "delinq14_steal_person": [
+    {
+      "name": "delinq17_steal_person",
+      "href": "/variables/delinquency-age-17#delinq17_steal_person",
+      "age": "17"
+    }
+  ],
+  "delinq14_burglary_ever": [
+    {
+      "name": "delinq17_burglary",
+      "href": "/variables/delinquency-age-17#delinq17_burglary",
+      "age": "17"
+    }
+  ],
+  "delinq14_knife_ever": [],
+  "vic14_insult": [
+    {
+      "name": "vic17_insult",
+      "href": "/variables/victimization-age-17#vic17_insult",
+      "age": "17"
+    }
+  ],
+  "vic14_violence": [
+    {
+      "name": "vic17_violence",
+      "href": "/variables/victimization-age-17#vic17_violence",
+      "age": "17"
+    },
+    {
+      "name": "vic23_violence",
+      "href": "/variables/victimization-age-23#vic23_violence",
+      "age": "23"
+    }
+  ],
+  "vic14_weapon": [
+    {
+      "name": "vic17_weapon",
+      "href": "/variables/victimization-age-17#vic17_weapon",
+      "age": "17"
+    },
+    {
+      "name": "vic23_weapon",
+      "href": "/variables/victimization-age-23#vic23_weapon",
+      "age": "23"
+    }
+  ],
+  "vic14_stolen": [
+    {
+      "name": "vic17_stolen",
+      "href": "/variables/victimization-age-17#vic17_stolen",
+      "age": "17"
+    }
+  ],
+  "vic14_sexual": [
+    {
+      "name": "vic23_sexual",
+      "href": "/variables/victimization-age-23#vic23_sexual",
+      "age": "23"
+    }
+  ],
+  "gang14": [
+    {
+      "name": "gang17",
+      "href": "/variables/gang-member-age-17#gang17",
+      "age": "17"
+    }
+  ],
+  "job17": [
+    {
+      "name": "job14",
+      "href": "/variables/job-age-14#job14",
+      "age": "14"
+    }
+  ],
+  "job17_hours": [],
+  "job17_paid": [],
+  "job17_any_paid_income": [],
+  "online17_sns": [
+    {
+      "name": "online11_sns",
+      "href": "/variables/time-online-age-11#online11_sns",
+      "age": "11"
+    },
+    {
+      "name": "online14_sns",
+      "href": "/variables/time-online-age-14#online14_sns",
+      "age": "14"
+    }
+  ],
+  "online17_games": [],
+  "date17_partner": [
+    {
+      "name": "date14_partner",
+      "href": "/variables/dating-age-14#date14_partner",
+      "age": "14"
+    }
+  ],
+  "delinq17_shoplift": [
+    {
+      "name": "delinq11_shoplift_ever",
+      "href": "/variables/delinquency-age-11-lifetime#delinq11_shoplift_ever",
+      "age": "11"
+    },
+    {
+      "name": "delinq14_shoplift",
+      "href": "/variables/delinquency-age-14#delinq14_shoplift",
+      "age": "14"
+    }
+  ],
+  "delinq17_graffiti": [
+    {
+      "name": "delinq11_graffiti_ever",
+      "href": "/variables/delinquency-age-11-lifetime#delinq11_graffiti_ever",
+      "age": "11"
+    },
+    {
+      "name": "delinq14_graffiti",
+      "href": "/variables/delinquency-age-14#delinq14_graffiti",
+      "age": "14"
+    }
+  ],
+  "delinq17_damage": [
+    {
+      "name": "delinq11_damage_ever",
+      "href": "/variables/delinquency-age-11-lifetime#delinq11_damage_ever",
+      "age": "11"
+    },
+    {
+      "name": "delinq14_damage",
+      "href": "/variables/delinquency-age-14#delinq14_damage",
+      "age": "14"
+    }
+  ],
+  "delinq17_burglary": [
+    {
+      "name": "delinq14_burglary_ever",
+      "href": "/variables/delinquency-age-14#delinq14_burglary_ever",
+      "age": "14"
+    }
+  ],
+  "delinq17_vehicle": [],
+  "delinq17_arson": [],
+  "delinq17_fraud": [],
+  "delinq17_hack": [
+    {
+      "name": "delinq14_hack",
+      "href": "/variables/delinquency-age-14#delinq14_hack",
+      "age": "14"
+    }
+  ],
+  "delinq17_virus": [
+    {
+      "name": "delinq14_virus",
+      "href": "/variables/delinquency-age-14#delinq14_virus",
+      "age": "14"
+    }
+  ],
+  "delinq17_hit": [
+    {
+      "name": "delinq14_hit",
+      "href": "/variables/delinquency-age-14#delinq14_hit",
+      "age": "14"
+    }
+  ],
+  "delinq17_weapon_use": [
+    {
+      "name": "delinq14_weapon_use",
+      "href": "/variables/delinquency-age-14#delinq14_weapon_use",
+      "age": "14"
+    }
+  ],
+  "delinq17_steal_person": [
+    {
+      "name": "delinq14_steal_person",
+      "href": "/variables/delinquency-age-14#delinq14_steal_person",
+      "age": "14"
+    }
+  ],
+  "delinq17_harass": [],
+  "delinq17_image": [],
+  "delinq17_sexual": [],
+  "vic17_insult": [
+    {
+      "name": "vic14_insult",
+      "href": "/variables/victimization-age-14#vic14_insult",
+      "age": "14"
+    }
+  ],
+  "vic17_gossip": [],
+  "vic17_violence": [
+    {
+      "name": "vic14_violence",
+      "href": "/variables/victimization-age-14#vic14_violence",
+      "age": "14"
+    },
+    {
+      "name": "vic23_violence",
+      "href": "/variables/victimization-age-23#vic23_violence",
+      "age": "23"
+    }
+  ],
+  "vic17_weapon": [
+    {
+      "name": "vic14_weapon",
+      "href": "/variables/victimization-age-14#vic14_weapon",
+      "age": "14"
+    },
+    {
+      "name": "vic23_weapon",
+      "href": "/variables/victimization-age-23#vic23_weapon",
+      "age": "23"
+    }
+  ],
+  "vic17_stolen": [
+    {
+      "name": "vic14_stolen",
+      "href": "/variables/victimization-age-14#vic14_stolen",
+      "age": "14"
+    }
+  ],
+  "vic17_harass": [],
+  "vic17_image": [
+    {
+      "name": "vic23_image",
+      "href": "/variables/victimization-age-23#vic23_image",
+      "age": "23"
+    }
+  ],
+  "vic17_unwelcome": [],
+  "vic17_assault": [],
+  "gang17": [
+    {
+      "name": "gang14",
+      "href": "/variables/gang-member-age-14#gang14",
+      "age": "14"
+    }
+  ],
+  "knife17": [
+    {
+      "name": "knife23",
+      "href": "/variables/carry-a-knife-age-23#knife23",
+      "age": "23"
+    }
+  ],
+  "cj17": [],
+  "live_parents23": [],
+  "married23": [],
+  "cohab23": [],
+  "married_cohab23": [],
+  "ftjob23": [],
+  "nvq23": [],
+  "vic23_violence": [
+    {
+      "name": "vic14_violence",
+      "href": "/variables/victimization-age-14#vic14_violence",
+      "age": "14"
+    },
+    {
+      "name": "vic17_violence",
+      "href": "/variables/victimization-age-17#vic17_violence",
+      "age": "17"
+    }
+  ],
+  "vic23_weapon": [
+    {
+      "name": "vic14_weapon",
+      "href": "/variables/victimization-age-14#vic14_weapon",
+      "age": "14"
+    },
+    {
+      "name": "vic17_weapon",
+      "href": "/variables/victimization-age-17#vic17_weapon",
+      "age": "17"
+    }
+  ],
+  "vic23_image": [
+    {
+      "name": "vic17_image",
+      "href": "/variables/victimization-age-17#vic17_image",
+      "age": "17"
+    }
+  ],
+  "vic23_sexual": [
+    {
+      "name": "vic14_sexual",
+      "href": "/variables/victimization-age-14#vic14_sexual",
+      "age": "14"
+    }
+  ],
+  "knife23": [
+    {
+      "name": "knife17",
+      "href": "/variables/carry-a-knife-age-17#knife17",
+      "age": "17"
+    }
+  ],
+  "conduct3_tantrum": [],
+  "conduct3_disobedient": [],
+  "conduct3_fights": [],
+  "conduct3_argumentative": [],
+  "conduct3_spiteful": [],
+  "att14_fight": [
+    {
+      "name": "att11_fight",
+      "href": "/variables/delinquent-attitudes-age-11-and-age-14#att11_fight",
+      "age": "11"
+    }
+  ],
+  "att14_graffiti": [
+    {
+      "name": "att11_graffiti",
+      "href": "/variables/delinquent-attitudes-age-11-and-age-14#att11_graffiti",
+      "age": "11"
+    }
+  ],
+  "att14_steal": [
+    {
+      "name": "att11_steal",
+      "href": "/variables/delinquent-attitudes-age-11-and-age-14#att11_steal",
+      "age": "11"
+    }
+  ],
+  "att14_download": [
+    {
+      "name": "att11_download",
+      "href": "/variables/delinquent-attitudes-age-11-and-age-14#att11_download",
+      "age": "11"
+    }
+  ],
+  "date14_touched": [],
+  "date14_touch": [],
+  "date14_touch_gen": [],
+  "date14_touched_gen": [],
+  "date14_oral_did": [],
+  "date14_oral_rec": [],
+  "date14_sex": [
+    {
+      "name": "date17_sex_ever",
+      "href": "/variables/dating-age-17#date17_sex_ever",
+      "age": "17"
+    }
+  ],
+  "date17_sex_ever": [
+    {
+      "name": "date14_sex",
+      "href": "/variables/dating-age-14#date14_sex",
+      "age": "14"
+    }
+  ],
+  "cj17_stopped": [],
+  "cj17_caution": [],
+  "cj17_arrest": [],
+  "cj17_court": []
+}

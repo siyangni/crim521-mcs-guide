@@ -1,0 +1,55 @@
+---
+import GuideLayout from "../layouts/GuideLayout.astro";
+import Callout from "../components/Callout.astro";
+import WeightPicker from "../components/WeightPicker.astro";
+import CodeTabs from "../components/CodeTabs.astro";
+import guide from "../data/guide.json";
+
+const chapter = guide.chapters.find((item) => item.href === "/weights");
+if (!chapter) throw new Error("Weights chapter missing from ingest");
+---
+
+<GuideLayout title="Sample design and analysis weights" eyebrow="Section 3">
+  <h1>Sample design and analysis weights</h1>
+  <Callout>
+    <p>
+      Unweighted percentages in this file do not represent the UK birth cohort. Do not use a
+      non-response weight (<code>*nrespwt</code>) on its own as the analysis weight.
+    </p>
+  </Callout>
+
+  <h2>Which weight to use</h2>
+  <p>
+    Choose the age of the outcome and whether the analysis is for the whole UK or one country.
+    The picker fills the restrict condition, the weight name, and copy-paste design statements
+    from section 3.3–3.4.
+  </p>
+  <WeightPicker />
+
+  <p>
+    If a model uses predictors from an earlier sweep and an outcome from a later sweep, use the
+    overall weight for the outcome sweep and state that earlier-wave attrition is only partly
+    adjusted. <code>nh2</code> may be omitted if a finite population correction is not required.
+    Handle singleton strata (<code>singleunit(centered)</code> in Stata).
+  </p>
+
+  {
+    guide.meta.examples.r && (
+      <section>
+        <h2>Worked example from the guide</h2>
+        <p>Age 14, whole UK, as printed in section 3.4.</p>
+        <CodeTabs r={guide.meta.examples.r} stata={guide.meta.examples.stata} />
+      </section>
+    )
+  }
+
+  <div class="prose" set:html={chapter.html} />
+  {
+    chapter.subsections.map((section) => (
+      <section>
+        <h2 id={section.slug}>{section.heading}</h2>
+        <div class="prose" set:html={section.html} />
+      </section>
+    ))
+  }
+</GuideLayout>

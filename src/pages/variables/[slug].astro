@@ -1,0 +1,42 @@
+---
+import GuideLayout from "../../layouts/GuideLayout.astro";
+import VariableBlock from "../../components/VariableBlock.astro";
+import guide from "../../data/guide.json";
+import { withBase } from "../../lib/paths.mjs";
+import related from "../../data/related.json";
+
+export function getStaticPaths() {
+  return guide.topics.map((topic) => ({
+    params: { slug: topic.slug },
+    props: { topic },
+  }));
+}
+
+const { topic } = Astro.props as {
+  topic: {
+    heading: string;
+    slug: string;
+    html: string;
+    variableNames: string[];
+  };
+};
+
+const variables = (guide.variables as { name: string }[]).filter((variable) =>
+  topic.variableNames.includes(variable.name),
+);
+const relatedMap = related as Record<string, { name: string; href: string; age: string | null }[]>;
+---
+
+<GuideLayout title={topic.heading} eyebrow="Variable dictionary">
+  <p class="eyebrow">
+    <a href={withBase("/variables")}>Dictionary</a>
+  </p>
+  <h1>{topic.heading}</h1>
+  {
+    variables.map((variable) => (
+      <VariableBlock variable={variable as never} related={relatedMap[variable.name] ?? []} />
+    ))
+  }
+  <h2>From the user guide</h2>
+  <div class="prose" set:html={topic.html} />
+</GuideLayout>

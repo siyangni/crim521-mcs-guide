@@ -1,0 +1,10 @@
+---
+interface Props {
+  name: string;
+}
+const { name } = Astro.props;
+---
+
+<button class="copy-name" type="button" data-copy={name} title={`Copy ${name}`}>
+  <code>{name}</code>
+</button>

@@ -1,0 +1,101 @@
+---
+import { designCode, recommendWeight } from "../lib/weights.mjs";
+import CodeTabs from "./CodeTabs.astro";
+
+const initial = recommendWeight(14, "uk");
+const initialCode = designCode(initial);
+---
+
+<form class="picker" id="weight-form">
+  <fieldset>
+    <legend>Age of the outcome</legend>
+    <div class="picker-options">
+      {
+        [11, 14, 17, 23].map((age) => (
+          <label>
+            <input type="radio" name="age" value={String(age)} checked={age === 14} />
+            {age}
+          </label>
+        ))
+      }
+    </div>
+  </fieldset>
+  <fieldset>
+    <legend>Geography</legend>
+    <div class="picker-options">
+      <label>
+        <input type="radio" name="geo" value="uk" checked />
+        Whole UK
+      </label>
+      <label>
+        <input type="radio" name="geo" value="country" />
+        One country
+      </label>
+      <label data-gb-only>
+        <input type="radio" name="geo" value="gb" />
+        Great Britain only
+      </label>
+    </div>
+  </fieldset>
+</form>
+
+<dl class="picker-out">
+  <div>
+    <dt>Restrict to</dt>
+    <dd><code id="w-restrict">{initial.restrict}</code></dd>
+  </div>
+  <div>
+    <dt>Weight</dt>
+    <dd><code id="w-weight">{initial.weight}</code></dd>
+  </div>
+  <div class="span-2">
+    <dt>Note</dt>
+    <dd id="w-note">{initial.note}</dd>
+  </div>
+</dl>
+
+<div id="w-code">
+  <CodeTabs r={initialCode.r} stata={initialCode.stata} />
+</div>
+
+<script>
+  import { designCode, recommendWeight } from "../lib/weights.mjs";
+
+  const form = document.getElementById("weight-form") as HTMLFormElement | null;
+  const restrictEl = document.getElementById("w-restrict");
+  const weightEl = document.getElementById("w-weight");
+  const noteEl = document.getElementById("w-note");
+  const codeHost = document.getElementById("w-code");
+  const gb = document.querySelector("[data-gb-only]");
+
+  function current() {
+    const data = new FormData(form ?? undefined);
+    const age = Number(data.get("age") || 14);
+    let geo = String(data.get("geo") || "uk");
+    if (age !== 23 && geo === "gb") geo = "uk";
+    return { age, geo };
+  }
+
+  function paint() {
+    if (!form) return;
+    const { age, geo } = current();
+    if (gb instanceof HTMLElement) gb.hidden = age !== 23;
+    if (age !== 23 && geo === "gb") {
+      const uk = form.querySelector('input[name="geo"][value="uk"]') as HTMLInputElement | null;
+      if (uk) uk.checked = true;
+    }
+    const rec = recommendWeight(age, age === 23 ? geo : geo === "gb" ? "uk" : geo);
+    const code = designCode(rec);
+    if (restrictEl) restrictEl.textContent = rec.restrict;
+    if (weightEl) weightEl.textContent = rec.weight;
+    if (noteEl) noteEl.textContent = rec.note;
+    if (codeHost) {
+      const pres = codeHost.querySelectorAll("pre");
+      if (pres[0]) pres[0].querySelector("code")!.textContent = code.r;
+      if (pres[1]) pres[1].querySelector("code")!.textContent = code.stata;
+    }
+  }
+
+  form?.addEventListener("change", paint);
+  paint();
+</script>
