@@ -1,27 +1,13 @@
 ---
+import { AGE_STOPS, isAgeStopActive, stopDetail } from "../lib/ages.mjs";
 import { withBase } from "../lib/paths.mjs";
 
 interface Props {
+  respondents: Record<string, number>;
   currentPath: string;
 }
 
-const { currentPath } = Astro.props;
-
-const items = [
-  { key: "9m", label: "9 months", detail: "MCS1 · 2001", href: "/introduction" },
-  { key: "3", label: "Age 3", detail: "MCS2 · 2004", href: "/ages/3" },
-  { key: "11", label: "Age 11", detail: "MCS5 · 2012", href: "/ages/11" },
-  { key: "14", label: "Age 14", detail: "MCS6 · 2015", href: "/ages/14" },
-  { key: "17", label: "Age 17", detail: "MCS7 · 2018", href: "/ages/17" },
-  { key: "23", label: "Age 23", detail: "MCS8 · 2023", href: "/ages/23" },
-];
-
-function active(item: (typeof items)[number]) {
-  if (currentPath === item.href) return true;
-  if (item.key !== "9m" && currentPath.includes(`age-${item.key}`)) return true;
-  if (item.key !== "9m" && currentPath.endsWith(`/ages/${item.key}`)) return true;
-  return false;
-}
+const { respondents, currentPath } = Astro.props;
 ---
 
 <div class="spine-wrap">
@@ -31,11 +17,15 @@ function active(item: (typeof items)[number]) {
   </div>
   <nav class="spine" aria-label="Browse variables by age">
     {
-      items.map((item) => (
-        <a class="spine-item" href={withBase(item.href)} aria-current={active(item) ? "true" : undefined}>
+      AGE_STOPS.map((item) => (
+        <a
+          class="spine-item"
+          href={withBase(item.href)}
+          aria-current={isAgeStopActive(item, currentPath) ? "true" : undefined}
+        >
           <span class="spine-dot" aria-hidden="true" />
           <span class="spine-age">{item.label}</span>
-          <span class="spine-meta">{item.detail}</span>
+          <span class="spine-meta">{stopDetail(item, respondents)}</span>
         </a>
       ))
     }

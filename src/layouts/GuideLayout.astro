@@ -6,6 +6,7 @@ import Icon from "../components/Icon.astro";
 import LicenceBar from "../components/LicenceBar.astro";
 import SearchPalette from "../components/SearchPalette.astro";
 import guide from "../data/guide.json";
+import { AGE_STOPS } from "../lib/ages.mjs";
 import { stripBase, withBase } from "../lib/paths.mjs";
 
 interface Props {
@@ -37,6 +38,7 @@ function current(href: string) {
 
 const groups: { label: string; items: { href: string; label: string }[] }[] = [
   { label: "Baseline", items: [] },
+  { label: "9 months", items: [] },
   { label: "Age 3", items: [] },
   { label: "Age 11", items: [] },
   { label: "Age 14", items: [] },
@@ -47,17 +49,19 @@ const groups: { label: string; items: { href: string; label: string }[] }[] = [
 for (const topic of topics) {
   const first = topic.ages[0];
   const bucket =
-    first === "3"
-      ? "Age 3"
-      : first === "11"
-        ? "Age 11"
-        : first === "14"
-          ? "Age 14"
-          : first === "17"
-            ? "Age 17"
-            : first === "23"
-              ? "Age 23"
-              : "Baseline";
+    first === "birth" || first === "9m"
+      ? "9 months"
+      : first === "3"
+        ? "Age 3"
+        : first === "11"
+          ? "Age 11"
+          : first === "14"
+            ? "Age 14"
+            : first === "17"
+              ? "Age 17"
+              : first === "23"
+                ? "Age 23"
+                : "Baseline";
   const group = groups.find((item) => item.label === bucket);
   group?.items.push({
     href: topic.href,
@@ -116,7 +120,7 @@ function shortNavLabel(heading: string) {
           </button>
         </div>
       </div>
-      <AgeSpine currentPath={path} />
+      <AgeSpine currentPath={path} respondents={guide.meta.respondents} />
     </header>
 
     <div class="nav-backdrop" data-toggle-nav hidden></div>
@@ -140,12 +144,12 @@ function shortNavLabel(heading: string) {
           </a>
           <div class="age-links">
             {
-              ["3", "11", "14", "17", "23"].map((age) => (
+              AGE_STOPS.map((stop) => (
                 <a
-                  href={withBase(`/ages/${age}`)}
-                  aria-current={path === `/ages/${age}` ? "page" : undefined}
+                  href={withBase(stop.href)}
+                  aria-current={path === stop.href ? "page" : undefined}
                 >
-                  {age}
+                  {stop.shortLabel}
                 </a>
               ))
             }

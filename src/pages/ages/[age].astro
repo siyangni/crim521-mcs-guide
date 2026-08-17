@@ -1,14 +1,18 @@
 ---
 import GuideLayout from "../../layouts/GuideLayout.astro";
 import guide from "../../data/guide.json";
+import { AGE_STOPS, findAgeStop, variableMatchesStop } from "../../lib/ages.mjs";
 import { formatN } from "../../lib/format.mjs";
 import { withBase } from "../../lib/paths.mjs";
 
 export function getStaticPaths() {
-  return ["3", "11", "14", "17", "23"].map((age) => ({ params: { age } }));
+  return AGE_STOPS.map((stop) => ({ params: { age: stop.key } }));
 }
 
 const { age } = Astro.params;
+const stop = findAgeStop(age ?? "");
+if (!stop) throw new Error(`Unknown age stop: ${age}`);
+
 const variables = (guide.variables as {
   name: string;
   age: string | null;
@@ -17,7 +21,7 @@ const variables = (guide.variables as {
   question: string;
   yesN: number | null;
   href: string;
-}[]).filter((variable) => variable.age === age);
+}[]).filter((variable) => variableMatchesStop(variable.age, stop));
 
 const byDomain = new Map<string, typeof variables>();
 for (const variable of variables) {
@@ -26,33 +30,34 @@ for (const variable of variables) {
   byDomain.set(variable.domainLabel, list);
 }
 
-const respKey = age ? `resp${age}` : "";
-const respN = (guide.meta.respondents as Record<string, number>)[respKey];
+const countN = (guide.meta.respondents as Record<string, number>)[stop.countKey];
 ---
 
-<GuideLayout title={`Age ${age}`} eyebrow="By age">
-  <h1>Age {age}</h1>
+<GuideLayout title={stop.label} eyebrow="By age">
+  <h1>{stop.label}</h1>
   <p class="lede">
-    Every class-file variable attached to age {age}.
-    {respN
-      ? ` The interview flag has ${formatN(respN)} respondents.`
-      : " Age 3 items come from the sweep-2 parent interview and the core file."}
+    {stop.lede}
+    {countN ? ` ${formatN(countN)} cohort members have the items used here.` : ""}
   </p>
   {
-    [...byDomain.entries()].map(([domain, rows]) => (
-      <section>
-        <h2>{domain}</h2>
-        {rows.map((variable) => (
-          <a class="var-row" href={withBase(variable.href)}>
-            <span class="name">
-              <code>{variable.name}</code>
-            </span>
-            <span class="age" />
-            <span class="q">{variable.question}</span>
-            <span class="yes">{variable.yesN != null ? `Yes ${formatN(variable.yesN)}` : ""}</span>
-          </a>
-        ))}
-      </section>
-    ))
+    byDomain.size === 0 ? (
+      <p>No class-file variables are tagged to this sweep.</p>
+    ) : (
+      [...byDomain.entries()].map(([domain, rows]) => (
+        <section>
+          <h2>{domain}</h2>
+          {rows.map((variable) => (
+            <a class="var-row" href={withBase(variable.href)}>
+              <span class="name">
+                <code>{variable.name}</code>
+              </span>
+              <span class="age" />
+              <span class="q">{variable.question}</span>
+              <span class="yes">{variable.yesN != null ? `Yes ${formatN(variable.yesN)}` : ""}</span>
+            </a>
+          ))}
+        </section>
+      ))
+    )
   }
 </GuideLayout>

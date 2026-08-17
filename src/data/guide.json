@@ -59,7 +59,9 @@
       "resp11": 13436,
       "resp14": 11719,
       "resp17": 10343,
-      "resp23": 9675
+      "resp23": 9675,
+      "obs9m": 19470,
+      "obs3": 14938
     },
     "examples": {
       "r": "library(haven)\nlibrary(survey)\nmcs <- read_dta(\"mcs_class.dta\")\ndes14 <- svydesign(\n  ids     = ~sptn00,\n  strata  = ~pttype2,\n  weights = ~fovwt2,\n  fpc     = ~nh2,\n  nest    = TRUE,\n  data    = subset(mcs, resp14 == 1)\n)\nsvymean(~delinq14_shoplift, des14, na.rm = TRUE)",
@@ -382,7 +384,9 @@
       "variableNames": [
         "sex"
       ],
-      "ages": [],
+      "ages": [
+        "birth"
+      ],
       "html": "<div class=\"table-wrap\"><table class=\"field-table\"><thead><tr><th>Field</th>\n<th>Detail</th>\n</tr>\n</thead>\n<tbody><tr>\n<td>Class variable</td>\n<td><a class=\"var-link\" href=\"/crim521-mcs-guide/variables/sex#sex\"><code>sex</code></a></td>\n</tr>\n<tr>\n<td>Original variable</td>\n<td><a class=\"var-link\" href=\"/crim521-mcs-guide/variables/sex#sex\"><code>sex</code></a></td>\n</tr>\n<tr>\n<td>Original wording</td>\n<td>CM sex at birth</td>\n</tr>\n<tr>\n<td>Original codes</td>\n<td>1 Male; 2 Female. Missing: -9, -8, -1</td>\n</tr>\n<tr>\n<td>Recode</td>\n<td>1 and 2 retained. Other codes missing</td>\n</tr>\n<tr>\n<td>Notes</td>\n<td>The first non-missing value across sweeps is used. Household-grid sex variables mix all persons in the household and are not used.</td>\n</tr>\n</tbody></table></div>\n<div class=\"table-wrap\"><table>\n<thead>\n<tr>\n<th>Code</th>\n<th>Label</th>\n<th>N</th>\n</tr>\n</thead>\n<tbody><tr>\n<td>1</td>\n<td>Male</td>\n<td>9,994</td>\n</tr>\n<tr>\n<td>2</td>\n<td>Female</td>\n<td>9,476</td>\n</tr>\n<tr>\n<td></td>\n<td>Missing</td>\n<td>35</td>\n</tr>\n</tbody></table></div>\n"
     },
     {
@@ -394,7 +398,9 @@
         "race11",
         "race4"
       ],
-      "ages": [],
+      "ages": [
+        "birth"
+      ],
       "html": "<div class=\"table-wrap\"><table class=\"field-table\"><thead><tr><th>Field</th>\n<th>Detail</th>\n</tr>\n</thead>\n<tbody><tr>\n<td>Class variable</td>\n<td><a class=\"var-link\" href=\"/crim521-mcs-guide/variables/ethnic-group#race11\"><code>race11</code></a></td>\n</tr>\n<tr>\n<td>Original variable</td>\n<td><code>dc11e</code></td>\n</tr>\n<tr>\n<td>Original wording</td>\n<td>First-recorded 11-category Census classification</td>\n</tr>\n<tr>\n<td>Original codes</td>\n<td>1 White; 2 Mixed; 3 Indian; 4 Pakistani; 5 Bangladeshi; 6 Other Asian; 7 Black Caribbean; 8 Black African; 9 Other Black; 10 Chinese; 11 Other ethnic group. Missing: -9, -8, -1</td>\n</tr>\n<tr>\n<td>Recode</td>\n<td>Codes 1-11 retained. Missing codes dropped</td>\n</tr>\n</tbody></table></div>\n<div class=\"table-wrap\"><table class=\"field-table\"><thead><tr><th>Field</th>\n<th>Detail</th>\n</tr>\n</thead>\n<tbody><tr>\n<td>Class variable</td>\n<td><a class=\"var-link\" href=\"/crim521-mcs-guide/variables/ethnic-group#race4\"><code>race4</code></a></td>\n</tr>\n<tr>\n<td>Original variable</td>\n<td><code>dc11e</code> (same as <a class=\"var-link\" href=\"/crim521-mcs-guide/variables/ethnic-group#race11\"><code>race11</code></a>)</td>\n</tr>\n<tr>\n<td>Recode</td>\n<td>1 White (from 1); 2 Black (from 7, 8, 9); 3 Asian (from 3, 4, 5, 6 and 10 Chinese); 4 Other (from 2 Mixed and 11)</td>\n</tr>\n<tr>\n<td>Notes</td>\n<td>Chinese is grouped with Asian (UK Census 2011 convention). Mixed is grouped with Other because the four-group scheme has no Mixed category.</td>\n</tr>\n</tbody></table></div>\n<div class=\"table-wrap\"><table>\n<thead>\n<tr>\n<th>Code</th>\n<th>Label</th>\n<th>N</th>\n</tr>\n</thead>\n<tbody><tr>\n<td>1</td>\n<td>White</td>\n<td>15,936</td>\n</tr>\n<tr>\n<td>2</td>\n<td>Black</td>\n<td>742</td>\n</tr>\n<tr>\n<td>3</td>\n<td>Asian</td>\n<td>2,033</td>\n</tr>\n<tr>\n<td>4</td>\n<td>Other</td>\n<td>728</td>\n</tr>\n<tr>\n<td></td>\n<td>Missing</td>\n<td>66</td>\n</tr>\n</tbody></table></div>\n"
     },
     {
@@ -1408,7 +1414,7 @@
           "isMissing": true
         }
       ],
-      "yesN": 2646,
+      "yesN": null,
       "topicSlug": "conduct-problems-at-age-3-sdq",
       "topicId": "5.4",
       "href": "/variables/conduct-problems-at-age-3-sdq#conduct3_score",

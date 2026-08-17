@@ -5,7 +5,7 @@ export function formatN(n) {
 
 export function ageLabel(age) {
   if (age == null || age === "") return "Baseline";
-  if (age === "birth") return "Birth";
+  if (age === "birth" || age === "9m") return "9 months";
   return `Age ${age}`;
 }
 

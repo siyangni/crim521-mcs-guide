@@ -201,10 +201,11 @@ function topicId(heading) {
 
 function yesN(frequencies) {
   if (!frequencies || frequencies.length === 0) return null;
-  const yes = frequencies.find((row) => row.value === "1" && !row.isMissing);
-  const no = frequencies.find((row) => row.value === "0" && !row.isMissing);
-  if (!yes || !no) return null;
-  return yes.n;
+  const observed = frequencies.filter((row) => !row.isMissing);
+  const values = new Set(observed.map((row) => row.value));
+  if (!values.has("0") || !values.has("1")) return null;
+  if ([...values].some((value) => value !== "0" && value !== "1")) return null;
+  return observed.find((row) => row.value === "1")?.n ?? null;
 }
 
 export function sanitizeHtml(html) {
@@ -365,7 +366,11 @@ export function ingestFromSources({ guideMd, specCsv, freqMd }) {
     );
     topic.variableNames = names;
     topic.ages = [
-      ...new Set(names.map((name) => variablesByName.get(name)?.age).filter((age) => age && /^\d+$/.test(age))),
+      ...new Set(
+        names
+          .map((name) => variablesByName.get(name)?.age)
+          .filter((age) => age && (/^\d+$/.test(age) || age === "birth")),
+      ),
     ];
     topic.html = enhanceHtml(marked.parse(topic.markdown || "") || "", {
       variablesByName,
@@ -397,6 +402,12 @@ export function ingestFromSources({ guideMd, specCsv, freqMd }) {
     const yes = rows.find((row) => row.value === "1");
     if (yes) resp[flag] = yes.n;
   }
+  const observedN = (rows = []) =>
+    rows.filter((row) => !row.isMissing).reduce((sum, row) => sum + row.n, 0);
+  const n9m = observedN(frequencies.sex);
+  const n3 = observedN(frequencies.conduct3);
+  if (n9m) resp.obs9m = n9m;
+  if (n3) resp.obs3 = n3;
 
   const weightsChapter = chapters.find((chapter) => chapter.href === "/weights");
   const exampleSection = weightsChapter?.subsections.find((section) => /3\.4/.test(section.heading));

@@ -90,6 +90,19 @@ test("full ingest is parity-clean and links shoplift", () => {
   assert.equal(payload.meta.n, 19505);
   assert.equal(payload.meta.version, "1.0");
   assert.equal(payload.meta.respondents.resp14, 11719);
+  const observedN = (rows = []) =>
+    rows.filter((row) => !row.isMissing).reduce((sum, row) => sum + row.n, 0);
+  assert.equal(payload.meta.respondents.obs9m, observedN(payload.frequencies.sex));
+  assert.equal(payload.meta.respondents.obs3, observedN(payload.frequencies.conduct3));
+  assert.ok(!payload.variables.some((variable) => variable.name === "resp9m" || variable.name === "resp3"));
+
+  const score = payload.variables.find((variable) => variable.name === "conduct3_score");
+  assert.equal(score.yesN, null);
+  const band = payload.variables.find((variable) => variable.name === "conduct3");
+  assert.equal(band.yesN, 4956);
+
+  const sexTopic = payload.topics.find((topic) => topic.slug === "sex");
+  assert.ok(sexTopic.ages.includes("birth"));
 
   const shoplift = payload.variables.find((row) => row.name === "delinq14_shoplift");
   assert.ok(shoplift);
